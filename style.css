@@ -313,6 +313,19 @@ body {
   z-index: 99;
   background-color: #4f3939;
   width: 100%;
+  padding: 15px 0px;
+}
+
+.header__logo {
+  font-size: 26px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.header__logo:hover {
+  color: #b66464;
 }
 
 .header__wrapper {
@@ -320,20 +333,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.header__logo img {
-  position: relative;
-  z-index: 100;
-  object-fit: contain;
-  width: 150px;
-  height: 80px;
-  transition: 0.3s ease;
-  border-radius: 15px;
-}
-
-.header__logo img:hover {
-  transform: scale(1.1);
 }
 
 .header-menu .header-menu--footer {
@@ -734,6 +733,38 @@ body {
   color: #000;
   font-size: 22px;
 }
+.main-feedback {
+  padding: 50px 0px;
+}
+
+.main-feedback__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: #4f3939;
+  margin-bottom: 50px;
+}
+
+.main-feedback-item {
+  @media (max-width: 992px) {
+    margin-bottom: 30px;
+  }
+}
+.main-feedback-item__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  height: 370px;
+  @media (max-width: 992px) {
+    height: auto;
+  }
+}
+.main-feedback-item-wrapper {
+}
+.main-feedback-item-wrapper__name {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+}
 
 .main-connection {
   padding: 100px 0px;
@@ -861,6 +892,10 @@ body {
   font-weight: 700;
   text-shadow: 0px 0px 3px #000;
   font-size: 22px;
+}
+
+.main-contacts {
+  margin-bottom: 30px;
 }
 
 .main-contacts__title {
@@ -1021,7 +1056,7 @@ body {
 }
 
 .footer {
-  background-color: #2d394b;
+  background-color: #4f3939;
   padding: 20px 0px;
 }
 
@@ -1332,7 +1367,7 @@ body {
 
 .main-privacy h1,
 h2 {
-  font-size: 20px;
+  font-size: 26px;
   color: #2d394b;
   font-weight: 400;
   margin: 0 0 30px 0;
@@ -1341,12 +1376,14 @@ h2 {
 .main-privacy ul li {
   color: #2d394b;
   margin-bottom: 30px;
+  font-size: 26px;
 }
 
 .main-privacy ul li a {
-  color: #2d394b;
+  color: #4f3939;
+  font-size: 28px;
+  font-weight: 600;
   transition: 0.3s ease;
-  font-size: 22px;
 }
 
 .main-privacy ul li a:hover {
@@ -1359,15 +1396,17 @@ h2 {
 
 .main-terms h1,
 h2 {
+  font-size: 26px;
   color: #2d394b;
-  font-size: 20px;
   font-weight: 400;
   margin: 0 0 30px 0;
 }
 
 .main-terms a {
-  color: #2d394b;
-  font-size: 22px;
+  color: #4f3939;
+  font-size: 28px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .main-terms a:hover {
@@ -1375,8 +1414,9 @@ h2 {
 }
 
 .main-terms ul li {
-  color: #000;
+  color: #2d394b;
   margin-bottom: 30px;
+  font-size: 26px;
 }
 
 /* UI-btn */
@@ -1406,6 +1446,7 @@ h2 {
   margin: 0 auto;
   display: block;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .main-poster-content {
