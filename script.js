@@ -1,4 +1,4 @@
-// burger-menu
+// burger - menu;
 const toggler = document.querySelector(".header-toggler");
 const menu = document.querySelector(".header-menu");
 const menuItems = document.querySelectorAll(".header-menu__item");
