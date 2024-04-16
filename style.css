@@ -547,6 +547,7 @@ p {
   max-width: 1374px;
   padding-left: 24px;
   padding-right: 24px;
+  padding-bottom: 50px;
 }
 
 .zkTvsMxOFMXxdIV.hPbXjvgpMwHThyY {
@@ -587,7 +588,7 @@ p {
 }
 
 .gUEdXdSXZYiEsOA.RlKhahFvYKLrBIn {
-  background-color: #000;
+  background-color: #222;
 }
 
 .gUEdXdSXZYiEsOA.gSJvtPzyYoBPlyj {
@@ -1569,7 +1570,7 @@ p {
   color: #f1cc06;
 }
 .ePcpDzQWaticWvr {
-  background-color: var(--gray);
+  background-color: #222;
   padding: 75px 24px;
 }
 
@@ -1618,7 +1619,7 @@ p {
   max-width: 1374px;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  background-color: var(--gray);
+  background-color: #222;
   width: 100%;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -3486,7 +3487,7 @@ body {
   font-size: 18px;
   line-height: 1.2;
   color: #fff;
-  background-color: #afafaf;
+  background-color: #333;
 }
 
 #wrapper {
@@ -3655,25 +3656,25 @@ body {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #000;
+  color: #ccc;
 }
 
 .main-privacy h1,
 h2 {
   font-size: 24px;
-  color: #000;
+  color: #ccc;
   font-weight: 400;
   margin: 0 0 30px 0;
 }
 
 .main-privacy ul li {
   font-size: 24px;
-  color: #000;
+  color: #ccc;
   margin-bottom: 30px;
 }
 
 .main-privacy ul li a {
-  color: #12528d;
+  color: #f1cc06;
   transition: 0.3s ease;
   font-size: 28px;
   word-break: break-all;
@@ -3681,7 +3682,7 @@ h2 {
 }
 
 .main-privacy ul li a:hover {
-  border-bottom: 1px solid #12528d;
+  border-bottom: 1px solid #f1cc06;
 }
 
 .main-terms {
@@ -3692,31 +3693,31 @@ h2 {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #000;
+  color: #ccc;
 }
 
 .main-terms h1,
 h2 {
-  color: #000;
+  color: #ccc;
   font-size: 24px;
   font-weight: 400;
   margin: 0 0 30px 0;
 }
 
 .main-terms a {
-  color: #12528d;
+  color: #f1cc06;
   font-size: 28px;
   word-break: break-all;
   font-weight: 600;
 }
 
 .main-terms a:hover {
-  border-bottom: 1px solid #12528d;
+  border-bottom: 1px solid #f1cc06;
 }
 
 .main-terms ul li {
   font-size: 24px;
-  color: #000;
+  color: #ccc;
   margin-bottom: 30px;
 }
 
@@ -3829,7 +3830,16 @@ h2 {
 }
 
 .main-wrapper {
+  word-wrap: break-word;
   padding-top: 200px;
+  padding-bottom: 100px;
+  @media (max-width: 788px) {
+    padding: 50px 0px;
+  }
+}
+
+.main-wrapper__title {
+  color: #ccc;
 }
 
 .main-wrapper a {
