@@ -505,7 +505,6 @@ label {
   vertical-align: top;
   color: #222;
   text-align: left;
-  white-space: nowrap;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
@@ -755,6 +754,11 @@ label {
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
+
+  @media screen and (max-width: 980px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 991px) {
