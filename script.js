@@ -1,7 +1,7 @@
 // burger - menu;
-const toggler = document.querySelector(".header-toggler");
-const menu = document.querySelector(".header-menu");
-const menuItems = document.querySelectorAll(".header-menu__item");
+var toggler = document.querySelector(".header-toggler");
+var menu = document.querySelector(".header-menu");
+var menuItems = document.querySelectorAll(".header-menu__item");
 
 toggler.addEventListener("click", () => {
   menu.classList.toggle("header-menu--open");
@@ -15,20 +15,22 @@ menuItems.forEach((e) => {
   });
 });
 
-let html = document.querySelector("html");
-document.querySelector(".header-toggler").onclick = function () {
+var html = document.querySelector("html");
+toggler.onclick = function () {
   html.classList.toggle("unscroll");
 };
 
 // coockie
-const coockie = document.querySelector(".coockie");
-const accept = document.querySelector(".coockie-wrap-buttons__accept");
-const cancel = document.querySelector(".coockie-wrap-buttons__cancel");
+var coockie = document.querySelector(".coockie");
+var accept = document.querySelector(".coockie-wrap-buttons__accept");
+var cancel = document.querySelector(".coockie-wrap-buttons__cancel");
 
-accept.addEventListener("click", () => {
-  coockie.classList.add("coockie__hidden");
-});
+if (coockie !== null) {
+  accept.addEventListener("click", () => {
+    coockie.classList.add("coockie__hidden");
+  });
 
-cancel.addEventListener("click", () => {
-  coockie.classList.add("coockie__hidden");
-});
+  cancel.addEventListener("click", () => {
+    coockie.classList.add("coockie__hidden");
+  });
+}
