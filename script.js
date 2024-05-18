@@ -19,3 +19,16 @@ let html = document.querySelector("html");
 document.querySelector(".header-toggler").onclick = function () {
   html.classList.toggle("unscroll");
 };
+
+// coockie
+const coockie = document.querySelector(".coockie");
+const accept = document.querySelector(".coockie-wrap-buttons__accept");
+const cancel = document.querySelector(".coockie-wrap-buttons__cancel");
+
+accept.addEventListener("click", () => {
+  coockie.classList.add("coockie__hidden");
+});
+
+cancel.addEventListener("click", () => {
+  coockie.classList.add("coockie__hidden");
+});
