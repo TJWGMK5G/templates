@@ -34,3 +34,8 @@ if (coockie !== null) {
     coockie.classList.add("coockie__hidden");
   });
 }
+
+var html = document.querySelector("html");
+coockie.onclick = function () {
+  html.classList.toggle("unscroll");
+};
