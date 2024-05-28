@@ -38,3 +38,14 @@ document.querySelector(".header-toggler").onclick = function () {
 //   html.classList.toggle("unscroll__bg");
 // };
 // }
+
+//подтверждение возраста
+const modal = document.querySelector(".head-info");
+const acceptBtn = document.querySelector(".accept");
+const closeBtn = document.querySelector(".close");
+
+if (modal) {
+  acceptBtn.addEventListener("click", function () {
+    modal.classList.add("hidden");
+  });
+}
