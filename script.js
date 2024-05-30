@@ -14,10 +14,10 @@ menuItems.forEach((e) => {
   });
 });
 
-let html = document.querySelector("html");
-document.querySelector(".header-toggler").onclick = function () {
-  html.classList.toggle("unscroll");
-};
+// let html = document.querySelector("html");
+// document.querySelector(".header-toggler").onclick = function () {
+//   html.classList.toggle("unscroll");
+// };
 
 // coockie;
 // var coockie = document.querySelector(".coockie");
@@ -40,12 +40,12 @@ document.querySelector(".header-toggler").onclick = function () {
 // }
 
 //подтверждение возраста
-const modal = document.querySelector(".head-info");
-const acceptBtn = document.querySelector(".accept");
-const closeBtn = document.querySelector(".close");
+// const modal = document.querySelector(".head-info");
+// const acceptBtn = document.querySelector(".accept");
+// const closeBtn = document.querySelector(".close");
 
-if (modal) {
-  acceptBtn.addEventListener("click", function () {
-    modal.classList.add("hidden");
-  });
-}
+// if (modal) {
+//   acceptBtn.addEventListener("click", function () {
+//     modal.classList.add("hidden");
+//   });
+// }
