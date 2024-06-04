@@ -960,10 +960,16 @@ img {
 
 .tmipQQOeLrRhZkn {
   margin-bottom: 0px;
-
+  color: #000;
   font-size: 17px;
   line-height: 30px;
   font-weight: 400;
+  max-width: 800px;
+  text-align: left;
+}
+
+.tmipQQOeLrRhZkn1 {
+  color: #fff;
 }
 
 .GuiyRFITxuWDfIQ {
@@ -1332,30 +1338,37 @@ img {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   margin-top: 50px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  gap: 20px;
 }
 
 .KQqzfjgwwYqjzKK {
   position: relative;
   overflow: hidden;
-  width: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   margin-right: 0px;
   margin-left: 0px;
   padding: 40px 20px;
+  gap: 25px;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 0 30px 0 #d6d7d8;
+  background: #3898ec;
 }
-
+/* 
 .KQqzfjgwwYqjzKK.ielGsHRiGUMLiUP {
   margin-right: 20px;
   margin-left: 20px;
-}
+} */
 
 .FgdFscOsYIgwPET {
   text-align: center;
@@ -1379,12 +1392,14 @@ img {
   margin-bottom: 20px;
 }
 
-.fEUTLOIzVUieiln {
+/* .fEUTLOIzVUieiln {
   margin-bottom: 25px;
-}
+} */
 
 .uOEdKDdnkdvIPIn {
   text-align: center;
+  color: #fff;
+  font-size: 22px;
 }
 
 .VnbtxwXWlLNPIgu {
@@ -2169,7 +2184,8 @@ img {
 }
 
 .BJFRXNQjIVVAQZT.kaIiitReJXTWBlt {
-  color: #42a7f7;
+  color: #fff;
+  margin: 0;
 }
 
 .OLNKEnQmIexvTzS {
@@ -2999,8 +3015,8 @@ img {
   }
 
   .KQqzfjgwwYqjzKK {
-    width: 450px;
-    margin-bottom: 50px;
+    width: 100%;
+
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
@@ -3706,12 +3722,13 @@ img {
   }
 
   .uNAPVYyGZuSZfwK {
-    padding-right: 36px;
-    padding-left: 36px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .KQqzfjgwwYqjzKK {
     width: 100%;
+    flex-direction: column;
   }
 
   .VnbtxwXWlLNPIgu {
@@ -4919,4 +4936,38 @@ button:hover {
     width: 100%;
     padding: 10px;
   }
+}
+
+.play {
+  padding: 50px 0px;
+  background-color: #eeeeee;
+}
+
+.play__title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.play__text {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.bet {
+  padding: 50px 0px;
+  background-color: #eeeeee;
+}
+
+.bet__title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.bet__text {
+  margin-bottom: 10px;
+  text-align: left;
 }
