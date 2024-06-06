@@ -11,14 +11,13 @@ menuItems.forEach((e) => {
   e.addEventListener("click", () => {
     menu.classList.remove("header-menu--open");
     toggler.classList.remove("header-toggler--open");
-    html.classList.remove("unscroll");
   });
 });
 
-let html = document.querySelector("html");
-toggler.onclick = function () {
-  html.classList.toggle("unscroll");
-};
+// let html = document.querySelector("html");
+// document.querySelector(".header-toggler").onclick = function () {
+//   html.classList.toggle("unscroll");
+// };
 
 // coockie;
 // var coockie = document.querySelector(".coockie");
