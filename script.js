@@ -41,8 +41,8 @@ if (coockie !== null) {
 // };
 
 // 18+ disclaimer
-const btnModal = document.querySelector(".nOdojjhWhxBYAMO");
-const modal = document.querySelector(".YTcZDnyFmosYiFJ");
+const btnModal = document.querySelector(".WusLiJenjgKzHOy");
+const modal = document.querySelector(".FwbwMRJWFRDpiZD");
 
 if (modal !== null) {
   btnModal.addEventListener("click", function () {
