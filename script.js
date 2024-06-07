@@ -1,6 +1,7 @@
-const toggler = document.querySelector(".header-toggler");
-const menu = document.querySelector(".header-menu");
-const menuItems = document.querySelectorAll(".header-menu__item");
+// burger - menu;
+var toggler = document.querySelector(".header-toggler");
+var menu = document.querySelector(".header-menu");
+var menuItems = document.querySelectorAll(".header-menu__item");
 
 toggler.addEventListener("click", () => {
   menu.classList.toggle("header-menu--open");
@@ -14,38 +15,27 @@ menuItems.forEach((e) => {
   });
 });
 
-// let html = document.querySelector("html");
-// document.querySelector(".header-toggler").onclick = function () {
-//   html.classList.toggle("unscroll");
-// };
+var html = document.querySelector("html");
+toggler.onclick = function () {
+  html.classList.toggle("unscroll");
+};
 
 // coockie;
-// var coockie = document.querySelector(".coockie");
-// var accept = document.querySelector(".coockie-wrap-buttons__accept");
-// var cancel = document.querySelector(".coockie-wrap-buttons__cancel");
+var coockie = document.querySelector(".coockie");
+var accept = document.querySelector(".coockie-wrap-buttons__accept");
+var cancel = document.querySelector(".coockie-wrap-buttons__cancel");
 
-// if (coockie !== null) {
-//   accept.addEventListener("click", () => {
-//     coockie.classList.add("coockie__hidden");
-//   });
+if (coockie !== null) {
+  accept.addEventListener("click", () => {
+    coockie.classList.add("coockie__hidden");
+  });
 
-//   cancel.addEventListener("click", () => {
-//     coockie.classList.add("coockie__hidden");
-//   });
+  cancel.addEventListener("click", () => {
+    coockie.classList.add("coockie__hidden");
+  });
 
-// var html = document.querySelector("html");
-// coockie.onclick = function () {
-//   html.classList.toggle("unscroll__bg");
-// };
-// }
-
-//подтверждение возраста
-// const modal = document.querySelector(".head-info");
-// const acceptBtn = document.querySelector(".accept");
-// const closeBtn = document.querySelector(".close");
-
-// if (modal) {
-//   acceptBtn.addEventListener("click", function () {
-//     modal.classList.add("hidden");
-//   });
-// }
+  var html = document.querySelector("html");
+  coockie.onclick = function () {
+    html.classList.toggle("unscroll__bg");
+  };
+}
