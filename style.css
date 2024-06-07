@@ -866,6 +866,9 @@ img {
   grid-auto-columns: 1fr;
   width: 100%;
   display: grid;
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .lCgPkddlDyfRvuH {
@@ -1518,7 +1521,8 @@ img {
 
   .SNNgCrLFdYijEDe {
     grid-template-columns: 1fr 1fr;
-    @media (max-width: 600px) {
+
+    @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
   }
