@@ -25,13 +25,15 @@ var coockie = document.querySelector(".coockie");
 var accept = document.querySelector(".coockie-wrap-buttons__accept");
 var cancel = document.querySelector(".coockie-wrap-buttons__cancel");
 
-accept.addEventListener("click", () => {
-  coockie.style.display = "none";
-});
+if (coockie !== null) {
+  accept.addEventListener("click", () => {
+    coockie.style.display = "none";
+  });
 
-cancel.addEventListener("click", () => {
-  coockie.style.display = "none";
-});
+  cancel.addEventListener("click", () => {
+    coockie.style.display = "none";
+  });
+}
 
 // var html = document.querySelector("html");
 // coockie.onclick = function () {
@@ -42,6 +44,8 @@ cancel.addEventListener("click", () => {
 const btnModal = document.querySelector(".nOdojjhWhxBYAMO");
 const modal = document.querySelector(".YTcZDnyFmosYiFJ");
 
-btnModal.addEventListener("click", function () {
-  modal.classList.add("hidden");
-});
+if (modal !== null) {
+  btnModal.addEventListener("click", function () {
+    modal.classList.add("hidden");
+  });
+}
