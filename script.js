@@ -15,10 +15,10 @@ menuItems.forEach((e) => {
   });
 });
 
-var html = document.querySelector("html");
-toggler.onclick = function () {
-  html.classList.toggle("unscroll");
-};
+// var html = document.querySelector("html");
+// toggler.onclick = function () {
+//   html.classList.toggle("unscroll");
+// };
 
 // coockie;
 var coockie = document.querySelector(".coockie");
@@ -41,8 +41,8 @@ if (coockie !== null) {
 // };
 
 // 18+ disclaimer
-const btnModal = document.querySelector(".qDkWkpaLjCamnQu");
-const modal = document.querySelector(".GSViwNPmatoDTQr ");
+const btnModal = document.querySelector(".SBGpbCiEXANAIWd");
+const modal = document.querySelector(".bmIsSJcxygEmByk ");
 
 if (modal !== null) {
   btnModal.addEventListener("click", function () {
