@@ -14,27 +14,11 @@ menuItems.forEach((e) => {
   });
 });
 
-const swiper = new Swiper(".swiper", {
-  loop: true,
-  autoplay: {
-    delay: 3000,
-  },
+// const btnModal = document.querySelector(".SBGpbCiEXANAIWd");
+// const modal = document.querySelector(".bmIsSJcxygEmByk ");
 
-  navigation: {
-    nextEl: ".swiper-button-next__custom",
-    prevEl: ".swiper-button-prev__custom",
-  },
-
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
-
-const btnModal = document.querySelector(".SBGpbCiEXANAIWd");
-const modal = document.querySelector(".bmIsSJcxygEmByk ");
-
-if (modal !== null) {
-  btnModal.addEventListener("click", function () {
-    modal.classList.add("hidden");
-  });
-}
+// if (modal !== null) {
+//   btnModal.addEventListener("click", function () {
+//     modal.classList.add("hidden");
+//   });
+// }
