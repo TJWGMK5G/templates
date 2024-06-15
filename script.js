@@ -61,3 +61,12 @@ if (dataCard !== null) {
     return new Date(item).toLocaleDateString();
   }
 }
+
+const btnModal = document.querySelector(".modal__btn");
+const modal = document.querySelector(".modal ");
+
+if (modal !== null) {
+  btnModal.addEventListener("click", function () {
+    modal.classList.add("hidden");
+  });
+}
