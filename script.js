@@ -42,8 +42,10 @@ const dataCard4 = document.querySelector(".correct_data4");
 const dataCard5 = document.querySelector(".correct_data5");
 const dataCard6 = document.querySelector(".correct_data6");
 const dataCard7 = document.querySelector(".correct_data7");
+const dataCard8 = document.querySelector(".correct_data8");
+const dataCard9 = document.querySelector(".correct_data9");
 
-if (dataCard !== null) {
+if (dataCard !== null || dataCard4 !== null) {
   document.addEventListener(
     "DOMContentLoaded",
     function () {
@@ -66,14 +68,40 @@ if (dataCard !== null) {
       let dataTomorow7 = new Date(
         new Date().getTime() + 24 * 60 * 60 * 1000 * 7
       );
+      let dataTomorow8 = new Date(
+        new Date().getTime() + 24 * 60 * 60 * 1000 * 8
+      );
+      let dataTomorow9 = new Date(
+        new Date().getTime() + 24 * 60 * 60 * 1000 * 9
+      );
 
-      dataCard.innerHTML = createDate(dataTomorow);
-      dataCard2.innerHTML = createDate(dataTomorow2);
-      dataCard3.innerHTML = createDate(dataTomorow3);
-      dataCard4.innerHTML = createDate(dataTomorow4);
-      dataCard5.innerHTML = createDate(dataTomorow5);
-      dataCard6.innerHTML = createDate(dataTomorow6);
-      dataCard7.innerHTML = createDate(dataTomorow7);
+      if (dataCard) {
+        dataCard.innerHTML = createDate(dataTomorow);
+      }
+      if (dataCard2) {
+        dataCard2.innerHTML = createDate(dataTomorow2);
+      }
+      if (dataCard3) {
+        dataCard3.innerHTML = createDate(dataTomorow3);
+      }
+      if (dataCard4) {
+        dataCard4.innerHTML = createDate(dataTomorow4);
+      }
+      if (dataCard5) {
+        dataCard5.innerHTML = createDate(dataTomorow5);
+      }
+      if (dataCard6) {
+        dataCard6.innerHTML = createDate(dataTomorow6);
+      }
+      if (dataCard7) {
+        dataCard7.innerHTML = createDate(dataTomorow7);
+      }
+      if (dataCard8) {
+        dataCard8.innerHTML = createDate(dataTomorow8);
+      }
+      if (dataCard9) {
+        dataCard9.innerHTML = createDate(dataTomorow9);
+      }
     },
     false
   );
@@ -82,6 +110,7 @@ if (dataCard !== null) {
   }
 }
 
+// Modal
 const btnModal = document.querySelector(".modal__btn");
 const modal = document.querySelector(".modal ");
 
