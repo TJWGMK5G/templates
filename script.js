@@ -44,6 +44,9 @@ const dataCard6 = document.querySelector(".correct_data6");
 const dataCard7 = document.querySelector(".correct_data7");
 const dataCard8 = document.querySelector(".correct_data8");
 const dataCard9 = document.querySelector(".correct_data9");
+const dataCard10 = document.querySelector(".correct_data10");
+const dataCard11 = document.querySelector(".correct_data11");
+const dataCard12 = document.querySelector(".correct_data12");
 
 if (dataCard !== null || dataCard4 !== null) {
   document.addEventListener(
@@ -74,6 +77,15 @@ if (dataCard !== null || dataCard4 !== null) {
       let dataTomorow9 = new Date(
         new Date().getTime() + 24 * 60 * 60 * 1000 * 9
       );
+      let dataTomorow10 = new Date(
+        new Date().getTime() + 24 * 60 * 60 * 1000 * 10
+      );
+      let dataTomorow11 = new Date(
+        new Date().getTime() + 24 * 60 * 60 * 1000 * 11
+      );
+      let dataTomorow12 = new Date(
+        new Date().getTime() + 24 * 60 * 60 * 1000 * 12
+      );
 
       if (dataCard) {
         dataCard.innerHTML = createDate(dataTomorow);
@@ -101,6 +113,15 @@ if (dataCard !== null || dataCard4 !== null) {
       }
       if (dataCard9) {
         dataCard9.innerHTML = createDate(dataTomorow9);
+      }
+      if (dataCard10) {
+        dataCard10.innerHTML = createDate(dataTomorow10);
+      }
+      if (dataCard11) {
+        dataCard11.innerHTML = createDate(dataTomorow11);
+      }
+      if (dataCard12) {
+        dataCard12.innerHTML = createDate(dataTomorow12);
       }
     },
     false
