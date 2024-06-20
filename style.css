@@ -1261,6 +1261,9 @@ li {
   align-items: center;
   justify-content: center;
   text-align: center;
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
 }
 .coockie-wrap-buttons__accept {
   cursor: pointer;
@@ -2825,10 +2828,11 @@ a {
 .CLEcFQmCKuRnzpk {
   border-top: 1px solid var(--color--light-0-6);
   border-bottom: 1px solid var(--color--light-0-6);
-  width: 100vw;
+  width: 100%;
   padding-top: 72px;
   padding-bottom: 72px;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .tJLSJttmdkyRWSG {
@@ -2842,9 +2846,11 @@ a {
 .nxCbVswAKdiQMDW {
   grid-column-gap: 40px;
   flex-direction: row;
-  flex: none;
+  flex: auto;
   align-items: center;
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .ubxBMAgKrXmiCMs {
@@ -3764,4 +3770,19 @@ a {
     height: 46px;
     padding: 0;
   }
+}
+
+.order-btn a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  transition: 0.3s ease;
+}
+
+.order-btn a:hover {
+  background-color: #fff;
+  color: #000;
 }
