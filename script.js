@@ -2,6 +2,7 @@ let swiperProverka = document.querySelector(".swiper");
 if (swiperProverka) {
   const swiper = new Swiper(".swiper", {
     loop: true,
+    autoHeight: true,
     autoplay: {
       delay: 3000,
     },
