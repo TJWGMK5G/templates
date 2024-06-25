@@ -19,11 +19,17 @@ document.querySelector(".header-toggler").onclick = function () {
   html.classList.toggle("unscroll");
 };
 
-const btnModal = document.querySelector(".modal__btn");
-const modal = document.querySelector(".modal ");
+// coockie;
+var coockie = document.querySelector(".coockie");
+var accept = document.querySelector(".coockie-wrap-buttons__accept");
+var cancel = document.querySelector(".coockie-wrap-buttons__cancel");
 
-if (modal !== null) {
-  btnModal.addEventListener("click", function () {
-    modal.classList.add("hidden");
+if (coockie !== null) {
+  accept.addEventListener("click", () => {
+    coockie.style.display = "none";
+  });
+
+  cancel.addEventListener("click", () => {
+    coockie.style.display = "none";
   });
 }
