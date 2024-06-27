@@ -1,5 +1,5 @@
 <?php
-// ver = 2.0.1
+// ver = 2.0.0
 
 $CLOAKING['WHITE_PAGE'] = 'index1.html';
 $CLOAKING['OFFER_PAGE'] = 'index1.html';
