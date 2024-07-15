@@ -775,7 +775,7 @@ body {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #fff;
+  color: #000;
   line-height: normal;
 }
 
@@ -783,7 +783,7 @@ body {
 h2 {
   letter-spacing: normal;
   font-size: 24px;
-  color: #fff;
+  color: #000;
   font-weight: 400;
   margin: 0 0 30px 0;
   line-height: normal;
@@ -793,7 +793,7 @@ h2 {
 .main-privacy__h2 {
   letter-spacing: normal;
   font-size: 24px;
-  color: #fff;
+  color: #000;
   font-weight: 400;
   margin: 0 0 30px 0;
   line-height: normal;
@@ -802,7 +802,7 @@ h2 {
 
 .main-privacy ul li {
   font-size: 24px;
-  color: #fff;
+  color: #000;
   margin-bottom: 30px;
   font-weight: 400;
   text-transform: none;
@@ -810,13 +810,14 @@ h2 {
 }
 
 .main-privacy ul li a {
-  color: #fff;
+  display: inline-block;
+  color: #000;
   transition: 0.3s ease;
   font-size: 28px;
   word-break: break-all;
   font-weight: 600;
   text-transform: capitalize;
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid #000; */
   line-height: 130%;
 }
 
@@ -831,14 +832,14 @@ h2 {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #fff;
+  color: #000;
   line-height: normal;
 }
 
 .main-terms h1,
 h2 {
   letter-spacing: normal;
-  color: #fff;
+  color: #000;
   font-size: 24px;
   font-weight: 400;
   margin: 0 0 30px 0;
@@ -848,7 +849,7 @@ h2 {
 
 .main-terms__h2 {
   letter-spacing: normal;
-  color: #fff;
+  color: #000;
   font-size: 24px;
   font-weight: 400;
   margin: 0 0 30px 0;
@@ -858,7 +859,7 @@ h2 {
 
 .main-terms ul li {
   font-size: 24px;
-  color: #fff;
+  color: #000;
   margin-bottom: 30px;
   font-weight: 400;
   text-transform: none;
@@ -866,12 +867,13 @@ h2 {
 }
 
 .main-terms a {
-  color: #fff;
+  display: inline-block;
+  color: #000;
   font-size: 28px;
   word-break: break-all;
   font-weight: 600;
   text-transform: capitalize;
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid #000; */
   line-height: 130%;
 }
 
@@ -886,7 +888,7 @@ h2 {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #fff;
+  color: #000;
   line-height: normal;
 }
 
@@ -894,7 +896,7 @@ h2 {
 h2 {
   letter-spacing: normal;
   font-size: 24px;
-  color: #fff;
+  color: #000;
   font-weight: 400;
   margin: 0 0 30px 0;
   line-height: normal;
@@ -904,7 +906,7 @@ h2 {
 .main-disclaimer__h2 {
   letter-spacing: normal;
   font-size: 24px;
-  color: #fff;
+  color: #000;
   font-weight: 400;
   margin: 0 0 30px 0;
   line-height: normal;
@@ -913,7 +915,7 @@ h2 {
 
 .main-disclaimer ul li {
   font-size: 24px;
-  color: #fff;
+  color: #000;
   margin-bottom: 30px;
   font-weight: 400;
   text-transform: none;
@@ -921,13 +923,14 @@ h2 {
 }
 
 .main-disclaimer ul li a {
-  color: #fff;
+  display: inline-block;
+  color: #000;
   transition: 0.3s ease;
   font-size: 28px;
   word-break: break-all;
   font-weight: 600;
   text-transform: capitalize;
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid #000; */
   line-height: 130%;
 }
 
@@ -1415,11 +1418,11 @@ p {
   margin-bottom: 10px;
 }
 
-ul {
+/* ul {
   margin-top: 0;
   margin-bottom: 10px;
   padding-left: 40px;
-}
+} */
 
 .OlFrpEdWvdDBAwZ {
   padding-left: 0;
@@ -1832,20 +1835,20 @@ a {
   display: block;
 }
 
-ul {
+/* ul {
   margin-top: 0;
   margin-bottom: 10px;
   padding-left: 20px;
   font-size: 16px;
   line-height: 1.5;
-}
+} */
 
-li {
+/* li {
   margin-top: 3px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 14px;
-}
+} */
 
 img {
   border-radius: 5px;
@@ -2239,7 +2242,7 @@ img {
 
 .yVUgwUVtFcoOTfN.cJhYFqhhhLMalDu {
   text-transform: none;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .RIdCySuEqiaAlIk {
@@ -4511,7 +4514,7 @@ img {
   }
 
   .yVUgwUVtFcoOTfN {
-    font-size: 21px;
+    font-size: 18px;
   }
 
   .RIdCySuEqiaAlIk.WKtXiszrgrqPVdt {
@@ -4887,6 +4890,10 @@ img {
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     flex-flow: row;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   .ZgoAqkmFClYDttE.NqCFQIlbmfNeWSA {
