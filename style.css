@@ -3194,6 +3194,11 @@ img {
   width: 100%;
   padding-bottom: 20px;
   position: relative;
+  /* 
+  @media (max-width: 768px) {
+    width: 768px;
+    overflow-y: scroll;
+  } */
 }
 
 .DVoUcSGntWEoloB {
@@ -3208,8 +3213,14 @@ img {
   width: 100%;
   display: grid;
   position: -webkit-sticky;
-  position: sticky;
+  position: static;
   top: 68px;
+  @media (max-width: 768px) {
+    max-width: 768px;
+    overflow: scroll;
+    flex-wrap: nowrap;
+    gap: 50px;
+  }
 }
 
 .DtyBShCximNjXvM {
@@ -3224,6 +3235,12 @@ img {
   grid-template-rows: auto;
   grid-template-columns: 1.75fr 1fr 1fr 1fr;
   width: 100%;
+  @media (max-width: 768px) {
+    max-width: 768px;
+    overflow: scroll;
+    flex-wrap: nowrap;
+    gap: 50px;
+  }
 }
 
 .gEBearKKNvkWXoN {
@@ -3239,12 +3256,18 @@ img {
   align-items: center;
   padding: 30px;
   display: flex;
+  @media (max-width: 768px) {
+    white-space: nowrap;
+  }
 }
 
 .XhJKeAdVnStziiU {
   align-items: center;
   padding: 15px 20px;
   display: flex;
+  @media (max-width: 768px) {
+    white-space: nowrap;
+  }
 }
 
 .xRVILmEdBlzLSee {
@@ -3254,9 +3277,9 @@ img {
   width: 100%;
   padding: 15px 20px;
   display: flex;
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     display: none;
-  }
+  } */
 }
 
 .EYLLosxnOmtLGZe {
@@ -3269,6 +3292,12 @@ img {
   align-items: stretch;
   width: 100%;
   display: flex;
+  /* @media (max-width: 768px) {
+    max-width: 768px;
+    overflow: scroll;
+    flex-wrap: nowrap;
+    gap: 50px;
+  } */
 }
 
 .uekoIkPpQgJnAhu {
@@ -4694,13 +4723,13 @@ img {
     padding: 20px;
   }
 
-  .DVoUcSGntWEoloB {
-    grid-template-columns: 1fr 1fr 1fr;
-    display: none;
+  /* .DVoUcSGntWEoloB {
+     grid-template-columns: 1fr 1fr 1fr; 
+    display: none; 
   }
 
   .DtyBShCximNjXvM {
-    display: none;
+    display: none; 
   }
 
   .rvKDeyrpHaOYvwM {
@@ -4710,8 +4739,8 @@ img {
     grid-template-rows: auto;
     grid-template-columns: 1fr;
     grid-auto-columns: 1fr;
-    grid-auto-flow: row dense;
-  }
+    grid-auto-flow: row dense; 
+  }  */
 
   .gEBearKKNvkWXoN {
     padding-left: 10px;
@@ -4724,12 +4753,12 @@ img {
     padding: 10px;
   }
 
-  .XhJKeAdVnStziiU {
+  /* .XhJKeAdVnStziiU {
     text-align: left;
     flex-wrap: wrap;
     flex: none;
     padding: 15px 10px 0;
-  }
+  } */
 
   .xRVILmEdBlzLSee {
     padding: 10px;
@@ -5112,10 +5141,10 @@ img {
     padding: 20px;
   }
 
-  .DVoUcSGntWEoloB {
+  /* .DVoUcSGntWEoloB {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-  }
+  } */
 
   .trpyohaePJTlBsg {
     padding-bottom: 20px;
