@@ -1,18 +1,3 @@
-// coockie;
-var coockie = document.querySelector(".coockie");
-var accept = document.querySelector(".coockie-wrap-buttons__accept");
-var cancel = document.querySelector(".coockie-wrap-buttons__cancel");
-
-if (coockie !== null) {
-  accept.addEventListener("click", () => {
-    coockie.style.display = "none";
-  });
-
-  cancel.addEventListener("click", () => {
-    coockie.style.display = "none";
-  });
-}
-
 const toggler = document.querySelector(".header-toggler");
 const menu = document.querySelector(".header-menu");
 const menuItems = document.querySelectorAll(".header-menu__item");
@@ -34,11 +19,26 @@ menuItems.forEach((e) => {
 //   html.classList.toggle("unscroll");
 // };
 
-const btnModal = document.querySelector(".modal__btn");
-const modal = document.querySelector(".modal ");
+// const btnModal = document.querySelector(".modal__btn");
+// const modal = document.querySelector(".modal ");
 
-if (modal !== null) {
-  btnModal.addEventListener("click", function () {
-    modal.classList.add("hidden");
-  });
-}
+// if (modal !== null) {
+//   btnModal.addEventListener("click", function () {
+//     modal.classList.add("hidden");
+//   });
+// }
+
+// // coockie;
+// var coockie = document.querySelector(".coockie");
+// var accept = document.querySelector(".coockie-wrap-buttons__accept");
+// var cancel = document.querySelector(".coockie-wrap-buttons__cancel");
+
+// if (coockie !== null) {
+//   accept.addEventListener("click", () => {
+//     coockie.style.display = "none";
+//   });
+
+//   cancel.addEventListener("click", () => {
+//     coockie.style.display = "none";
+//   });
+// }
