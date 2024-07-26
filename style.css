@@ -231,6 +231,7 @@ body {
   gap: 10px;
   @media (max-width: 375px) {
     padding: 15px 0px;
+    gap: 5;
   }
 }
 
@@ -1357,14 +1358,10 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  /* @media (max-width: 500px) {
-    flex-direction: column;
-  } */
+  @media (max-width: 330px) {
+    gap: 0;
+  }
 }
-
-/* .header-info a:hover {
-  color: #000;
-} */
 
 .header-info__log {
   border: 1px solid #d30303;
@@ -1382,7 +1379,7 @@ button:hover {
   @media (max-width: 550px) {
     padding: 8px 15px;
     font-size: 14px;
-    width: 80px;
+    width: 100%;
   }
 }
 
