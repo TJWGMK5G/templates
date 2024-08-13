@@ -1,9 +1,11 @@
 <?php
-// ver = 2.0.0
+// ver = 2.0.2
 
 $CLOAKING['WHITE_PAGE'] = 'index1.html';
 $CLOAKING['OFFER_PAGE'] = 'index1.html';
 
+$CLOAKING['ENABLE_LOG'] = 1; //1 включить сбор лого, 0 выключить сбор логов
+//Логи можно посмотреть по ссылке - ИМЯ ДОМЕНА.COM/logs/logfile.txt
 
 //--------------------------------------------------------------------------------------//
 renameIndexHtml(); // Кастомная функция для быстрого переименования файлов и ссылок
@@ -40,7 +42,11 @@ function current_protocol() {
     return $current_url;
 }
 
-
+//Сбор логов
+if($CLOAKING['ENABLE_LOG'] === 1){
+	// Записываем лог
+	log_message(get_info_logs());
+}
 
 if (empty($CLOAKING['banReason']) && !empty($CLOAKING['STATUS']) && !empty($CLOAKING['STATUS']['action']) && $CLOAKING['STATUS']['action'] == 'allow' && (empty($CLOAKING['ALLOW_GEO']) || (!empty($CLOAKING['STATUS']['geo']) && !empty($CLOAKING['ALLOW_GEO']) && stristr($CLOAKING['ALLOW_GEO'],$CLOAKING['STATUS']['geo'])))) {
     cloakedOfferPage($CLOAKING['OFFER_PAGE'],$CLOAKING['OFFER_METHOD'],$CLOAKING['UTM'],$CLOAKING['STATUS']['geo']);
@@ -139,7 +145,7 @@ function renameIndexHtml(){
 			$sitemapArray .= '
 			<url>';
 				$sitemapArray .= '
-				<loc>https://' . current_url() . '/' . $file_path . '/</loc>';
+				<loc>https://' . current_url() . '/' . $file_path . '</loc>';
 				$sitemapArray .= '
 				<lastmod>' . date("Y-m-d") . '</lastmod>';
 				$sitemapArray .= '
@@ -149,10 +155,6 @@ function renameIndexHtml(){
 			$sitemapArray .= '
 			</url>';
 		}
-
-
-
-
 
 
 			$file_content = file_get_contents($file_path);
@@ -231,6 +233,60 @@ function MyIp(){
 						color: #ffc400;
 					}
 					</style>';
+}
+
+
+
+function log_message($message, $log_dir = 'logs/', $log_file = 'logfile.txt', $max_lines = 4000, $max_files = 3) {
+    // Создаем директорию для логов, если она не существует
+    if (!is_dir($log_dir)) {
+        mkdir($log_dir, 0777, true);
+    }
+
+    $file_path = $log_dir . $log_file;
+
+    // Проверяем количество строк в текущем файле
+    if (file_exists($file_path)) {
+        $line_count = count(file($file_path));
+        if ($line_count >= $max_lines) {
+            // Удаляем самый старый файл
+            $oldest_file = $log_dir . $log_file . '.' . $max_files;
+            if (file_exists($oldest_file)) {
+                unlink($oldest_file);
+            }
+            // Переименовываем существующие файлы, сдвигая их на одну позицию
+            for ($i = $max_files - 1; $i > 0; $i--) {
+                $old_file = $log_dir . $log_file . '.' . $i;
+                $new_file = $log_dir . $log_file . '.' . ($i + 1);
+                if (file_exists($old_file)) {
+                    rename($old_file, $new_file);
+                }
+            }
+            // Переименовываем текущий файл
+            rename($file_path, $log_dir . $log_file . '.1');
+        }
+    }
+    
+    // Записываем сообщение в лог
+    // file_put_contents($file_path, $message . PHP_EOL, FILE_APPEND);
+	logGetRequest($message, $file_path);
+}
+
+//Функция для сбора нужных логов
+function get_info_logs() {
+    $ADD_LOG = [
+        'HTTP_X_REAL_IP' => $_SERVER['HTTP_X_REAL_IP'] ?? '',
+        'HTTP_X_FORWARDED_FOR' => $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '',
+        'HTTP_CF_CONNECTING_IP' => $_SERVER['HTTP_CF_CONNECTING_IP'] ?? '',
+        'REQUEST_URI' => $_SERVER['REQUEST_URI'] ?? ''
+    ];
+    return $_GET + $ADD_LOG;
+}
+
+// Функция для логирования данных в файл
+function logGetRequest($log, $logFile = "logfile.txt") {
+    $logEntry = "\n" . date("Y-m-d H:i:s") . " - " . print_r($log, true) . "\n";
+    file_put_contents($logFile, $logEntry, FILE_APPEND);
 }
 //Кастомные функции от Михаила//
 ?>
