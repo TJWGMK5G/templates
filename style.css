@@ -985,6 +985,11 @@ h2 {
   right: 20px;
   bottom: 20px;
   margin-bottom: 20px;
+  gap: 10px;
+  @media (max-width: 550px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .ban-header {
@@ -997,9 +1002,10 @@ h2 {
 .ban img {
   position: relative;
   z-index: 999;
-  width: 60px;
+  width: 250px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: 0;
+  background: #ffffff75;
 }
 
 .pay {
@@ -2137,8 +2143,6 @@ a:hover {
 img {
   display: inline-block;
   max-width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .RrVAKnOoHVRowYQ {
@@ -2530,7 +2534,7 @@ img {
   @media (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 550px) {
+  @media (max-width: 700px) {
     grid-template-columns: 1fr;
   }
 }
@@ -2596,7 +2600,7 @@ img {
 .ETbJoLdDIfEfyQW.omFzOEdSnizVpck {
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
-  color: #ef0c87;
+  color: #fff;
 }
 
 .ETbJoLdDIfEfyQW.omFzOEdSnizVpck:hover {
@@ -2756,7 +2760,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 50%;
+  height: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2765,9 +2769,8 @@ img {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-
   color: #fff;
-  font-size: 17px;
+  font-size: 22px;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
@@ -3198,13 +3201,13 @@ img {
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 65px;
-  height: 65px;
-  margin-top: 15px;
+  width: 50%;
+  height: 50px;
+  /* margin-top: 15px;
   margin-right: 15px;
-  padding-top: 11px;
-  padding-bottom: 10px;
-  border-radius: 50%;
+  padding-top: 11px; */
+  /* padding-bottom: 10px; */
+  border-radius: 0;
   background-color: #ef0c87;
 }
 
@@ -5421,7 +5424,7 @@ img {
 
 @media screen and (max-width: 479px) {
   .RrVAKnOoHVRowYQ {
-    padding-top: 26%;
+    padding-top: 35%;
     /* padding-bottom: 300px; */
   }
 
@@ -5647,5 +5650,11 @@ img {
 
   .uGEvXqClhRsqHLc {
     display: none;
+  }
+}
+
+.apjceAuDvNOwUtp1 {
+  @media (max-width: 768px) {
+    padding-top: 120px;
   }
 }
