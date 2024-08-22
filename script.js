@@ -19,14 +19,14 @@ menuItems.forEach((e) => {
 //   html.classList.toggle("unscroll");
 // };
 
-// const btnModal = document.querySelector(".modal__btn");
-// const modal = document.querySelector(".modal ");
+const btnModal = document.querySelector(".modal__btn");
+const modal = document.querySelector(".modal ");
 
-// if (modal !== null) {
-//   btnModal.addEventListener("click", function () {
-//     modal.classList.add("hidden");
-//   });
-// }
+if (modal !== null) {
+  btnModal.addEventListener("click", function () {
+    modal.classList.add("hidden");
+  });
+}
 
 //  coockie
 var coockie = document.querySelector(".coockie");
