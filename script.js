@@ -50,7 +50,6 @@ const dataCard3 = document.querySelector(".correct_data3");
 const dataCard4 = document.querySelector(".correct_data4");
 const dataCard5 = document.querySelector(".correct_data5");
 const dataCard6 = document.querySelector(".correct_data6");
-const dataCard7 = document.querySelector(".correct_data7");
 
 if (dataCard !== null) {
   document.addEventListener(
@@ -72,9 +71,6 @@ if (dataCard !== null) {
       let dataTomorow6 = new Date(
         new Date().getTime() + 24 * 60 * 60 * 1000 * 6
       );
-      let dataTomorow7 = new Date(
-        new Date().getTime() + 24 * 60 * 60 * 1000 * 7
-      );
 
       dataCard.innerHTML = createDate(dataTomorow);
       dataCard2.innerHTML = createDate(dataTomorow2);
@@ -82,7 +78,6 @@ if (dataCard !== null) {
       dataCard4.innerHTML = createDate(dataTomorow4);
       dataCard5.innerHTML = createDate(dataTomorow5);
       dataCard6.innerHTML = createDate(dataTomorow6);
-      dataCard7.innerHTML = createDate(dataTomorow7);
     },
     false
   );
