@@ -51,9 +51,9 @@ if (dataCard !== null) {
   document.addEventListener(
     "DOMContentLoaded",
     function () {
-      let dataTomorow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+      let dataTomorow = new Date(new Date().getTime() - 24 * 60 * 60 * 1000);
       let dataTomorow2 = new Date(
-        new Date().getTime() + 24 * 60 * 60 * 1000 * 2
+        new Date().getTime() - 24 * 60 * 60 * 1000 * 2
       );
 
       dataCard.innerHTML = createDate(dataTomorow);
