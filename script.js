@@ -76,15 +76,17 @@ let openChat = document.querySelector(".help-picture");
 let closeChat = document.querySelector(".help-text__title-close");
 let blockContent = document.querySelector(".help-text");
 
-openChat.addEventListener("click", function () {
-  blockContent.classList.toggle("visible-block");
-});
+if (blockContent !== null) {
+  openChat.addEventListener("click", function () {
+    blockContent.classList.toggle("visible-block");
+  });
 
-closeChat.addEventListener("click", function () {
-  blockContent.classList.remove("visible-block");
-  blockContent.classList.remove("hidden-block");
-});
+  closeChat.addEventListener("click", function () {
+    blockContent.classList.remove("visible-block");
+    blockContent.classList.remove("hidden-block");
+  });
 
-setTimeout(() => {
-  openChat.classList.add("visible-block");
-}, 2000);
+  setTimeout(() => {
+    openChat.classList.add("visible-block");
+  }, 2000);
+}
