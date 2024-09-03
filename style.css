@@ -167,9 +167,9 @@ html {
 }
 
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: auto;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -180,29 +180,14 @@ body {
   color: #0e1821;
 }
 
-#wrapper {
+.wrapper {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
-  min-width: 100%;
 }
 
-#main {
-  flex: 1 0 auto;
-  -webkit-box-flex: 1;
-}
-
-/* .main {
-  max-width: 1140px;
-  margin: 0 auto;
-} */
-
-#footer {
-  flex: 0 0 auto;
-  -webkit-box-flex: 0;
+.main {
+  flex: 1 1 auto;
 }
 
 .container {
@@ -867,7 +852,7 @@ li {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #000;
+  color: #fff;
   line-height: normal;
   text-transform: capitalize;
 }
@@ -876,7 +861,7 @@ li {
 h2 {
   letter-spacing: normal;
   font-size: 24px;
-  color: #000;
+  color: #fff;
   font-weight: 400;
   margin: 0 0 30px 0;
   line-height: normal;
@@ -886,7 +871,7 @@ h2 {
 .main-privacy__h2 {
   letter-spacing: normal;
   font-size: 24px;
-  color: #000;
+  color: #fff;
   font-weight: 400;
   margin: 0 0 30px 0;
   line-height: normal;
@@ -895,7 +880,7 @@ h2 {
 
 .main-privacy ul li {
   font-size: 24px;
-  color: #000;
+  color: #fff;
   margin-bottom: 30px;
   font-weight: 400;
   text-transform: none;
@@ -904,13 +889,13 @@ h2 {
 
 .main-privacy ul li a {
   display: inline-block;
-  color: #000;
+  color: #fff;
   transition: 0.3s ease;
   font-size: 28px;
   word-break: break-all;
   font-weight: 600;
   text-transform: capitalize;
-  /* border-bottom: 1px solid #000; */
+  /* border-bottom: 1px solid #fff; */
   line-height: 130%;
 }
 
@@ -925,7 +910,7 @@ h2 {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #000;
+  color: #fff;
   line-height: normal;
   text-transform: capitalize;
 }
@@ -933,7 +918,7 @@ h2 {
 .main-terms h1,
 h2 {
   letter-spacing: normal;
-  color: #000;
+  color: #fff;
   font-size: 24px;
   font-weight: 400;
   margin: 0 0 30px 0;
@@ -943,7 +928,7 @@ h2 {
 
 .main-terms__h2 {
   letter-spacing: normal;
-  color: #000;
+  color: #fff;
   font-size: 24px;
   font-weight: 400;
   margin: 0 0 30px 0;
@@ -953,7 +938,7 @@ h2 {
 
 .main-terms ul li {
   font-size: 24px;
-  color: #000;
+  color: #fff;
   margin-bottom: 30px;
   font-weight: 400;
   text-transform: none;
@@ -962,12 +947,12 @@ h2 {
 
 .main-terms a {
   display: inline-block;
-  color: #000;
+  color: #fff;
   font-size: 28px;
   word-break: break-all;
   font-weight: 600;
   text-transform: capitalize;
-  /* border-bottom: 1px solid #000; */
+  /* border-bottom: 1px solid #fff; */
   line-height: 130%;
 }
 
@@ -982,7 +967,7 @@ h2 {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #000;
+  color: #fff;
   line-height: normal;
   text-transform: capitalize;
 }
@@ -991,7 +976,7 @@ h2 {
 h2 {
   letter-spacing: normal;
   font-size: 24px;
-  color: #000;
+  color: #fff;
   font-weight: 400;
   margin: 0 0 30px 0;
   line-height: normal;
@@ -1001,7 +986,7 @@ h2 {
 .main-disclaimer__h2 {
   letter-spacing: normal;
   font-size: 24px;
-  color: #000;
+  color: #fff;
   font-weight: 400;
   margin: 0 0 30px 0;
   line-height: normal;
@@ -1010,7 +995,7 @@ h2 {
 
 .main-disclaimer ul li {
   font-size: 24px;
-  color: #000;
+  color: #fff;
   margin-bottom: 30px;
   font-weight: 400;
   text-transform: none;
@@ -1019,13 +1004,13 @@ h2 {
 
 .main-disclaimer ul li a {
   display: inline-block;
-  color: #000;
+  color: #fff;
   transition: 0.3s ease;
   font-size: 28px;
   word-break: break-all;
   font-weight: 600;
   text-transform: capitalize;
-  /* border-bottom: 1px solid #000; */
+  /* border-bottom: 1px solid #fff; */
   line-height: 130%;
 }
 
@@ -1097,7 +1082,7 @@ h2 {
   text-align: center;
   margin-bottom: 20px;
   font-weight: 600;
-  color: #000;
+  color: #fff;
 }
 
 .head-info {
@@ -1758,6 +1743,7 @@ button:hover {
   }
 }
 .main-swip-content__title {
+  color: #0e1821;
   text-align: center;
   font-size: 45px;
   margin-bottom: 20px;
