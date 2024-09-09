@@ -14,10 +14,10 @@ menuItems.forEach((e) => {
   });
 });
 
-// let html = document.querySelector("html");
-// document.querySelector(".header-toggler").onclick = function () {
-//   html.classList.toggle("unscroll");
-// };
+let html = document.querySelector("html");
+document.querySelector(".header-toggler").onclick = function () {
+  html.classList.toggle("unscroll");
+};
 
 const btnModal = document.querySelector(".modal__btn");
 const modal = document.querySelector(".modal ");
