@@ -1,10 +1,11 @@
 const toggler = document.querySelector(".header-toggler");
 const menu = document.querySelector(".header-menu");
 const menuItems = document.querySelectorAll(".header-menu__item");
+const menuActive = document.querySelector(".dKJTFCSEWAbuQZw");
 
 toggler.addEventListener("click", () => {
-  menu.classList.toggle("header-menu--open");
-  toggler.classList.toggle("header-toggler--open");
+  menuActive.classList.toggle("visible-block");
+  // toggler.classList.toggle("header-toggler--open");
 });
 
 menuItems.forEach((e) => {
@@ -14,10 +15,10 @@ menuItems.forEach((e) => {
   });
 });
 
-let html = document.querySelector("html");
-document.querySelector(".header-toggler").onclick = function () {
-  html.classList.toggle("unscroll");
-};
+// let html = document.querySelector("html");
+// document.querySelector(".header-toggler").onclick = function () {
+//   html.classList.toggle("unscroll");
+// };
 
 const btnModal = document.querySelector(".modal__btn");
 const modal = document.querySelector(".modal ");
@@ -48,19 +49,21 @@ if (blockContent !== null) {
   }, 2000);
 }
 
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  // direction: "vertical",
-  // loop: true,
+{
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    // direction: "vertical",
+    // loop: true,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
+    // And if we need scrollbar
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  });
+}
