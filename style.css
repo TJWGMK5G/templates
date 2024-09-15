@@ -1705,8 +1705,12 @@ button:hover {
   color: #000;
 }
 .help-picture {
+  z-index: 999999;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
   display: none;
-  padding: 10px;
   border-radius: 50%;
   background-color: #ef0c87;
   cursor: pointer;
@@ -1717,16 +1721,9 @@ button:hover {
   height: 50px;
   object-fit: cover;
   border-radius: 0;
+  padding: 10px;
   /* border: 1px solid #000;
   border-radius: 50%; */
-}
-
-.visible-block {
-  display: flex;
-}
-
-.hidden-block {
-  display: none;
 }
 
 .header-top {
@@ -1739,6 +1736,121 @@ button:hover {
 .header-top__text {
   padding: 10px 0px;
   color: #fff;
+}
+
+/* CHAT Assist */
+.chat-container {
+  z-index: 9999;
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  @media (max-width: 425px) {
+    width: 250px;
+  }
+}
+
+.chat-window {
+  position: relative;
+  background: url(img/back-help.svg);
+  padding: 15px;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: unset;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-window img {
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.chat-message {
+  word-break: break-all;
+  text-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+.chat-message:nth-child(odd) {
+  /* text-align: right; */
+  font-weight: 500;
+  line-height: 120%;
+  padding-left: 50px;
+  @media (max-width: 425px) {
+    padding-left: 30px;
+  }
+}
+
+.chat-message:nth-child(even) {
+  text-align: left;
+  margin-bottom: 5px;
+  padding-right: 50px;
+  @media (max-width: 425px) {
+    padding-right: 30px;
+  }
+}
+
+.chat-input-container {
+  display: flex;
+  padding: 10px;
+  @media (max-width: 425px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+#chatInput {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+#chatInput:focus-visible {
+  border: 1px solid #000;
+}
+
+#sendButton {
+  padding: 8px 16px;
+  margin-left: 10px;
+  border: none;
+  background-color: #000;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  @media (max-width: 425px) {
+    margin: 0;
+  }
+}
+
+#sendButton:hover {
+  background-color: #ef0c87;
+}
+/*  */
+
+.visible-block {
+  display: flex;
+}
+
+.hidden-block {
+  display: none;
 }
 
 html {
