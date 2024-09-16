@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
-    $tel = $_POST["tel"];
+    // $tel = $_POST["tel"];
 
   
 	$to = "support@" . $_SERVER['HTTP_HOST'];
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $body = "Name: $name\n";
     $body .= "Email: $email\n";
-    $body .= "Tel:\n$tel";
+    // $body .= "Tel:\n$tel";
 
 
     $headers = "From: $to \r\n";
