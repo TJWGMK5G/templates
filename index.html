@@ -1,247 +1,979 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs" data-lang-system="cs">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Tag Manager -->
+    <!-- <script type="text/javascript" async="" src="destination"></script> -->
+    <script type="text/javascript" async="" src="js/rc.js"></script>
+
+    <script defer="" async="" src="js/piwik.js"></script>
+    <script
+      type="text/javascript"
+      async=""
+      charset="utf-8"
+      src="js/recaptcha__cs.js"
+      crossorigin="anonymous"
+    ></script>
+    <script async="" src="js/gtm.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+        wait_for_update: 1000,
+      });
+      window.dataLayer.push({
+        event: "dl.ready",
+        gaid: "",
+        ga4id: "",
+        matomoid: "7734",
+        consent_state: {
+          functionality_storage: "granted",
+          ad_storage: "denied",
+          analytics_storage: "denied",
+          personalization_storage: "denied",
+        },
+      });
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P43M3Q6");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!--[if IE
+      ]><meta http-equiv="X-UA-Compatible" content="IE=EDGE"
+    /><![endif]-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=yes"
+    />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Antee s.r.o." />
     <meta
       name="description"
-      content="Explore Live Casino and a wide range of slots at HEYBAJI. Sign up for exclusive bonuses and enjoy live dealer games from the comfort of your home."
+      content="Nové casino na Náměstí Republiky v Plzni. BIG WIN je vaše velká výhra!"
     />
-    <title>HEYBAJI Online Casino: Entertainment Without Limits</title>
-    <link rel="stylesheet" href="style.css" />
-    <link type="image/x-icon" href="img/favicon/favicon.ico" rel="icon" />
-    <link rel="canonical" href="https://23bet.biz" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=yes"
+    />
+    <title>Casino BIG WIN Plzeň</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/jquery-ui-1.8.20.custom.css"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="style.php" /> -->
+    <link rel="stylesheet" type="text/css" href="css/libs.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/genericons.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/css2.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery-migrate-3.1.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/ipo.min.js"></script>
+    <script src="js/cs.js"></script>
+
+    <script src="js/api.js"></script>
+
+    <link
+      href="/akce?action=atom"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Akce"
+    />
+    <link
+      href="/hlavni-stranka-animace?action=atom"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Hlavní stránka - animace"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="css/css2.css" rel="stylesheet" />
+    <link href="images/index10.jpg" rel="icon" type="image/png" />
+    <link rel="shortcut icon" href="images/index10.jpg" />
+    <script>
+      //posun h1
+      ipo.api.live("h1", function (el) {
+        if (
+          !document.getElementById("page9982163") &&
+          $("#system-menu").length != 1 &&
+          !$(".error").length
+        ) {
+          if (window.innerWidth >= 1025) {
+            $(el).wrap("<div class='wrapper-h1 layout-container' />");
+            $(".wrapper-h1").insertBefore("#iponavigation p");
+          }
+        }
+      });
+      //převod úvodní fotky na drobečkovou navigaci
+      ipo.api.live("body", function (el) {
+        if (!document.getElementById("page9982163") && !$(".error").length) {
+          if ($(el).find(".subpage-background").length) {
+            var image_back = $(el)
+              .find(".subpage-background .boxImage > div")
+              .attr("style");
+            $(el).find("#iponavigation").attr("style", image_back);
+          }
+        }
+      });
+      ipo.api.live("body", function (el) {
+        //zjištění zda se jedná o stránku 404
+        if ($(el).find(".ipopagetext .error").length) {
+          $(el).addClass("error-page");
+        }
+        //přesun patičky
+        $(el).find("#ipocopyright").insertAfter("#ipocontainer");
+      });
+    </script>
+
+    <!-- <script src="file.php"></script> -->
+    <!-- <link
+      rel="preload"
+      href="/file.php?nid=21053&amp;oid=10008408"
+      as="style"
+    /> -->
+    <!-- <link rel="stylesheet" href="file_1.php" /> -->
+    <script>
+      ipo.api.live(".header-animace", function (el) {
+        $(el).owlCarousel({
+          animateIn: "fadeIn",
+          animateOut: "fadeOut",
+          loop: true,
+          mouseDrag: true,
+          autoWidth: false,
+          autoplayHoverPause: true,
+          lazyLoad: true,
+          margin: 0,
+          autoplay: true,
+          items: 1,
+          slideBy: 1,
+          autoplayTimeout: 5000,
+          autoplaySpeed: 2500,
+          dots: true,
+          nav: false,
+          navText: false,
+        });
+      });
+      ipo.api.live("body", function (el) {
+        //scroll arrow
+        $(document).on("click", 'a[href^="#sluzby"]', function (event) {
+          event.preventDefault();
+          $("html, body").animate(
+            {
+              scrollTop: $($.attr(this, "href")).offset().top,
+            },
+            1000
+          );
+        });
+      });
+      ipo.api.live(".carousel__wrapper", function (el) {
+        $(el).owlCarousel({
+          animateIn: "fadeIn",
+          animateOut: "fadeOut",
+          loop: true,
+          mouseDrag: true,
+          autoWidth: false,
+          autoplayHoverPause: true,
+          lazyLoad: true,
+          margin: 0,
+          autoplay: true,
+          items: 1,
+          slideBy: 1,
+          autoplayTimeout: 5000,
+          autoplaySpeed: 2500,
+          dots: true,
+          nav: false,
+          navText: false,
+          responsive: {
+            0: {
+              items: 1,
+              dots: false,
+              nav: false,
+            },
+            425: {
+              items: 2,
+              dots: false,
+              nav: false,
+            },
+            550: {
+              items: 3,
+              dots: false,
+              nav: false,
+            },
+            1025: {
+              items: 4,
+            },
+          },
+        });
+      });
+      //vstup nad 18let
+      ipo.api.live("body", function (el) {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth();
+        var day = date.getDate();
+        var expiration = new Date(year, month + 1, day);
+        $(".block-age .action-button").click(function (e) {
+          e.preventDefault();
+          document.cookie = `exit=confirmed; expires=${expiration}`;
+          $(el).find(".block-age").addClass("cookies-hidden");
+          $(el).find(".block-age").removeClass("cookies-display");
+        });
+        if (
+          document.cookie.includes("exit=confirmed") &&
+          !$(el).find(".cookies-hidden").hasClass("cookies-hidden")
+        ) {
+          document.cookie = `exit=confirmed; expires=${expiration}`;
+          $(el).find(".block-age").addClass("cookies-hidden");
+          $(el).find(".block-age").removeClass("cookies-display");
+        } else {
+          $(el).find(".block-age").removeClass("cookies-hidden");
+          $(el).find(".block-age").addClass("cookies-display");
+        }
+      });
+    </script>
   </head>
-  <body>
-    <header class="header" id="header">
-      <div class="container">
-        <div class="header__wrapper">
-          <div class="header-toggler">
-            <div class="header-toggler__icon">
-              <div class="header-toggler__line header-toggler__line-top"></div>
-              <div
-                class="header-toggler__line header-toggler__line-middle"
-              ></div>
-              <div
-                class="header-toggler__line header-toggler__line-bottom"
-              ></div>
+
+  <body
+    id="page9982163"
+    class="subpage9982163"
+    data-nid="21053"
+    data-lid="CZ"
+    data-oid="9982163"
+    data-layout-pagewidth="1024"
+    data-slideshow-timer="3"
+    data-layout="responsive"
+    data-viewport_width_responsive="1024"
+  >
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P43M3Q6"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      >
+      </iframe>
+    </noscript>
+
+    <div id="ipocontainer">
+      <div class="menu-toggler">
+        <span>Menu</span>
+        <span class="genericon genericon-menu"></span>
+      </div>
+
+      <span id="back-to-top">
+        <i class="fa fa-angle-up"></i>
+      </span>
+
+      <div id="ipoheader">
+        <div class="header-inner__container">
+          <div class="row header-inner flex-container layout-container">
+            <div class="logo">
+              <a title="BIG WIN a.s." href="index.html" class="header-logo">
+                <img
+                  src="images/logo-min.png"
+                  width="300"
+                  height="98"
+                  alt="BIG WIN a.s."
+                />
+              </a>
+            </div>
+            <div class="header-socials flex-container">
+              <a
+                class="tooltip tooltipstered"
+                href="kde-nas-najdete/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="29.3"
+                  height="29.3"
+                  viewBox="0 0 29.3 29.3"
+                >
+                  <g data-name="Group 803">
+                    <path
+                      data-name="Path 256"
+                      d="M14.6 0h-6a10.8 10.8 0 0 0-3.5.8 7.2 7.2 0 0 0-2.6 1.7A7.2 7.2 0 0 0 .8 5 10.7 10.7 0 0 0 0 8.6l-.1 6v6a10.8 10.8 0 0 0 .8 3.6A7.5 7.5 0 0 0 5 28.5a10.8 10.8 0 0 0 3.5.7h12a10.8 10.8 0 0 0 3.6-.7 7.5 7.5 0 0 0 4.3-4.3 10.8 10.8 0 0 0 .7-3.5V8.6a10.8 10.8 0 0 0-.7-3.5 7.2 7.2 0 0 0-1.7-2.6A7.2 7.2 0 0 0 24.2.8a10.8 10.8 0 0 0-3.5-.7l-6-.1Zm-1.3 2.6h1.3l6 .1a8.1 8.1 0 0 1 2.7.5A4.5 4.5 0 0 1 25 4.3 4.5 4.5 0 0 1 26 6a8 8 0 0 1 .6 2.7v11.9a8.1 8.1 0 0 1-.5 2.7 4.9 4.9 0 0 1-2.8 2.8 8 8 0 0 1-2.7.5H8.7A8 8 0 0 1 6 26 4.5 4.5 0 0 1 4.3 25a4.5 4.5 0 0 1-1-1.7 8 8 0 0 1-.6-2.7V8.7A8.1 8.1 0 0 1 3.2 6a4.5 4.5 0 0 1 1.1-1.7 4.5 4.5 0 0 1 1.7-1 8 8 0 0 1 2.7-.6h4.6Zm9.2 2.5a1.8 1.8 0 1 0 1.7 1.7 1.8 1.8 0 0 0-1.7-1.7Zm-7.9 2a7.5 7.5 0 1 0 7.6 7.5 7.5 7.5 0 0 0-7.6-7.5Zm0 2.7a4.9 4.9 0 1 1-4.8 4.8 4.9 4.9 0 0 1 4.8-4.8Z"
+                      fill="#e5e0bd"
+                    ></path>
+                  </g>
+                </svg>
+                <span>Instagram</span>
+              </a>
+              <a
+                class="tooltip tooltipstered"
+                href="kde-nas-najdete/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="29.3"
+                  height="29.3"
+                  viewBox="0 0 29.3 29.3"
+                >
+                  <g data-name="Group 804">
+                    <path
+                      data-name="Path 257"
+                      d="M29.3 14.7a14.6 14.6 0 1 0-17 14.6V19H8.6v-4.3h3.8v-3.2c0-3.7 2.1-5.7 5.5-5.7a22.4 22.4 0 0 1 3.3.2v3.7h-1.9A2.1 2.1 0 0 0 17 12v2.7h4l-.6 4.3H17v10.3a14.7 14.7 0 0 0 12.4-14.6Z"
+                      fill="#e5e0bd"
+                    ></path>
+                  </g>
+                </svg>
+                <span>Facebook</span>
+              </a>
             </div>
           </div>
-          <a href="index.html" class="header__logo">
-            <img src="img/logo.png" alt="logo" />
-          </a>
-          <nav class="header-menu">
-            <ul>
-              <li class="header-menu__item">
-                <a href="sport.html" class="header-menu__item-link"
-                  >Sport
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    fill="#fff"
-                  >
-                    <path
-                      d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-              <li class="header-menu__item">
-                <a href="app.html" class="header-menu__item-link"
-                  >App
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    fill="#fff"
-                  >
-                    <path
-                      d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-              <li class="header-menu__item">
-                <a href="login.html" class="header-menu__item-link"
-                  >Login
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    fill="#fff"
-                  >
-                    <path
-                      d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-              <li class="header-menu__item">
-                <a href="casino.html" class="header-menu__item-link"
-                  >Casino
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    fill="#fff"
-                  >
-                    <path
-                      d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header-info">
+        </div>
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/index1.jpg" alt="image" />
+              <div class="swiper-slide-content layout-container">
+                <h2>Nové casino na Náměstí republiky v Plzni</h2>
+                <h3>BIG WIN je vaše velká výhra</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/index2.jpg" alt="image" />
+              <div class="swiper-slide-content layout-container">
+                <h2>Nové casino na Náměstí republiky v Plzni</h2>
+                <h3>BIG WIN je vaše velká výhra</h3>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <a class="scroll-hint animated" title="Posuňte dolů" href="#sluzby"
+          ><span>šipka dolů</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="52.8"
+            height="37.2"
+            viewBox="0 0 52.8 37.2"
+          >
+            <g data-name="Group 628">
+              <g data-name="Group 627">
+                <g
+                  data-name="Group 625"
+                  transform="translate(-973.6 -740.7) translate(78.5)"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                >
+                  <path
+                    data-name="Line 14"
+                    transform="translate(896.5 751.5)"
+                    d="M0 0 25 25"
+                  ></path>
+                  <path
+                    data-name="Line 15"
+                    transform="translate(921.5 751.5)"
+                    d="M25 0 0 25"
+                  ></path>
+                </g>
+              </g>
+              <g
+                data-name="Group 626"
+                transform="translate(-973.6 -740.7) translate(87.7 -9.4)"
+                fill="none"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-width="2"
+              >
+                <path
+                  data-name="Line 14"
+                  transform="translate(896.5 751.5)"
+                  d="M0 0 15.8 15.8"
+                ></path>
+                <path
+                  data-name="Line 15"
+                  transform="translate(912.3 751.5)"
+                  d="M15.8 0 0 15.8"
+                ></path>
+              </g>
+            </g></svg
+        ></a>
+
+        <div class="subpage-background">
+          <div class="boxImage">
+            <div style="background-image: url(image_9.php)">image</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ipotopmenuwrapper">
+        <div id="ipotopmenu">
+          <h4 class="hiddenMenu">Horní menu</h4>
+          <ul class="topmenulevel1">
+            <li class="topmenuitem1 noborder active" id="ipomenu9982163">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="topmenuitem1" id="ipomenu10002137">
+              <a href="../www.casinobigwin.cz/ziva-hra/index.html">Živá hra</a>
+            </li>
+            <li class="topmenuitem1" id="ipomenu10002133">
+              <a href="../www.casinobigwin.cz/casino-big/index.html"
+                >Nabídka VLT</a
+              >
+            </li>
+            <li class="topmenuitem1" id="ipomenu10002136">
+              <a href="../www.casinobigwin.cz/poker/index.html">Poker</a>
+            </li>
+            <li class="topmenuitem1" id="ipomenu10002138">
+              <a href="../www.casinobigwin.cz/akce/index.html">Akce</a>
+            </li>
+            <li class="topmenuitem1" id="ipomenu10002139">
+              <a href="../www.casinobigwin.cz/galerie/index.html">Galerie</a>
+            </li>
+            <li class="topmenuitem1" id="ipomenu10002141">
+              <a href="../www.casinobigwin.cz/kde-nas-najdete/index.html"
+                >Kde nás najdete</a
+              >
+            </li>
+          </ul>
+          <div class="cleartop"></div>
+        </div>
+      </div>
+      <div id="ipomain">
+        <div id="ipomainframe">
+          <div id="ipopage">
+            <div class="ipopagetext">
+              <div class="text view-default content">
+                <div id="snippet--flash"></div>
+
+                <div class="paragraph">
+                  <div class="row widget-aktuality layout-container">
+                    <div class="widget-body">
+                      <a
+                        title="pokerový turnaj"
+                        class="widget-item"
+                        href="akce/index.html"
+                      >
+                        <span
+                          style="background-image: url(images/casino.jpg)"
+                          class="widget-image"
+                          >image</span
+                        >
+                        <span class="widget-date correct_data"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28.7"
+                            height="28.7"
+                            viewBox="0 0 28.7 28.7"
+                          >
+                            <g
+                              data-name="Icon feather-clock"
+                              fill="none"
+                              stroke="#e5e0bd"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="3"
+                            >
+                              <path
+                                data-name="Path 241"
+                                d="M28.7 15.8A12.8 12.8 0 1 1 15.8 3a12.8 12.8 0 0 1 12.9 12.8Z"
+                                transform="translate(-1.5 -1.5)"
+                              ></path>
+                              <path
+                                data-name="Path 242"
+                                d="M18 9v7.7l5.1 2.6"
+                                transform="translate(-1.5 -1.5) translate(-2.2 -.9)"
+                              ></path>
+                            </g></svg
+                          >11.&nbsp;9.&nbsp;2024</span
+                        >
+                        <span class="widget-text">pokerový turnaj</span>
+                        <span class="widget-vice">více informací</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div id="sluzby" class="sluzby__container">
+                    <div class="row sluzby grid-container layout-container">
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="47.9"
+                          height="47.6"
+                          viewBox="0 0 47.9 47.6"
+                        >
+                          <defs>
+                            <path
+                              data-name="Rectangle 169"
+                              fill="#e5e0bd"
+                              d="M0 0H47.9V47.6H0z"
+                            ></path>
+                          </defs>
+                          <g
+                            data-name="Group 820"
+                            clip-path="url(#a)"
+                            fill="#e5e0bd"
+                          >
+                            <path
+                              data-name="Path 504"
+                              d="M1.5 72.8h11.4a1.5 1.5 0 0 0 1.4-1.5V53a1.5 1.5 0 0 0-1.4-1.4H1.5A1.5 1.5 0 0 0 0 52.9v18.4a1.5 1.5 0 0 0 1.5 1.5M3 56.3a.6.6 0 0 1 .6-.6h7a.6.6 0 0 1 .5.6c0 4.3-2.9 8.1-2.9 12.4a.5.5 0 0 1-.4.4H5.6a.5.5 0 0 1-.5-.4c0-5.8 2.3-6.7 2.3-9.6H3.7a.6.6 0 0 1-.6-.6Z"
+                              transform="translate(0 -38.3)"
+                            ></path>
+                            <path
+                              data-name="Path 505"
+                              d="M78.5 72.8a1.5 1.5 0 0 0 1.5-1.5V53a1.5 1.5 0 0 0-1.5-1.4H67a1.5 1.5 0 0 0-1.5 1.4v18.4a1.5 1.5 0 0 0 1.5 1.5Zm-9.8-16.5a.6.6 0 0 1 .6-.6h7a.6.6 0 0 1 .5.6c0 4.3-2.9 8.1-2.9 12.4a.5.5 0 0 1-.4.4h-2.3a.5.5 0 0 1-.5-.4c0-5.8 2.3-6.7 2.3-9.6h-3.7a.6.6 0 0 1-.6-.6Z"
+                              transform="translate(-48.9 -38.3)"
+                            ></path>
+                            <path
+                              data-name="Path 506"
+                              d="M144 51.5h-11.3a1.5 1.5 0 0 0-1.5 1.4v18.4a1.5 1.5 0 0 0 1.5 1.5h11.4a1.5 1.5 0 0 0 1.5-1.5V53a1.5 1.5 0 0 0-1.5-1.4m-4.5 17.2a.5.5 0 0 1-.5.4h-2.3a.5.5 0 0 1-.4-.4c0-5.8 2.3-6.7 2.3-9.6h-3.8a.6.6 0 0 1-.6-.6v-2.2a.6.6 0 0 1 .6-.6h7a.6.6 0 0 1 .6.6c0 4.3-3 8.1-3 12.4"
+                              transform="translate(-97.7 -38.3)"
+                            ></path>
+                            <path
+                              data-name="Path 507"
+                              d="M0 151.2a4.4 4.4 0 0 0 4.3 4.3h39.2a4.4 4.4 0 0 0 4.4-4.3v-6.3H0Z"
+                              transform="translate(0 -108)"
+                            ></path>
+                            <path
+                              data-name="Path 508"
+                              d="M43.5 0H4.3A4.4 4.4 0 0 0 0 4.3v6.3h47.9V4.3A4.4 4.4 0 0 0 43.5 0"
+                            ></path>
+                          </g>
+                        </svg>
+                        <h2>
+                          <a href="casino-big/index.html">80 VLT strojů</a>
+                        </h2>
+                        <p>
+                          Casino BIG WIN nabízí možnost zábavy na více <br />než
+                          80 nejmodernějších video-loterijních
+                          <br />terminálech. Z široké nabídky značek.
+                        </p>
+                        <p>
+                          <a class="action-button" href="casino-big/index.html"
+                            >více informací</a
+                          >
+                        </p>
+                      </div>
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="51.5"
+                          height="47.6"
+                          viewBox="0 0 51.5 47.6"
+                        >
+                          <defs>
+                            <path
+                              data-name="Rectangle 168"
+                              fill="#e5e0bd"
+                              d="M0 0H51.5V47.6H0z"
+                            ></path>
+                          </defs>
+                          <g data-name="Group 818" clip-path="url(#a)">
+                            <path
+                              data-name="Path 503"
+                              d="M51.4 15.7a2 2 0 0 0 0-.2 2 2 0 0 0-.1-.2L43 1a2 2 0 0 0-2.3-1 2 2 0 0 0-.4.3l-5.2 3a1.7 1.7 0 0 0-1 1.6 2.8 2.8 0 0 0 .3 1l-.2.1-.6.3a8 8 0 0 1-1 .3 3.4 3.4 0 0 1-.8.1h-.5l-3.6-.1c-4.4-.2-9.3-.5-13.3 1.1a14.1 14.1 0 0 0-1.5.7l-.3.2-.2.2a27.6 27.6 0 0 0-6.8 5.8 11.7 11.7 0 0 0-.8 1.1 5.4 5.4 0 0 0-.5 1l-.2.6c-1.3 3.6-2.9 8-2.4 12a12.2 12.2 0 0 0-.7 11A12.1 12.1 0 0 0 3.6 44a12.2 12.2 0 0 0 17.2 0 12.2 12.2 0 0 0 2.4-13.7l.4-.2.8-.5c2.3-1.4 4.5-2.7 6-2.8 4.3-.1 5.9-1.9 7.6-3.8l1.3-1.3a9 9 0 0 1 1.6-1.2l1.4-.8.4.6a2 2 0 0 0 1.8 1 2 2 0 0 0 .4-.1 2 2 0 0 0 .4-.2l5.2-3a2 2 0 0 0 1-1.2 2 2 0 0 0 0-1M20.6 39.2a9.2 9.2 0 0 1-.8 1.4 9.4 9.4 0 0 1-1.1 1.3 9.3 9.3 0 0 1-6.6 2.8A9.3 9.3 0 0 1 5.6 42a9.4 9.4 0 0 1-2.2-9.7 9.3 9.3 0 0 1 .9-1.8 9.4 9.4 0 0 1 1.3-1.7 9.3 9.3 0 0 1 5.4-2.6A9.4 9.4 0 0 1 12 26h.4a4 4 0 0 0-.2 1.6v.4l.1.4a6.2 6.2 0 0 0 .8 1.9l.2.3.3.3a5.5 5.5 0 0 0 1 1l.2.2.3.1a4 4 0 0 0 1.3.5 4.2 4.2 0 0 0 1.3 0 8.3 8.3 0 0 0 1.8-.6l1.1-.5a9.4 9.4 0 0 1 0 7.6M14 20.6a6.4 6.4 0 0 1 3.6-2 10.1 10.1 0 0 1 4 .1 2.5 2.5 0 0 1-.1.9 13.3 13.3 0 0 1-1.9 1.3l-2 1.1-2.6 1.6a12.2 12.2 0 0 0-2-.3h-.2l.1-.3a5.8 5.8 0 0 1 .6-1.8 4.5 4.5 0 0 1 .4-.4v-.1l.1-.1Zm7.5-1Zm18-1.8a14.7 14.7 0 0 0-3.7 3.2 10.5 10.5 0 0 1-2.1 1.9 6.5 6.5 0 0 1-3.4 1 9.7 9.7 0 0 0-3.6 1l-3.8 2-.9.6a14.8 14.8 0 0 1-4.7 2.3 1.2 1.2 0 0 1-.3 0 .9.9 0 0 1-.4-.1 1.9 1.9 0 0 1-.4-.4L16 29a3.4 3.4 0 0 1-.5-.9V28a1.5 1.5 0 0 1-.1-.7.5.5 0 0 1 0-.1.4.4 0 0 1 .1-.2 21.4 21.4 0 0 1 3.6-2.2l2.2-1.2a15.9 15.9 0 0 0 2.2-1.6 3.6 3.6 0 0 0 1-2.4 5.7 5.7 0 0 0 0-1 8 8 0 0 0 0-1v-.1l-.1-.2-.1-.6v-.3h-.4l-.5-.2a11.8 11.8 0 0 0-8.7.3 9.4 9.4 0 0 0-1.5.9 10.2 10.2 0 0 0-1.4 1.2 9 9 0 0 0-.6.7v.1l-.2.2a10.4 10.4 0 0 0-1.2 3.1l-.2 1a12.1 12.1 0 0 0-4.1 1.7l-.5.3a35.4 35.4 0 0 1 2.2-7.9c.4-1 2.1-3 4.2-4.6a26 26 0 0 1 2.5-1.7l1.2-.7h.2l.2-.2c3.5-1.4 8-1.1 12-.9l3.8.2h.4a6.3 6.3 0 0 0 1.5-.2 10.7 10.7 0 0 0 1.5-.5 16.2 16.2 0 0 0 1.2-.5l5 8.4-1.5.8Z"
+                              fill="#e5e0bd"
+                            ></path>
+                          </g>
+                        </svg>
+                        <h2><a href="ziva-hra/index.html">Živá hra</a></h2>
+                        <p>
+                          3x Black jack, 3x Ultimate <br />Texas Hold'em , 3x
+                          Evropská ruleta.
+                        </p>
+                        <p>
+                          <a class="action-button" href="ziva-hra/index.html"
+                            >více informací</a
+                          >
+                        </p>
+                      </div>
+                      <div>
+                        <svg
+                          data-name="Group 815"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="38.1"
+                          height="51.8"
+                          viewBox="0 0 38.1 51.8"
+                        >
+                          <defs>
+                            <path
+                              data-name="Rectangle 166"
+                              fill="#e5e0bd"
+                              d="M0 0H38.1V51.8H0z"
+                            ></path>
+                          </defs>
+                          <g data-name="Group 814" clip-path="url(#a)">
+                            <path
+                              data-name="Path 500"
+                              d="M9 51.8H29c2.2 0 2.1-3.6 0-4l-7.4-1.4V32.6l15.8-17.1a1.6 1.6 0 0 0-1-2.8H29l1.6-2c3.2 1.2 6.6-3.6 5-6.2L38 1.3 36.4 0l-2.5 3.2a4 4 0 0 0-4.7 1.5 4 4 0 0 0-.3 4.9l-2.5 3H1.6a1.6 1.6 0 0 0-1.1 2.8l15.8 17.2v13.8L9 47.8c-2 .3-2.1 4 0 4m2.6-33h10.1l2.3-2.9H5.6l2.8 2.9 7.6 8.5Zm12.8 0h5.3l2.9-2.9h-6Z"
+                              fill="#e5e0bd"
+                              fill-rule="evenodd"
+                            ></path>
+                          </g>
+                        </svg>
+                        <h2>
+                          <a href="bar-a-catering/index.html">Bar a Catering</a>
+                        </h2>
+                        <p>
+                          &nbsp;Široká nabídka nápojů na baru a catering
+                          <br />pro hráče je k dispozici nonstop.
+                        </p>
+                        <p>
+                          <a
+                            class="action-button"
+                            href="bar-a-catering/index.html"
+                            >více informací</a
+                          >
+                        </p>
+                      </div>
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="36.4"
+                          height="43.4"
+                          viewBox="0 0 36.4 43.4"
+                        >
+                          <defs>
+                            <path
+                              data-name="Rectangle 167"
+                              fill="#e5e0bd"
+                              d="M0 0H36.4V43.4H0z"
+                            ></path>
+                          </defs>
+                          <g
+                            data-name="Group 816"
+                            clip-path="url(#a)"
+                            fill="#e5e0bd"
+                            fill-rule="evenodd"
+                          >
+                            <path
+                              data-name="Path 501"
+                              d="M49.2 95.4a3.8 3.8 0 0 0-3.6 2.3 3.8 3.8 0 0 0-3.7-2.3 4 4 0 0 0-3.6 3.9c0 3 3.6 5.2 7.3 8.3 3.6-3 7.3-5.3 7.3-8.3a4 4 0 0 0-3.7-3.9"
+                              transform="translate(-30.5 -76)"
+                            ></path>
+                            <path
+                              data-name="Path 502"
+                              d="M33.4 0H9.3a3 3 0 0 0-3 3v2.2H3a3 3 0 0 0-3 3v32.2a3 3 0 0 0 3 3h24.2a3 3 0 0 0 3-3v-2.2h3.2a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3M27 38.8a1.4 1.4 0 0 1-1.4 1.5h-21a1.4 1.4 0 0 1-1.4-1.5v-29a1.4 1.4 0 0 1 1.4-1.5h21A1.4 1.4 0 0 1 27 9.8Z"
+                            ></path>
+                          </g>
+                        </svg>
+                        <h2><a href="poker/index.html">Pokerové turnaje</a></h2>
+                        <p>Pořádáme pravidelné pokerové turnaje.</p>
+                        <p>
+                          <a class="action-button" href="poker/index.html"
+                            >více informací</a
+                          >
+                        </p>
+                      </div>
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="50.5"
+                          height="56.2"
+                          viewBox="0 0 50.5 56.2"
+                        >
+                          <defs>
+                            <path
+                              data-name="Rectangle 165"
+                              fill="#e5e0bd"
+                              d="M0 0H50.5V56.2H0z"
+                            ></path>
+                          </defs>
+                          <g
+                            data-name="Group 812"
+                            clip-path="url(#a)"
+                            fill="#e5e0bd"
+                            fill-rule="evenodd"
+                          >
+                            <path
+                              data-name="Path 498"
+                              d="M37.7 117.6c-5.8 8-19.1 8-25 0-7.3 2-12.7 5.9-12.7 11.6v8.4a3.2 3.2 0 0 0 3.2 3.1h44.1a3.2 3.2 0 0 0 3.2-3.1v-8.4c0-5.7-5.5-9.6-12.8-11.6M35.3 133a1.6 1.6 0 0 1-2.3 1.3l-5.5-3c-.7 1.6-3.8 1.6-4.4 0l-5.5 3a1.6 1.6 0 0 1-2.4-1.3v-6.1a1.6 1.6 0 0 1 2.5-1.3l5.4 3c.8-1.5 3.6-1.5 4.3 0l5.5-3a1.6 1.6 0 0 1 2.4 1.3Z"
+                              transform="translate(0 -84.5)"
+                            ></path>
+                            <path
+                              data-name="Path 499"
+                              d="M31.7 25.3c2.5 5.6 7 9.8 12.5 9.8 5.4 0 9.8-4.2 12.4-9.7 3-.3 5.6-2.2 5.6-6.3a5.3 5.3 0 0 0-3.3-5.3C58.5 6.6 54.4.2 44.9 0 34.7-.2 30.2 6.4 29.6 13.8a5.3 5.3 0 0 0-3.3 5.3c0 4 2.5 6 5.4 6.2"
+                              transform="translate(-19)"
+                            ></path>
+                          </g>
+                        </svg>
+                        <h2>
+                          <a href="private-taxi/index.html">Private Taxi</a>
+                        </h2>
+                        <p>
+                          Chcete si u nás dát skleničku nebo neřešit otázky s
+                          parkováním. <br />Zajistíme vám dopravu k nám, nebo
+                          vás odvezeme až domů. <br />Volejte recepci
+                          <a href="tel:+420606613131">+420 606 613 131</a>.
+                        </p>
+                        <p>
+                          <a
+                            class="action-button"
+                            href="private-taxi/index.html"
+                            >více informací</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel__cont">
+                    <div class="row carousel layout-container">
+                      <div class="block-swiper1">
+                        <div class="carousel__title">
+                          <h1>Podívejte se, <br />jak to u nás <br />vypadá</h1>
+                        </div>
+                        <div class="swiper1">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide1">
+                              <img src="images/index3.jpg" alt="image" />
+                            </div>
+                            <div class="swiper-slide swiper-slide1">
+                              <img src="images/index4.jpg" alt="image" />
+                            </div>
+                            <div class="swiper-slide swiper-slide1">
+                              <img src="images/index5.jpg" alt="image" />
+                            </div>
+                            <div class="swiper-slide swiper-slide1">
+                              <img src="images/index7.jpg" alt="image" />
+                            </div>
+                            <div class="swiper-slide swiper-slide1">
+                              <img src="images/index8.jpg" alt="image" />
+                            </div>
+                            <div class="swiper-slide swiper-slide1">
+                              <img src="images/index10.jpg" alt="image" />
+                            </div>
+                            <div class="swiper-slide swiper-slide1">
+                              <img src="images/index4.jpg" alt="image" />
+                            </div>
+                            <div class="swiper-slide swiper-slide1">
+                              <img src="images/index6.jpg" alt="image" />
+                            </div>
+                          </div>
+                          <div
+                            class="swiper-pagination swiper-pagination1"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hrclear"></div>
+
+          <div id="ipostatistics">
+            <!-- <script>
+              var _paq = _paq || [];
+              _paq.push(["disableCookies"]);
+              _paq.push(["trackPageView"]);
+              _paq.push(["enableLinkTracking"]);
+              (function () {
+                var u = "https://matomo.antee.cz/";
+                _paq.push(["setTrackerUrl", u + "piwik.php"]);
+                _paq.push(["setSiteId", 7734]);
+                var d = document,
+                  g = d.createElement("script"),
+                  s = d.getElementsByTagName("script")[0];
+                g.defer = true;
+                g.async = true;
+                g.src = u + "piwik.js";
+                s.parentNode.insertBefore(g, s);
+              })();
+            </script>
+            <script>
+              $(document).ready(function () {
+                $('a[href^="mailto"]').on("click", function () {
+                  _paq.push([
+                    "setCustomVariable",
+                    1,
+                    "Click mailto",
+                    "Email=" +
+                      this.href.replace(/^mailto:/i, "") +
+                      " /Page = " +
+                      location.href,
+                    "page",
+                  ]);
+                  _paq.push(["trackGoal", 8]);
+                  _paq.push(["trackPageView"]);
+                });
+
+                $('a[href^="tel"]').on("click", function () {
+                  _paq.push([
+                    "setCustomVariable",
+                    1,
+                    "Click telefon",
+                    "Telefon=" +
+                      this.href.replace(/^tel:/i, "") +
+                      " /Page = " +
+                      location.href,
+                    "page",
+                  ]);
+                  _paq.push(["trackPageView"]);
+                });
+              });
+            </script> -->
+          </div>
+
+          <div id="ipofooter"></div>
+        </div>
+      </div>
+    </div>
+    <div id="ipocopyright">
+      <div class="copyright">
+        <div class="row copyright__inner layout-container">
+          <div class="copy-logo">
+            <a title="BIG WIN a.s." href="index.html" class="header-logo">
+              <img
+                src="images/logo-min.png"
+                width="300"
+                height="98"
+                alt="BIG WIN a.s."
+              />
+            </a>
+          </div>
+          <div class="copy-socials flex-container">
             <a
-              href="https://lacotion.com/1p5qN9kL"
-              rel="nofollow"
-              class="header-info__log"
-              >Login
+              class="tooltip tooltipstered"
+              href="kde-nas-najdete/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="29.3"
+                height="29.3"
+                viewBox="0 0 29.3 29.3"
+              >
+                <g data-name="Group 803">
+                  <path
+                    data-name="Path 256"
+                    d="M14.6 0h-6a10.8 10.8 0 0 0-3.5.8 7.2 7.2 0 0 0-2.6 1.7A7.2 7.2 0 0 0 .8 5 10.7 10.7 0 0 0 0 8.6l-.1 6v6a10.8 10.8 0 0 0 .8 3.6A7.5 7.5 0 0 0 5 28.5a10.8 10.8 0 0 0 3.5.7h12a10.8 10.8 0 0 0 3.6-.7 7.5 7.5 0 0 0 4.3-4.3 10.8 10.8 0 0 0 .7-3.5V8.6a10.8 10.8 0 0 0-.7-3.5 7.2 7.2 0 0 0-1.7-2.6A7.2 7.2 0 0 0 24.2.8a10.8 10.8 0 0 0-3.5-.7l-6-.1Zm-1.3 2.6h1.3l6 .1a8.1 8.1 0 0 1 2.7.5A4.5 4.5 0 0 1 25 4.3 4.5 4.5 0 0 1 26 6a8 8 0 0 1 .6 2.7v11.9a8.1 8.1 0 0 1-.5 2.7 4.9 4.9 0 0 1-2.8 2.8 8 8 0 0 1-2.7.5H8.7A8 8 0 0 1 6 26 4.5 4.5 0 0 1 4.3 25a4.5 4.5 0 0 1-1-1.7 8 8 0 0 1-.6-2.7V8.7A8.1 8.1 0 0 1 3.2 6a4.5 4.5 0 0 1 1.1-1.7 4.5 4.5 0 0 1 1.7-1 8 8 0 0 1 2.7-.6h4.6Zm9.2 2.5a1.8 1.8 0 1 0 1.7 1.7 1.8 1.8 0 0 0-1.7-1.7Zm-7.9 2a7.5 7.5 0 1 0 7.6 7.5 7.5 7.5 0 0 0-7.6-7.5Zm0 2.7a4.9 4.9 0 1 1-4.8 4.8 4.9 4.9 0 0 1 4.8-4.8Z"
+                    fill="#e5e0bd"
+                  ></path>
+                </g>
+              </svg>
+              <span>Instagram</span>
             </a>
             <a
-              href="https://lacotion.com/1p5qN9kL"
-              rel="nofollow"
-              class="header-info__reg"
-              >Register</a
+              class="tooltip tooltipstered"
+              href="kde-nas-najdete/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="29.3"
+                height="29.3"
+                viewBox="0 0 29.3 29.3"
+              >
+                <g data-name="Group 804">
+                  <path
+                    data-name="Path 257"
+                    d="M29.3 14.7a14.6 14.6 0 1 0-17 14.6V19H8.6v-4.3h3.8v-3.2c0-3.7 2.1-5.7 5.5-5.7a22.4 22.4 0 0 1 3.3.2v3.7h-1.9A2.1 2.1 0 0 0 17 12v2.7h4l-.6 4.3H17v10.3a14.7 14.7 0 0 0 12.4-14.6Z"
+                    fill="#e5e0bd"
+                  ></path>
+                </g>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </div>
+          <div class="copy-adresa">
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23.4"
+                height="31.2"
+                viewBox="0 0 23.4 31.2"
+              >
+                <path
+                  data-name="Icon awesome-map-marker-alt"
+                  d="M10.5 30.5C1.6 17.7 0 16.4 0 11.7a11.7 11.7 0 0 1 23.4 0c0 4.7-1.7 6-10.5 18.8a1.5 1.5 0 0 1-2.4 0Zm1.2-14a4.9 4.9 0 1 0-4.9-4.8 4.9 4.9 0 0 0 4.9 4.9Z"
+                  fill="#fff"
+                ></path>
+              </svg>
+              náměstí Republiky, Bedřicha Smetany 139/1, Plzeň
+            </p>
+          </div>
+          <div class="copy-otevreno">
+            <p><strong>Otevřeno NONSTOP!</strong></p>
           </div>
         </div>
-      </div>
-    </header>
 
-    <main class="main">
-      <div class="container">
-        <div class="main-wrap">
-          <h1 class="main-wrap__title">
-            HEYBAJI.COM: Your Portal for Online Gaming and Betting
-          </h1>
-          <div class="main-wrap__link">
-            <a
-              href="https://lacotion.com/1p5qN9kL"
-              rel="nofollow"
-              class="main-wrap__link__btn"
-              >Login to HEYBAJI</a
-            >
-          </div>
-          <div class="main-wrap__img">
-            <img
-              src="img/Index 1.jpg"
-              alt="Online Casino Impressions HEYBAJI"
-            />
-          </div>
-          <h2 class="main-wrap__subtitle">
-            HEYBAJI Online Casino
-            <p>
-              HEYBAJI online casino offers a world of varied offers, including
-              an exciting live casino. Here, players can experience the thrill
-              of traditional live dealer games, providing an authentic casino
-              experience from the comfort of their home. Login to HEYBAJI gives
-              you access to this vibrant area where reality meets digital
-              convenience.
-            </p>
-          </h2>
-          <div class="main-wrap__img">
-            <img
-              src="img/Index 2.jpg"
-              alt="HEYBAJI Betting Possibility of Online"
-            />
-          </div>
-          <h2 class="main-wrap__subtitle">
-            Betting at HEYBAJI Online Casino
-            <p>
-              At HEYBAJI, betting enthusiasts will find a wide range of options,
-              from sports betting to live betting. The bookmaker offers a
-              dynamic football betting experience, especially in the area of
-              football betting, with the possibility of betting online in real
-              time. Login to HEYBAJI guarantees quick and secure access, ideal
-              for those looking for immediate action in their favorite sports.
-            </p>
-          </h2>
-          <div class="main-wrap__link">
-            <a
-              href="https://lacotion.com/1p5qN9kL"
-              rel="nofollow"
-              class="main-wrap__link__btn"
-              >Login to HEYBAJI</a
-            >
-          </div>
-          <div class="main-wrap__img">
-            <img src="img/Index 3.jpg" alt="HEYBAJI Slots Big Chance" />
-          </div>
-          <h2 class="main-wrap__subtitle">
-            Slots at HEYBAJI Online Casino
-            <p>
-              HEYBAJI stands out for its slot machines, which include popular
-              games such as Burning wins, Sun of Egypt 2, 3 coins, Magic Apple.
-              Each game is designed to offer not only entertainment but also the
-              chance at big prizes, making HEYBAJI the perfect place for slot
-              lovers.
-            </p>
-          </h2>
+        <div class="row copy-mapa">
+          <a
+            title="Zobrazit na mapě"
+            href="https://goo.gl/maps/CFjwr5PqWqjJG1ur7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Zobrazit na mapě</span>
+          </a>
+        </div>
 
-          <!-- <div class="main-wrap__img">
-            <img
-              src="img/Index 4.jpg"
-              alt="Crash Games HEYBAJI - Will Satisfy All Tastes"
-            />
-          </div>
-          <h2 class="main-wrap__subtitle">
-            Games at HEYBAJI Online Casino
-            <p>
-              In addition to slots, the HEYBAJI portal offers a selection of
-              crash games and table games. Games like Aviator and Aviatrix are
-              ideal for those looking for fast-paced action and instant
-              gratification. These games, combined with classic board games,
-              will satisfy all tastes.
-            </p>
-          </h2>
-          <h2 class="main-wrap__subtitle">
-            Bonuses at HEYBAJI Online Casino
-            <p>
-              New users are welcomed with a casino sign-up bonus, which may
-              include free spins or extra credits. HEYBAJI continues to reward
-              its players with regular promotions and bonuses tailored to their
-              gaming activities, further encouraging player participation and
-              loyalty.
-            </p>
-          </h2>
-          <div class="main-wrap__img">
-            <img
-              src="img/Index 5.jpg"
-              alt="Registration at HEYBAJI Online Casino"
-            />
+        <div class="row copy-zakaz layout-container">
+          <p>
+            <strong
+              >Zákaz účasti osob mladších 18 let na hazardní hře! Ministerstvo
+              financí varuje:<br />
+              „Účastí na hazardní hře může vzniknout závislost!“</strong
+            >
+          </p>
+        </div>
+
+        <div class="row antee">
+          <!-- <div class="layout-container">
+            © 2024 Casino BIG WIN Plzeň,
+            <a href="mailto:david-paukner@seznam.cz">Kontaktovat webmastera</a>,
+            <span id="links"
+              ><a href="mapa-stranek/index.html">Mapa stránek</a></span
+            ><br />ANTEE s.r.o. -
+            <a href="https://www.antee.cz" rel="nofollow"
+              >Tvorba webových stránek</a
+            >, Redakční systém IPO
           </div> -->
+          <div class="layout-container">
+            © 2024 Casino BIG WIN Plzeň,
 
-          <h2 class="main-wrap__subtitle">
-            Login to HEYBAJI Online Casino
-            <p>
-              Registration at HEYBAJI online casino is simple and secure. With
-              just a few clicks, new players can complete their registration on
-              the HEYBAJI and use your HEYBAJI login credentials. This process
-              ensures that users have immediate access to all available features
-              and games, allowing them to start their entertainment journey
-              without any hassle.
-            </p>
-          </h2>
-          <div class="main-wrap__link">
-            <a
-              href="https://lacotion.com/1p5qN9kL"
-              rel="nofollow"
-              class="main-wrap__link__btn"
-              >Login to HEYBAJI</a
-            >
+            <span id="links"
+              ><a href="mapa-stranek/index.html">Mapa stránek</a></span
+            >, Redakční systém IPO
           </div>
         </div>
       </div>
-    </main>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/date.js"></script>
   </body>
 </html>
