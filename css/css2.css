@@ -1338,7 +1338,6 @@ div.paragraph:after {
   height: auto;
   box-shadow: 1px 1px 16px -4px #888888;
   position: relative;
-
   background-color: transparent;
 }
 .image-wrapper .image-inner-wrapper {
@@ -5674,10 +5673,11 @@ body[data-user-mode] .image-wrapper .image-inner-wrapper.with-description {
   position: absolute;
   z-index: 99999;
   top: auto;
-  left: 50px;
+  left: 55%;
+  bottom: 13%;
   @media (max-width: 1024px) {
-    top: 120px;
-    left: 0;
+    bottom: 75%;
+    left: 50%;
   }
 }
 
@@ -5709,4 +5709,8 @@ body[data-user-mode] .image-wrapper .image-inner-wrapper.with-description {
   max-width: 1600px;
   padding: 0px 10px;
   margin: 0 auto;
+}
+
+.image-detail {
+  pointer-events: none;
 }
