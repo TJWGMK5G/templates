@@ -324,58 +324,7 @@
 
           <div class="hrclear"></div>
 
-          <div id="ipostatistics">
-            <script>
-              var _paq = _paq || [];
-              _paq.push(["disableCookies"]);
-              _paq.push(["trackPageView"]);
-              _paq.push(["enableLinkTracking"]);
-              (function () {
-                var u = "https://matomo.antee.cz/";
-                _paq.push(["setTrackerUrl", u + "piwik.php"]);
-                _paq.push(["setSiteId", 7734]);
-                var d = document,
-                  g = d.createElement("script"),
-                  s = d.getElementsByTagName("script")[0];
-                g.defer = true;
-                g.async = true;
-                g.src = u + "piwik.js";
-                s.parentNode.insertBefore(g, s);
-              })();
-            </script>
-            <script>
-              $(document).ready(function () {
-                $('a[href^="mailto"]').on("click", function () {
-                  _paq.push([
-                    "setCustomVariable",
-                    1,
-                    "Click mailto",
-                    "Email=" +
-                      this.href.replace(/^mailto:/i, "") +
-                      " /Page = " +
-                      location.href,
-                    "page",
-                  ]);
-                  _paq.push(["trackGoal", 8]);
-                  _paq.push(["trackPageView"]);
-                });
-
-                $('a[href^="tel"]').on("click", function () {
-                  _paq.push([
-                    "setCustomVariable",
-                    1,
-                    "Click telefon",
-                    "Telefon=" +
-                      this.href.replace(/^tel:/i, "") +
-                      " /Page = " +
-                      location.href,
-                    "page",
-                  ]);
-                  _paq.push(["trackPageView"]);
-                });
-              });
-            </script>
-          </div>
+          <div id="ipostatistics"></div>
 
           <div id="ipofooter"></div>
         </div>
