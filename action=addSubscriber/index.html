@@ -32,15 +32,13 @@
       crossorigin="anonymous"
     />
 
-    <script src="../js/jquery-3.0.0.min.js"></script>
+    <!-- <script src="../js/jquery-3.0.0.min.js"></script>
     <script src="../js/jquery-migrate-3.1.0.min.js"></script>
     <script src="../js/jquery-ui.min.js"></script>
     <script src="../js/jquery.ui.touch-punch.min.js"></script>
     <script src="../js/libs.min.js"></script>
     <script src="../js/ipo.min.js"></script>
-    <script src="../js/cs.js"></script>
-
-    <script src="../js/api.js"></script>
+    <script src="../js/cs.js"></script> -->
 
     <link
       href="/akce?action=atom"
@@ -60,7 +58,7 @@
     <link href="../css/css2.css" rel="stylesheet" />
     <link href="../images/index10.jpg" rel="icon" type="image/png" />
     <link rel="shortcut icon" href="../images/index10.jpg" />
-    <script>
+    <!-- <script>
       //posun h1
       ipo.api.live("h1", function (el) {
         if (
@@ -93,7 +91,7 @@
         //přesun patičky
         $(el).find("#ipocopyright").insertAfter("#ipocontainer");
       });
-    </script>
+    </script> -->
 
     <!-- <link
       rel="preload"
@@ -242,7 +240,7 @@
             <div id="ipopage">
               <div
                 id="iponavigation"
-                style="background-image: url(../../image.php)"
+                style="background-image: url(../images/index10.jpg)"
               >
                 <h5 class="hiddenMenu">Drobečková navigace</h5>
                 <p>
@@ -291,33 +289,7 @@
                           />
                         </div>
                       </div>
-                      <div class="form-item antispam-disclaimer">
-                        <div class="tooltip-wrapper">
-                          <span id="tooltip-content-recaptcha"
-                            ><h3>Google reCAPTCHA</h3>
-                            <div>
-                              <a
-                                href="https://www.google.com/intl/cs/policies/privacy"
-                                target="_blank"
-                                >Ochrana soukromí</a
-                              >
-                            </div>
-                            <div>
-                              <a
-                                href="https://www.google.com/intl/cs/policies/terms"
-                                target="_blank"
-                                >Podmínky služby</a
-                              >
-                            </div></span
-                          >
-                        </div>
-                        Chráněno službou
-                        <a
-                          class="tooltip nolink tooltipstered"
-                          data-tooltip-content="#tooltip-content-recaptcha"
-                          >reCAPTCHA</a
-                        >.
-                      </div>
+
                       <div class="form-item buttons">
                         <div class="form-item-label"></div>
                         <div class="form-item-field">
@@ -339,19 +311,6 @@
                                 overflow: hidden;
                               "
                             >
-                              <div class="grecaptcha-logo">
-                                <iframe
-                                  title="reCAPTCHA"
-                                  width="256"
-                                  height="60"
-                                  role="presentation"
-                                  name="a-94h5tjtdja2r"
-                                  frameborder="0"
-                                  scrolling="no"
-                                  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
-                                  src="anchor.html"
-                                ></iframe>
-                              </div>
                               <div class="grecaptcha-error"></div>
                               <textarea
                                 id="g-recaptcha-response"
@@ -538,29 +497,8 @@
             opacity: 0.5;
           "
         ></div>
-        <div
-          style="
-            margin: 0px auto;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            position: fixed;
-            border: 1px solid rgb(204, 204, 204);
-            z-index: 2000000000;
-            background-color: rgb(255, 255, 255);
-          "
-        >
-          <iframe
-            title="ověření recaptcha vyprší za dvě minuty"
-            name="c-94h5tjtdja2r"
-            frameborder="0"
-            scrolling="no"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
-            src="bframe.html"
-            style="width: 100%; height: 100%"
-          ></iframe>
-        </div>
       </div>
     </main>
   </body>
+  <script src="../js/burger-menu.js"></script>
 </html>
