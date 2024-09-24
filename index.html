@@ -1,740 +1,261 @@
 <!DOCTYPE html>
-<html lang="cs" data-lang-system="cs">
+<html lang="pt">
   <head>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=yes"
-    />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="robots" content="index,follow" />
-    <meta name="author" content="Antee s.r.o." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Nové casino na Náměstí Republiky v Plzni. BIG WIN je vaše velká výhra!"
+      content="Descubra o JustFunSlots, o lugar ideal para jogar sem preocupações! Oferecemos uma vasta seleção de jogos de cassino social, onde você pode se divertir gratuitamente. Junte-se a nossa comunidade de jogadores e aproveite momentos de entretenimento envolventes e emocionantes, tudo em um ambiente seguro e amigável.      "
     />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=yes"
-    />
-    <title>Casino BIG WIN Plzeň</title>
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/jquery-ui-1.8.20.custom.css"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" type="text/css" href="style.php" /> -->
-    <link rel="stylesheet" type="text/css" href="css/libs.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/genericons.css"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/css2.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <!-- <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/jquery-migrate-3.1.0.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
-    <script src="js/libs.min.js"></script>
-    <script src="js/ipo.min.js"></script>
-    <script src="js/cs.js"></script> -->
-
-    <link
-      href="/akce?action=atom"
-      type="application/atom+xml"
-      rel="alternate"
-      title="Akce"
-    />
-    <link
-      href="/hlavni-stranka-animace?action=atom"
-      type="application/atom+xml"
-      rel="alternate"
-      title="Hlavní stránka - animace"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link href="css/css2.css" rel="stylesheet" />
-    <link href="images/index10.jpg" rel="icon" type="image/png" />
-    <link rel="shortcut icon" href="images/index10.jpg" />
-    <!-- <script>
-      //posun h1
-      ipo.api.live("h1", function (el) {
-        if (
-          !document.getElementById("page9982163") &&
-          $("#system-menu").length != 1 &&
-          !$(".error").length
-        ) {
-          if (window.innerWidth >= 1025) {
-            $(el).wrap("<div class='wrapper-h1 layout-container' />");
-            $(".wrapper-h1").insertBefore("#iponavigation p");
-          }
-        }
-      });
-      //převod úvodní fotky na drobečkovou navigaci
-      ipo.api.live("body", function (el) {
-        if (!document.getElementById("page9982163") && !$(".error").length) {
-          if ($(el).find(".subpage-background").length) {
-            var image_back = $(el)
-              .find(".subpage-background .boxImage > div")
-              .attr("style");
-            $(el).find("#iponavigation").attr("style", image_back);
-          }
-        }
-      });
-      ipo.api.live("body", function (el) {
-        //zjištění zda se jedná o stránku 404
-        if ($(el).find(".ipopagetext .error").length) {
-          $(el).addClass("error-page");
-        }
-        //přesun patičky
-        $(el).find("#ipocopyright").insertAfter("#ipocontainer");
-      });
-    </script> -->
-
-    <!-- <script src="file.php"></script> -->
-    <!-- <link
-      rel="preload"
-      href="/file.php?nid=21053&amp;oid=10008408"
-      as="style"
-    /> -->
-    <!-- <link rel="stylesheet" href="file_1.php" /> -->
-    <!-- <script>
-      ipo.api.live(".header-animace", function (el) {
-        $(el).owlCarousel({
-          animateIn: "fadeIn",
-          animateOut: "fadeOut",
-          loop: true,
-          mouseDrag: true,
-          autoWidth: false,
-          autoplayHoverPause: true,
-          lazyLoad: true,
-          margin: 0,
-          autoplay: true,
-          items: 1,
-          slideBy: 1,
-          autoplayTimeout: 5000,
-          autoplaySpeed: 2500,
-          dots: true,
-          nav: false,
-          navText: false,
-        });
-      });
-      ipo.api.live("body", function (el) {
-        //scroll arrow
-        $(document).on("click", 'a[href^="#sluzby"]', function (event) {
-          event.preventDefault();
-          $("html, body").animate(
-            {
-              scrollTop: $($.attr(this, "href")).offset().top,
-            },
-            1000
-          );
-        });
-      });
-      ipo.api.live(".carousel__wrapper", function (el) {
-        $(el).owlCarousel({
-          animateIn: "fadeIn",
-          animateOut: "fadeOut",
-          loop: true,
-          mouseDrag: true,
-          autoWidth: false,
-          autoplayHoverPause: true,
-          lazyLoad: true,
-          margin: 0,
-          autoplay: true,
-          items: 1,
-          slideBy: 1,
-          autoplayTimeout: 5000,
-          autoplaySpeed: 2500,
-          dots: true,
-          nav: false,
-          navText: false,
-          responsive: {
-            0: {
-              items: 1,
-              dots: false,
-              nav: false,
-            },
-            425: {
-              items: 2,
-              dots: false,
-              nav: false,
-            },
-            550: {
-              items: 3,
-              dots: false,
-              nav: false,
-            },
-            1025: {
-              items: 4,
-            },
-          },
-        });
-      });
-      //vstup nad 18let
-      ipo.api.live("body", function (el) {
-        var date = new Date();
-        var year = date.getFullYear();
-        var month = date.getMonth();
-        var day = date.getDate();
-        var expiration = new Date(year, month + 1, day);
-        $(".block-age .action-button").click(function (e) {
-          e.preventDefault();
-          document.cookie = `exit=confirmed; expires=${expiration}`;
-          $(el).find(".block-age").addClass("cookies-hidden");
-          $(el).find(".block-age").removeClass("cookies-display");
-        });
-        if (
-          document.cookie.includes("exit=confirmed") &&
-          !$(el).find(".cookies-hidden").hasClass("cookies-hidden")
-        ) {
-          document.cookie = `exit=confirmed; expires=${expiration}`;
-          $(el).find(".block-age").addClass("cookies-hidden");
-          $(el).find(".block-age").removeClass("cookies-display");
-        } else {
-          $(el).find(".block-age").removeClass("cookies-hidden");
-          $(el).find(".block-age").addClass("cookies-display");
-        }
-      });
-    </script> -->
+    <title>JustFunSlots – O Seu Destino de Cassino Social Gratuito!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link type="image/x-icon" href="img/favicon/favicon.ico" rel="icon" />
   </head>
 
-  <body
-    id="page9982163"
-    class="subpage9982163"
-    data-nid="21053"
-    data-lid="CZ"
-    data-oid="9982163"
-    data-layout-pagewidth="1024"
-    data-slideshow-timer="3"
-    data-layout="responsive"
-    data-viewport_width_responsive="1024"
-  >
-    <main class="main">
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-P43M3Q6"
-          height="0"
-          width="0"
-          style="display: none; visibility: hidden"
-        >
-        </iframe>
-      </noscript>
-
-      <div id="ipocontainer">
-        <div class="menu-toggler">
-          <span>Menu</span>
-          <span class="genericon genericon-menu"></span>
-        </div>
-
-        <span id="back-to-top">
-          <i class="fa fa-angle-up"></i>
-        </span>
-
-        <div id="ipoheader">
-          <div class="header-inner__container">
-            <div class="row header-inner flex-container layout-container">
-              <div class="logo">
-                <a title="BIG WIN a.s." href="index.html" class="header-logo">
-                  <img
-                    src="images/logo-min.png"
-                    width="300"
-                    height="98"
-                    alt="BIG WIN a.s."
-                  />
-                </a>
-              </div>
-              <div class="header-socials flex-container">
-                <a
-                  class="tooltip tooltipstered"
-                  href="kde-nas-najdete/index.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
+  <body>
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <a href="index.html" class="header__logo">JustFunSlots</a>
+          <nav class="header-menu">
+            <ul>
+              <li class="header-menu__item">
+                <a href="index.html" class="header-menu__item-link">Início</a>
+              </li>
+              <li class="header-menu__item">
+                <a href="about.html" class="header-menu__item-link"
+                  >Sobre nós</a
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="29.3"
-                    height="29.3"
-                    viewBox="0 0 29.3 29.3"
-                  >
-                    <g data-name="Group 803">
-                      <path
-                        data-name="Path 256"
-                        d="M14.6 0h-6a10.8 10.8 0 0 0-3.5.8 7.2 7.2 0 0 0-2.6 1.7A7.2 7.2 0 0 0 .8 5 10.7 10.7 0 0 0 0 8.6l-.1 6v6a10.8 10.8 0 0 0 .8 3.6A7.5 7.5 0 0 0 5 28.5a10.8 10.8 0 0 0 3.5.7h12a10.8 10.8 0 0 0 3.6-.7 7.5 7.5 0 0 0 4.3-4.3 10.8 10.8 0 0 0 .7-3.5V8.6a10.8 10.8 0 0 0-.7-3.5 7.2 7.2 0 0 0-1.7-2.6A7.2 7.2 0 0 0 24.2.8a10.8 10.8 0 0 0-3.5-.7l-6-.1Zm-1.3 2.6h1.3l6 .1a8.1 8.1 0 0 1 2.7.5A4.5 4.5 0 0 1 25 4.3 4.5 4.5 0 0 1 26 6a8 8 0 0 1 .6 2.7v11.9a8.1 8.1 0 0 1-.5 2.7 4.9 4.9 0 0 1-2.8 2.8 8 8 0 0 1-2.7.5H8.7A8 8 0 0 1 6 26 4.5 4.5 0 0 1 4.3 25a4.5 4.5 0 0 1-1-1.7 8 8 0 0 1-.6-2.7V8.7A8.1 8.1 0 0 1 3.2 6a4.5 4.5 0 0 1 1.1-1.7 4.5 4.5 0 0 1 1.7-1 8 8 0 0 1 2.7-.6h4.6Zm9.2 2.5a1.8 1.8 0 1 0 1.7 1.7 1.8 1.8 0 0 0-1.7-1.7Zm-7.9 2a7.5 7.5 0 1 0 7.6 7.5 7.5 7.5 0 0 0-7.6-7.5Zm0 2.7a4.9 4.9 0 1 1-4.8 4.8 4.9 4.9 0 0 1 4.8-4.8Z"
-                        fill="#e5e0bd"
-                      ></path>
-                    </g>
-                  </svg>
-                  <span>Instagram</span>
-                </a>
-                <a
-                  class="tooltip tooltipstered"
-                  href="kde-nas-najdete/index.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
+              </li>
+              <li class="header-menu__item">
+                <a href="index.html#service" class="header-menu__item-link"
+                  >Serviço</a
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="29.3"
-                    height="29.3"
-                    viewBox="0 0 29.3 29.3"
-                  >
-                    <g data-name="Group 804">
-                      <path
-                        data-name="Path 257"
-                        d="M29.3 14.7a14.6 14.6 0 1 0-17 14.6V19H8.6v-4.3h3.8v-3.2c0-3.7 2.1-5.7 5.5-5.7a22.4 22.4 0 0 1 3.3.2v3.7h-1.9A2.1 2.1 0 0 0 17 12v2.7h4l-.6 4.3H17v10.3a14.7 14.7 0 0 0 12.4-14.6Z"
-                        fill="#e5e0bd"
-                      ></path>
-                    </g>
-                  </svg>
-                  <span>Facebook</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/index1.jpg" alt="image" />
-                <div class="swiper-slide-content layout-container">
-                  <h2>Nové casino na Náměstí republiky v Plzni</h2>
-                  <h3>BIG WIN je vaše velká výhra</h3>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/index2.jpg" alt="image" />
-                <div class="swiper-slide-content layout-container">
-                  <h2>Nové casino na Náměstí republiky v Plzni</h2>
-                  <h3>BIG WIN je vaše velká výhra</h3>
-                </div>
-              </div>
-            </div>
-            <div
-              class="swiper-pagination swiper-pagination-top swiper-pagination-bullets-top layout-container"
-            ></div>
-          </div>
-
-          <a
-            class="scroll-hint animated"
-            title="Posuňte dolů"
-            href="poker/index.html"
-            ><span>šipka dolů</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="52.8"
-              height="37.2"
-              viewBox="0 0 52.8 37.2"
-            >
-              <g data-name="Group 628">
-                <g data-name="Group 627">
-                  <g
-                    data-name="Group 625"
-                    transform="translate(-973.6 -740.7) translate(78.5)"
-                    fill="none"
-                    stroke="#fff"
-                    stroke-linecap="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      data-name="Line 14"
-                      transform="translate(896.5 751.5)"
-                      d="M0 0 25 25"
-                    ></path>
-                    <path
-                      data-name="Line 15"
-                      transform="translate(921.5 751.5)"
-                      d="M25 0 0 25"
-                    ></path>
-                  </g>
-                </g>
-                <g
-                  data-name="Group 626"
-                  transform="translate(-973.6 -740.7) translate(87.7 -9.4)"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-width="2"
+              </li>
+              <li class="header-menu__item">
+                <a href="contact.html" class="header-menu__item-link"
+                  >Сontato</a
                 >
-                  <path
-                    data-name="Line 14"
-                    transform="translate(896.5 751.5)"
-                    d="M0 0 15.8 15.8"
-                  ></path>
-                  <path
-                    data-name="Line 15"
-                    transform="translate(912.3 751.5)"
-                    d="M15.8 0 0 15.8"
-                  ></path>
-                </g>
-              </g></svg
-          ></a>
-
-          <div class="subpage-background">
-            <div class="boxImage">
-              <div style="background-image: url(images/index9.jpg)">image</div>
-            </div>
-          </div>
-        </div>
-
-        <div id="ipotopmenuwrapper">
-          <div id="ipotopmenu">
-            <h4 class="hiddenMenu">Horní menu</h4>
-            <ul class="topmenulevel1">
-              <li class="topmenuitem1 noborder active" id="ipomenu9982163">
-                <a href="index.html">Home</a>
-              </li>
-              <li class="topmenuitem1" id="ipomenu10002137">
-                <a href="ziva-hra/index.html">Živá hra</a>
-              </li>
-              <li class="topmenuitem1" id="ipomenu10002133">
-                <a href="casino-big/index.html">Nabídka VLT</a>
-              </li>
-              <li class="topmenuitem1" id="ipomenu10002136">
-                <a href="poker/index.html">Poker</a>
-              </li>
-              <li class="topmenuitem1" id="ipomenu10002138">
-                <a href="akce/index.html">Akce</a>
-              </li>
-              <li class="topmenuitem1" id="ipomenu10002139">
-                <a href="galerie/index.html">Galerie</a>
-              </li>
-              <li class="topmenuitem1" id="ipomenu10002141">
-                <a href="kde-nas-najdete/index.html">Kde nás najdete</a>
               </li>
             </ul>
-            <div class="cleartop"></div>
+          </nav>
+          <div class="header-toggler">
+            <div class="header-toggler__icon">
+              <div class="header-toggler__line header-toggler__line-top"></div>
+              <div
+                class="header-toggler__line header-toggler__line-middle"
+              ></div>
+              <div
+                class="header-toggler__line header-toggler__line-bottom"
+              ></div>
+            </div>
           </div>
         </div>
-        <div id="ipomain">
-          <div id="ipomainframe">
-            <div id="ipopage">
-              <div class="ipopagetext">
-                <div class="text view-default content">
-                  <div id="snippet--flash"></div>
-
-                  <div class="paragraph">
-                    <div class="row widget-aktuality layout-container">
-                      <div class="widget-body">
-                        <a
-                          title="pokerový turnaj"
-                          class="widget-item"
-                          href="akce/index.html"
-                        >
-                          <span
-                            style="background-image: url(images/casino.jpg)"
-                            class="widget-image"
-                            >image</span
-                          >
-                          <span class="widget-date correct_data"
-                            ><svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="28.7"
-                              height="28.7"
-                              viewBox="0 0 28.7 28.7"
-                            >
-                              <g
-                                data-name="Icon feather-clock"
-                                fill="none"
-                                stroke="#e5e0bd"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="3"
-                              >
-                                <path
-                                  data-name="Path 241"
-                                  d="M28.7 15.8A12.8 12.8 0 1 1 15.8 3a12.8 12.8 0 0 1 12.9 12.8Z"
-                                  transform="translate(-1.5 -1.5)"
-                                ></path>
-                                <path
-                                  data-name="Path 242"
-                                  d="M18 9v7.7l5.1 2.6"
-                                  transform="translate(-1.5 -1.5) translate(-2.2 -.9)"
-                                ></path>
-                              </g></svg
-                            >11.&nbsp;9.&nbsp;2024</span
-                          >
-                          <span class="widget-text">pokerový turnaj</span>
-                          <span class="widget-vice">více informací</span>
-                        </a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="POrYBnCRyxkpxlq">
+        <div class="jKDMCPddNbMTieL">
+          <div class="SKQtXReJqqktdOW">
+            <div class="KUlSkTfQUuQvLtE">
+              <div class="UzWuZUNkieQWCvm">
+                <div class="GDwVwbJFuvlLMuh">
+                  <h1 class="wvhsLaJCBmNaeXy">
+                    JustFunSlots - Jogue no Melhor Cassino Grátis Online!
+                  </h1>
+                  <div class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"></div>
+                  <div class="gMPMbRdbcwdprCi">
+                    <h2 class="BwEkBLYzjYrwsGr">
+                      Descubra o JustFunSlots, o cassino social onde você pode
+                      jogar seus jogos favoritos sem gastar um centavo! Jogue
+                      gratuitamente, sem apostas em dinheiro real – é pura
+                      diversão! Experimente slots emocionantes e torne-se o rei
+                      dos prêmios, tudo em um ambiente seguro e 100% gratuito.
+                      Entre no mundo do cassino grátis e comece a jogar agora!
+                    </h2>
+                  </div>
+                  <div class="LrkSrUcOCPAAwTx IGnZjBzBAKJCbQR"></div>
+                  <a href="contact.html" class="HSvDArcZXLAsldC bHbQPvZejfgUUQd"
+                    ><div>Saiba mais</div></a
+                  >
+                  <div class="LrkSrUcOCPAAwTx XZGSjVisCSROTdp"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="KnslNMNvxhjZFmL">
+          <div class="bkzMFcACsowKGrs">
+            <div class="KUlSkTfQUuQvLtE">
+              <div class="UzWuZUNkieQWCvm">
+                <div class="lNqoYzifedCXcou">
+                  <div class="ILyZvyCkIdNhQkH">
+                    <div class="beVnSqmOocrioge">
+                      <h3 class="ptuVZnBXedJjdye">
+                        Serviços para Todas as Situações – Diversão Grátis no
+                        Cassino Social para Qualquer Ocasião
+                      </h3>
+                      <div class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"></div>
+                      <div class="BwEkBLYzjYrwsGr">
+                        No JustFunSlots, oferecemos diversão para todas as
+                        situações! Quer você esteja em busca de um rápido jogo
+                        casual ou de uma experiência imersiva, nosso cassino
+                        social tem tudo o que você precisa – e o melhor, tudo
+                        gratuito! Jogue sem apostar dinheiro real, com slots
+                        emocionantes e prêmios virtuais, perfeitos para todos os
+                        momentos. Seja uma pausa rápida ou uma sessão prolongada
+                        de jogatina, oferecemos entretenimento seguro, acessível
+                        e 100% sem custos.
                       </div>
                     </div>
-                    <div id="sluzby" class="sluzby__container">
-                      <div class="row sluzby grid-container layout-container">
-                        <div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="47.9"
-                            height="47.6"
-                            viewBox="0 0 47.9 47.6"
-                          >
-                            <defs>
-                              <path
-                                data-name="Rectangle 169"
-                                fill="#e5e0bd"
-                                d="M0 0H47.9V47.6H0z"
-                              ></path>
-                            </defs>
-                            <g
-                              data-name="Group 820"
-                              clip-path="url(#a)"
-                              fill="#e5e0bd"
-                            >
-                              <path
-                                data-name="Path 504"
-                                d="M1.5 72.8h11.4a1.5 1.5 0 0 0 1.4-1.5V53a1.5 1.5 0 0 0-1.4-1.4H1.5A1.5 1.5 0 0 0 0 52.9v18.4a1.5 1.5 0 0 0 1.5 1.5M3 56.3a.6.6 0 0 1 .6-.6h7a.6.6 0 0 1 .5.6c0 4.3-2.9 8.1-2.9 12.4a.5.5 0 0 1-.4.4H5.6a.5.5 0 0 1-.5-.4c0-5.8 2.3-6.7 2.3-9.6H3.7a.6.6 0 0 1-.6-.6Z"
-                                transform="translate(0 -38.3)"
-                              ></path>
-                              <path
-                                data-name="Path 505"
-                                d="M78.5 72.8a1.5 1.5 0 0 0 1.5-1.5V53a1.5 1.5 0 0 0-1.5-1.4H67a1.5 1.5 0 0 0-1.5 1.4v18.4a1.5 1.5 0 0 0 1.5 1.5Zm-9.8-16.5a.6.6 0 0 1 .6-.6h7a.6.6 0 0 1 .5.6c0 4.3-2.9 8.1-2.9 12.4a.5.5 0 0 1-.4.4h-2.3a.5.5 0 0 1-.5-.4c0-5.8 2.3-6.7 2.3-9.6h-3.7a.6.6 0 0 1-.6-.6Z"
-                                transform="translate(-48.9 -38.3)"
-                              ></path>
-                              <path
-                                data-name="Path 506"
-                                d="M144 51.5h-11.3a1.5 1.5 0 0 0-1.5 1.4v18.4a1.5 1.5 0 0 0 1.5 1.5h11.4a1.5 1.5 0 0 0 1.5-1.5V53a1.5 1.5 0 0 0-1.5-1.4m-4.5 17.2a.5.5 0 0 1-.5.4h-2.3a.5.5 0 0 1-.4-.4c0-5.8 2.3-6.7 2.3-9.6h-3.8a.6.6 0 0 1-.6-.6v-2.2a.6.6 0 0 1 .6-.6h7a.6.6 0 0 1 .6.6c0 4.3-3 8.1-3 12.4"
-                                transform="translate(-97.7 -38.3)"
-                              ></path>
-                              <path
-                                data-name="Path 507"
-                                d="M0 151.2a4.4 4.4 0 0 0 4.3 4.3h39.2a4.4 4.4 0 0 0 4.4-4.3v-6.3H0Z"
-                                transform="translate(0 -108)"
-                              ></path>
-                              <path
-                                data-name="Path 508"
-                                d="M43.5 0H4.3A4.4 4.4 0 0 0 0 4.3v6.3h47.9V4.3A4.4 4.4 0 0 0 43.5 0"
-                              ></path>
-                            </g>
-                          </svg>
-                          <h2>
-                            <a href="casino-big/index.html">80 VLT strojů</a>
-                          </h2>
-                          <p>
-                            Casino BIG WIN nabízí možnost zábavy na více
-                            <br />než 80 nejmodernějších video-loterijních
-                            <br />terminálech. Z široké nabídky značek.
-                          </p>
-                          <p>
-                            <a
-                              class="action-button"
-                              href="casino-big/index.html"
-                              >více informací</a
-                            >
-                          </p>
-                        </div>
-                        <div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="51.5"
-                            height="47.6"
-                            viewBox="0 0 51.5 47.6"
-                          >
-                            <defs>
-                              <path
-                                data-name="Rectangle 168"
-                                fill="#e5e0bd"
-                                d="M0 0H51.5V47.6H0z"
-                              ></path>
-                            </defs>
-                            <g data-name="Group 818" clip-path="url(#a)">
-                              <path
-                                data-name="Path 503"
-                                d="M51.4 15.7a2 2 0 0 0 0-.2 2 2 0 0 0-.1-.2L43 1a2 2 0 0 0-2.3-1 2 2 0 0 0-.4.3l-5.2 3a1.7 1.7 0 0 0-1 1.6 2.8 2.8 0 0 0 .3 1l-.2.1-.6.3a8 8 0 0 1-1 .3 3.4 3.4 0 0 1-.8.1h-.5l-3.6-.1c-4.4-.2-9.3-.5-13.3 1.1a14.1 14.1 0 0 0-1.5.7l-.3.2-.2.2a27.6 27.6 0 0 0-6.8 5.8 11.7 11.7 0 0 0-.8 1.1 5.4 5.4 0 0 0-.5 1l-.2.6c-1.3 3.6-2.9 8-2.4 12a12.2 12.2 0 0 0-.7 11A12.1 12.1 0 0 0 3.6 44a12.2 12.2 0 0 0 17.2 0 12.2 12.2 0 0 0 2.4-13.7l.4-.2.8-.5c2.3-1.4 4.5-2.7 6-2.8 4.3-.1 5.9-1.9 7.6-3.8l1.3-1.3a9 9 0 0 1 1.6-1.2l1.4-.8.4.6a2 2 0 0 0 1.8 1 2 2 0 0 0 .4-.1 2 2 0 0 0 .4-.2l5.2-3a2 2 0 0 0 1-1.2 2 2 0 0 0 0-1M20.6 39.2a9.2 9.2 0 0 1-.8 1.4 9.4 9.4 0 0 1-1.1 1.3 9.3 9.3 0 0 1-6.6 2.8A9.3 9.3 0 0 1 5.6 42a9.4 9.4 0 0 1-2.2-9.7 9.3 9.3 0 0 1 .9-1.8 9.4 9.4 0 0 1 1.3-1.7 9.3 9.3 0 0 1 5.4-2.6A9.4 9.4 0 0 1 12 26h.4a4 4 0 0 0-.2 1.6v.4l.1.4a6.2 6.2 0 0 0 .8 1.9l.2.3.3.3a5.5 5.5 0 0 0 1 1l.2.2.3.1a4 4 0 0 0 1.3.5 4.2 4.2 0 0 0 1.3 0 8.3 8.3 0 0 0 1.8-.6l1.1-.5a9.4 9.4 0 0 1 0 7.6M14 20.6a6.4 6.4 0 0 1 3.6-2 10.1 10.1 0 0 1 4 .1 2.5 2.5 0 0 1-.1.9 13.3 13.3 0 0 1-1.9 1.3l-2 1.1-2.6 1.6a12.2 12.2 0 0 0-2-.3h-.2l.1-.3a5.8 5.8 0 0 1 .6-1.8 4.5 4.5 0 0 1 .4-.4v-.1l.1-.1Zm7.5-1Zm18-1.8a14.7 14.7 0 0 0-3.7 3.2 10.5 10.5 0 0 1-2.1 1.9 6.5 6.5 0 0 1-3.4 1 9.7 9.7 0 0 0-3.6 1l-3.8 2-.9.6a14.8 14.8 0 0 1-4.7 2.3 1.2 1.2 0 0 1-.3 0 .9.9 0 0 1-.4-.1 1.9 1.9 0 0 1-.4-.4L16 29a3.4 3.4 0 0 1-.5-.9V28a1.5 1.5 0 0 1-.1-.7.5.5 0 0 1 0-.1.4.4 0 0 1 .1-.2 21.4 21.4 0 0 1 3.6-2.2l2.2-1.2a15.9 15.9 0 0 0 2.2-1.6 3.6 3.6 0 0 0 1-2.4 5.7 5.7 0 0 0 0-1 8 8 0 0 0 0-1v-.1l-.1-.2-.1-.6v-.3h-.4l-.5-.2a11.8 11.8 0 0 0-8.7.3 9.4 9.4 0 0 0-1.5.9 10.2 10.2 0 0 0-1.4 1.2 9 9 0 0 0-.6.7v.1l-.2.2a10.4 10.4 0 0 0-1.2 3.1l-.2 1a12.1 12.1 0 0 0-4.1 1.7l-.5.3a35.4 35.4 0 0 1 2.2-7.9c.4-1 2.1-3 4.2-4.6a26 26 0 0 1 2.5-1.7l1.2-.7h.2l.2-.2c3.5-1.4 8-1.1 12-.9l3.8.2h.4a6.3 6.3 0 0 0 1.5-.2 10.7 10.7 0 0 0 1.5-.5 16.2 16.2 0 0 0 1.2-.5l5 8.4-1.5.8Z"
-                                fill="#e5e0bd"
-                              ></path>
-                            </g>
-                          </svg>
-                          <h2><a href="ziva-hra/index.html">Živá hra</a></h2>
-                          <p>
-                            3x Black jack, 3x Ultimate <br />Texas Hold'em , 3x
-                            Evropská ruleta.
-                          </p>
-                          <p>
-                            <a class="action-button" href="ziva-hra/index.html"
-                              >více informací</a
-                            >
-                          </p>
-                        </div>
-                        <div>
-                          <svg
-                            data-name="Group 815"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="38.1"
-                            height="51.8"
-                            viewBox="0 0 38.1 51.8"
-                          >
-                            <defs>
-                              <path
-                                data-name="Rectangle 166"
-                                fill="#e5e0bd"
-                                d="M0 0H38.1V51.8H0z"
-                              ></path>
-                            </defs>
-                            <g data-name="Group 814" clip-path="url(#a)">
-                              <path
-                                data-name="Path 500"
-                                d="M9 51.8H29c2.2 0 2.1-3.6 0-4l-7.4-1.4V32.6l15.8-17.1a1.6 1.6 0 0 0-1-2.8H29l1.6-2c3.2 1.2 6.6-3.6 5-6.2L38 1.3 36.4 0l-2.5 3.2a4 4 0 0 0-4.7 1.5 4 4 0 0 0-.3 4.9l-2.5 3H1.6a1.6 1.6 0 0 0-1.1 2.8l15.8 17.2v13.8L9 47.8c-2 .3-2.1 4 0 4m2.6-33h10.1l2.3-2.9H5.6l2.8 2.9 7.6 8.5Zm12.8 0h5.3l2.9-2.9h-6Z"
-                                fill="#e5e0bd"
-                                fill-rule="evenodd"
-                              ></path>
-                            </g>
-                          </svg>
-                          <h2>
-                            <a href="bar-a-catering/index.html"
-                              >Bar a Catering</a
-                            >
-                          </h2>
-                          <p>
-                            &nbsp;Široká nabídka nápojů na baru a catering
-                            <br />pro hráče je k dispozici nonstop.
-                          </p>
-                          <p>
-                            <a
-                              class="action-button"
-                              href="bar-a-catering/index.html"
-                              >více informací</a
-                            >
-                          </p>
-                        </div>
-                        <div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="36.4"
-                            height="43.4"
-                            viewBox="0 0 36.4 43.4"
-                          >
-                            <defs>
-                              <path
-                                data-name="Rectangle 167"
-                                fill="#e5e0bd"
-                                d="M0 0H36.4V43.4H0z"
-                              ></path>
-                            </defs>
-                            <g
-                              data-name="Group 816"
-                              clip-path="url(#a)"
-                              fill="#e5e0bd"
-                              fill-rule="evenodd"
-                            >
-                              <path
-                                data-name="Path 501"
-                                d="M49.2 95.4a3.8 3.8 0 0 0-3.6 2.3 3.8 3.8 0 0 0-3.7-2.3 4 4 0 0 0-3.6 3.9c0 3 3.6 5.2 7.3 8.3 3.6-3 7.3-5.3 7.3-8.3a4 4 0 0 0-3.7-3.9"
-                                transform="translate(-30.5 -76)"
-                              ></path>
-                              <path
-                                data-name="Path 502"
-                                d="M33.4 0H9.3a3 3 0 0 0-3 3v2.2H3a3 3 0 0 0-3 3v32.2a3 3 0 0 0 3 3h24.2a3 3 0 0 0 3-3v-2.2h3.2a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3M27 38.8a1.4 1.4 0 0 1-1.4 1.5h-21a1.4 1.4 0 0 1-1.4-1.5v-29a1.4 1.4 0 0 1 1.4-1.5h21A1.4 1.4 0 0 1 27 9.8Z"
-                              ></path>
-                            </g>
-                          </svg>
-                          <h2>
-                            <a href="poker/index.html">Pokerové turnaje</a>
-                          </h2>
-                          <p>Pořádáme pravidelné pokerové turnaje.</p>
-                          <p>
-                            <a class="action-button" href="poker/index.html"
-                              >více informací</a
-                            >
-                          </p>
-                        </div>
-                        <div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="50.5"
-                            height="56.2"
-                            viewBox="0 0 50.5 56.2"
-                          >
-                            <defs>
-                              <path
-                                data-name="Rectangle 165"
-                                fill="#e5e0bd"
-                                d="M0 0H50.5V56.2H0z"
-                              ></path>
-                            </defs>
-                            <g
-                              data-name="Group 812"
-                              clip-path="url(#a)"
-                              fill="#e5e0bd"
-                              fill-rule="evenodd"
-                            >
-                              <path
-                                data-name="Path 498"
-                                d="M37.7 117.6c-5.8 8-19.1 8-25 0-7.3 2-12.7 5.9-12.7 11.6v8.4a3.2 3.2 0 0 0 3.2 3.1h44.1a3.2 3.2 0 0 0 3.2-3.1v-8.4c0-5.7-5.5-9.6-12.8-11.6M35.3 133a1.6 1.6 0 0 1-2.3 1.3l-5.5-3c-.7 1.6-3.8 1.6-4.4 0l-5.5 3a1.6 1.6 0 0 1-2.4-1.3v-6.1a1.6 1.6 0 0 1 2.5-1.3l5.4 3c.8-1.5 3.6-1.5 4.3 0l5.5-3a1.6 1.6 0 0 1 2.4 1.3Z"
-                                transform="translate(0 -84.5)"
-                              ></path>
-                              <path
-                                data-name="Path 499"
-                                d="M31.7 25.3c2.5 5.6 7 9.8 12.5 9.8 5.4 0 9.8-4.2 12.4-9.7 3-.3 5.6-2.2 5.6-6.3a5.3 5.3 0 0 0-3.3-5.3C58.5 6.6 54.4.2 44.9 0 34.7-.2 30.2 6.4 29.6 13.8a5.3 5.3 0 0 0-3.3 5.3c0 4 2.5 6 5.4 6.2"
-                                transform="translate(-19)"
-                              ></path>
-                            </g>
-                          </svg>
-                          <h2>
-                            <a href="private-taxi/index.html">Private Taxi</a>
-                          </h2>
-                          <p>
-                            Chcete si u nás dát skleničku nebo neřešit otázky s
-                            parkováním. <br />Zajistíme vám dopravu k nám, nebo
-                            vás odvezeme až domů. <br />Volejte recepci
-                            <a href="tel:+420606613131">+420 606 613 131</a>.
-                          </p>
-                          <p>
-                            <a
-                              class="action-button"
-                              href="private-taxi/index.html"
-                              >více informací</a
-                            >
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel__cont">
-                      <div class="row carousel layout-container">
-                        <div class="block-swiper1">
-                          <div class="carousel__title">
-                            <h1>
-                              Podívejte se, <br />jak to u nás <br />vypadá
-                            </h1>
-                          </div>
-                          <div class="swiper1">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide swiper-slide1">
-                                <img src="images/index3.jpg" alt="image" />
-                              </div>
-                              <div class="swiper-slide swiper-slide1">
-                                <img src="images/index4.jpg" alt="image" />
-                              </div>
-                              <div class="swiper-slide swiper-slide1">
-                                <img src="images/index5.jpg" alt="image" />
-                              </div>
-                              <div class="swiper-slide swiper-slide1">
-                                <img src="images/index7.jpg" alt="image" />
-                              </div>
-                              <div class="swiper-slide swiper-slide1">
-                                <img src="images/index8.jpg" alt="image" />
-                              </div>
-                              <div class="swiper-slide swiper-slide1">
-                                <img src="images/index10.jpg" alt="image" />
-                              </div>
-                              <div class="swiper-slide swiper-slide1">
-                                <img src="images/index4.jpg" alt="image" />
-                              </div>
-                              <div class="swiper-slide swiper-slide1">
-                                <img src="images/index6.jpg" alt="image" />
+                    <div class="LrkSrUcOCPAAwTx XZGSjVisCSROTdp"></div>
+                    <div class="OegvVrsaZrCdUCC urcITiPKGWbzWsO">
+                      <div class="miPWCgRLeyndskM EDxsSxxRtEYYJZP">
+                        <div class="BLvluAlBrtYZlOp LivrnXQgvOLUSHE">
+                          <div class="EhIsIhBqLaMTAjL">
+                            <img
+                              src="img/jackpot.png"
+                              alt="image"
+                              class="gyNMDCXFaTSNGFS"
+                            />
+                            <div class="GjDLjvRsmCgogdI">
+                              <div class="WhxkOlhIfVEOeJQ">
+                                <h5 class="OlbXBpxlOWmRweD">
+                                  Diversão Sem Compromisso
+                                </h5>
+                                <p class="wGjgPnoRicEzYkQ">
+                                  Aqui, a diversão é o único objetivo! No
+                                  JustFunSlots, você não precisa se preocupar
+                                  com apostas reais. Jogue quantas vezes quiser,
+                                  quando quiser, sem colocar dinheiro em risco.
+                                  Deixe os limites de lado e explore uma
+                                  variedade de slots incríveis, onde a vitória é
+                                  sempre diversão garantida.
+                                </p>
                               </div>
                             </div>
-                            <div
-                              class="swiper-pagination swiper-pagination1"
-                            ></div>
+                          </div>
+                        </div>
+                        <div class="BLvluAlBrtYZlOp LivrnXQgvOLUSHE">
+                          <div class="EhIsIhBqLaMTAjL">
+                            <img
+                              src="img/jackpot.png"
+                              alt="image"
+                              class="gyNMDCXFaTSNGFS"
+                            />
+                            <div class="GjDLjvRsmCgogdI">
+                              <div class="WhxkOlhIfVEOeJQ">
+                                <h5 class="OlbXBpxlOWmRweD">
+                                  Experiência de Cassino 100% Grátis
+                                </h5>
+                                <p class="wGjgPnoRicEzYkQ">
+                                  Sinta a emoção de um cassino real, mas sem
+                                  gastar nada! Nossos jogos são totalmente
+                                  gratuitos, trazendo a mesma adrenalina sem o
+                                  peso das apostas. Venha rodar as bobinas e
+                                  colecionar prêmios fictícios, aproveitando uma
+                                  experiência de cassino que só traz benefícios.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="BLvluAlBrtYZlOp LivrnXQgvOLUSHE">
+                          <div class="EhIsIhBqLaMTAjL">
+                            <img
+                              src="img/jackpot.png"
+                              alt="image"
+                              class="gyNMDCXFaTSNGFS"
+                            />
+                            <div class="GjDLjvRsmCgogdI">
+                              <div class="WhxkOlhIfVEOeJQ">
+                                <h5 class="OlbXBpxlOWmRweD">
+                                  Entretenimento Ilimitado
+                                </h5>
+                                <p class="wGjgPnoRicEzYkQ">
+                                  No JustFunSlots, a diversão não tem fim!
+                                  Escolha entre uma vasta coleção de jogos de
+                                  slots com gráficos envolventes e mecânicas
+                                  inovadoras. E o melhor de tudo? Não há limites
+                                  de jogo nem custos envolvidos. Desfrute de
+                                  entretenimento ilimitado sempre que quiser.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="BLvluAlBrtYZlOp LivrnXQgvOLUSHE">
+                          <div class="EhIsIhBqLaMTAjL">
+                            <img
+                              src="img/jackpot.png"
+                              alt="image"
+                              class="gyNMDCXFaTSNGFS"
+                            />
+                            <div class="GjDLjvRsmCgogdI">
+                              <div class="WhxkOlhIfVEOeJQ">
+                                <h5 class="OlbXBpxlOWmRweD">
+                                  Cassino Social Para Todos
+                                </h5>
+                                <p class="wGjgPnoRicEzYkQ">
+                                  Não importa se você é um jogador iniciante ou
+                                  experiente, nosso cassino social foi criado
+                                  para todos. Com fácil acesso e sem apostas
+                                  reais, você pode se divertir de forma segura e
+                                  inclusiva. Explore nossa seleção de jogos e
+                                  faça parte de uma comunidade de jogadores em
+                                  busca de pura diversão.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="BLvluAlBrtYZlOp LivrnXQgvOLUSHE">
+                          <div class="EhIsIhBqLaMTAjL">
+                            <img
+                              src="img/jackpot.png"
+                              alt="image"
+                              class="gyNMDCXFaTSNGFS"
+                            />
+                            <div class="GjDLjvRsmCgogdI">
+                              <div class="WhxkOlhIfVEOeJQ">
+                                <h5 class="OlbXBpxlOWmRweD">
+                                  Ganhos Sem Pressão
+                                </h5>
+                                <p class="wGjgPnoRicEzYkQ">
+                                  Sinta o gosto da vitória sem o estresse das
+                                  apostas! No JustFunSlots, os prêmios são
+                                  puramente fictícios, oferecendo uma
+                                  experiência relaxante e divertida. Jogue de
+                                  forma leve e descontraída, colecione pontos, e
+                                  aproveite as recompensas sem gastar um
+                                  centavo.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="BLvluAlBrtYZlOp LivrnXQgvOLUSHE">
+                          <div class="EhIsIhBqLaMTAjL">
+                            <img
+                              src="img/jackpot.png"
+                              alt="image"
+                              class="gyNMDCXFaTSNGFS"
+                            />
+                            <div class="GjDLjvRsmCgogdI">
+                              <div class="WhxkOlhIfVEOeJQ">
+                                <h5 class="OlbXBpxlOWmRweD">
+                                  Slots Para Todas as Ocasiões
+                                </h5>
+                                <p class="wGjgPnoRicEzYkQ">
+                                  Com tantas opções de slots, você sempre
+                                  encontrará o jogo perfeito para o momento.
+                                  Quer relaxar após um longo dia ou se divertir
+                                  em uma pausa rápida? JustFunSlots oferece
+                                  jogos para qualquer ocasião, com diversão
+                                  garantida e sem apostas em dinheiro.
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -743,143 +264,1163 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="GWzBqJzlIEjNzBb">
+            <div class="KUlSkTfQUuQvLtE">
+              <div class="UzWuZUNkieQWCvm">
+                <div class="lNqoYzifedCXcou zBxhWVuBhZtJdKx">
+                  <div class="lduCQwgOGzPfZXo">
+                    <div class="pqYbeARZcjQAFQY">
+                      <h3 class="ptuVZnBXedJjdye jZtQkkEDYLAgVoX">
+                        Confiança e Expertise – Histórico de Sucesso Garantido
+                      </h3>
+                      <div class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"></div>
+                      <div class="AlBnOhHuGyanPPP">
+                        <p class="BwEkBLYzjYrwsGr urWEowJhQpTwpar">
+                          No JustFunSlots, contamos com anos de experiência para
+                          oferecer a você a melhor diversão gratuita. Nossa
+                          equipe combina conhecimento profundo da indústria de
+                          cassinos com uma plataforma sólida, criada para
+                          proporcionar entretenimento de qualidade. Ao longo do
+                          tempo, conquistamos a confiança de milhares de
+                          jogadores que buscam diversão segura e sem apostas
+                          reais. Jogue com tranquilidade sabendo que está em
+                          boas mãos, em um cassino social que preza pela
+                          confiança e a satisfação do jogador.
+                        </p>
+                        <p class="BwEkBLYzjYrwsGr urWEowJhQpTwpar">
+                          Aqui no JustFunSlots, nossa prioridade é oferecer uma
+                          experiência divertida e confiável. Sabemos o quanto é
+                          importante garantir que todos os jogos sejam seguros e
+                          justos, por isso investimos continuamente em
+                          tecnologia e desenvolvimento. Nossa plataforma é
+                          projetada para proporcionar jogabilidade impecável,
+                          gráficos impressionantes e a emoção dos cassinos, sem
+                          o risco financeiro. Você joga por diversão, e nós
+                          garantimos que a experiência seja a melhor possível.
+                        </p>
+                        <p class="BwEkBLYzjYrwsGr urWEowJhQpTwpar">
+                          Além disso, temos orgulho do nosso suporte ao jogador.
+                          Desde iniciantes até os mais experientes, nossa equipe
+                          está sempre à disposição para garantir que você
+                          aproveite cada momento. Trabalhamos arduamente para
+                          criar uma comunidade ativa e envolvente, onde a
+                          confiança é a base. JustFunSlots é mais do que apenas
+                          jogos – é um espaço onde você pode relaxar e se
+                          divertir com total segurança e tranquilidade.
+                        </p>
+                      </div>
+                      <div class="LrkSrUcOCPAAwTx iydVNKLWdGIodLj"></div>
+                      <a
+                        href="contact.html"
+                        class="HSvDArcZXLAsldC bHbQPvZejfgUUQd"
+                        ><div>Saiba mais</div></a
+                      >
+                    </div>
+                    <div class="QahDqibqfGzHUDi">
+                      <img
+                        class="bfTQppGparAGjuw"
+                        src="img/cas2.jpg"
+                        alt="image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rTeQlWhVCSgqVLN">
+            <div class="KUlSkTfQUuQvLtE">
+              <div class="UzWuZUNkieQWCvm">
+                <div class="lNqoYzifedCXcou">
+                  <div class="VEVbmvVryHziSiJ">
+                    <div class="GiAGZsIYeDvJhQA">
+                      <h3 class="ptuVZnBXedJjdye jZtQkkEDYLAgVoX">
+                        Benefícios Exclusivos de Escolher o JustFunSlots – A
+                        Melhor Experiência de Cassino Grátis
+                      </h3>
+                      <div class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"></div>
+                      <div class="BwEkBLYzjYrwsGr urWEowJhQpTwpar">
+                        Ao escolher o JustFunSlots, você ganha acesso a uma
+                        experiência de cassino verdadeiramente única e sem
+                        compromissos. Nossos jogos são totalmente gratuitos,
+                        oferecendo entretenimento de alta qualidade sem o risco
+                        de perder dinheiro. Além disso, você pode aproveitar uma
+                        ampla variedade de slots com temas inovadores e gráficos
+                        cativantes, criados para todos os tipos de jogadores, do
+                        casual ao dedicado.
+                      </div>
+                    </div>
+                    <div class="LrkSrUcOCPAAwTx XZGSjVisCSROTdp"></div>
+                    <div class="NRcrcwTBghfvoTh">
+                      <div
+                        data-current="Tab 1"
+                        data-easing="ease"
+                        data-duration-in="300"
+                        data-duration-out="100"
+                        class="nvTsNnCsRzfECkl JjthRIKQXqdHFrY"
+                      >
+                        <div class="LcinjUTHWdBTIPf yUBVSltmEkZeywj">
+                          <div
+                            data-w-tab="Tab 1"
+                            class="KMGjXotrTWQAEUZ KgJWxsHuOORdmNd"
+                            id="bgGrgUkcbbkQpOx"
+                            aria-labelledby="w-tabs-0-data-w-tab-0"
+                          >
+                            <div class="PKqXJfohdTJbyNa">
+                              <img
+                                alt="image"
+                                src="img/cas3.jpg"
+                                class="KpYnowSTytbnKbb"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            data-w-tab="Tab 2"
+                            class="KMGjXotrTWQAEUZ"
+                            id="NRGgWjUyFBgNLxh"
+                            aria-labelledby="w-tabs-0-data-w-tab-1"
+                          >
+                            <div class="PKqXJfohdTJbyNa"></div>
+                          </div>
+                          <div
+                            data-w-tab="Tab 3"
+                            class="KMGjXotrTWQAEUZ"
+                            id="vDYCIvPusyAIwGs"
+                            aria-labelledby="w-tabs-0-data-w-tab-2"
+                          >
+                            <div class="PKqXJfohdTJbyNa"></div>
+                          </div>
+                          <div
+                            data-w-tab="Tab 4"
+                            class="KMGjXotrTWQAEUZ"
+                            id="iPSDoGRsmtKmvJc"
+                            aria-labelledby="w-tabs-0-data-w-tab-3"
+                          >
+                            <div class="PKqXJfohdTJbyNa"></div>
+                          </div>
+                        </div>
+                        <div class="PUiscFSeDSaMmgD NPyDkWcpGaYzbqI">
+                          <a
+                            data-w-tab="Tab 1"
+                            class="yxfbgDaNFzWySpF bHbQPvZejfgUUQd RoZAINBEmdSFRaK GOGekrDoMpWQNCg"
+                            id="yXoRKdnKbvZlmuU"
+                            href="contact.html"
+                            aria-controls="w-tabs-0-data-w-pane-0"
+                            aria-selected="true"
+                            ><img
+                              width="60"
+                              alt="image"
+                              src="img/jackpot.png"
+                            />
+                            <div class="FGHrDsShRxCdagv">
+                              <div>Jogos Sem Custos Escondidos</div>
+                              <div class="wGjgPnoRicEzYkQ urWEowJhQpTwpar">
+                                No JustFunSlots, o jogo é 100% gratuito, sem
+                                pegadinhas ou custos escondidos. Nossa missão é
+                                proporcionar uma experiência de cassino pura,
+                                onde o foco está apenas na diversão. Aproveite
+                                horas de entretenimento sem se preocupar com
+                                cobranças inesperadas ou apostas em dinheiro
+                                real.
+                              </div>
+                            </div></a
+                          ><a
+                            data-w-tab="Tab 2"
+                            class="yxfbgDaNFzWySpF bHbQPvZejfgUUQd RoZAINBEmdSFRaK"
+                            tabindex="-1"
+                            id="ixwZDssmzEKMZPS"
+                            href="contact.html"
+                            aria-controls="w-tabs-0-data-w-pane-1"
+                            aria-selected="false"
+                            ><img src="img/jackpot.png" alt="image" />
+                            <div class="FGHrDsShRxCdagv">
+                              <div>Cassino Social Para Todos os Níveis</div>
+                              <div class="wGjgPnoRicEzYkQ urWEowJhQpTwpar">
+                                Seja você um iniciante ou um jogador veterano,
+                                JustFunSlots oferece algo para todos. Nossos
+                                jogos são fáceis de entender, mas cheios de
+                                desafios para quem procura mais. Sem pressão,
+                                sem riscos financeiros – apenas diversão para
+                                todos os gostos e níveis de habilidade.
+                              </div>
+                            </div></a
+                          ><a
+                            data-w-tab="Tab 3"
+                            class="yxfbgDaNFzWySpF bHbQPvZejfgUUQd RoZAINBEmdSFRaK"
+                            tabindex="-1"
+                            id="khEjtYtOPZgpNLm"
+                            href="contact.html"
+                            aria-controls="w-tabs-0-data-w-pane-2"
+                            aria-selected="false"
+                            ><img src="img/jackpot.png" alt="image" />
+                            <div class="FGHrDsShRxCdagv">
+                              <div>
+                                Gráficos de Alta Qualidade e Jogabilidade Fluida
+                              </div>
+                              <div class="wGjgPnoRicEzYkQ urWEowJhQpTwpar">
+                                Mergulhe em uma experiência visual
+                                impressionante! No JustFunSlots, combinamos
+                                gráficos de alta qualidade com jogabilidade
+                                fluida para oferecer uma experiência de cassino
+                                que realmente prende a atenção. Cada jogo é
+                                projetado para ser intuitivo e visualmente
+                                estimulante, mantendo você entretido por horas.
+                              </div>
+                            </div></a
+                          ><a
+                            data-w-tab="Tab 4"
+                            class="yxfbgDaNFzWySpF bHbQPvZejfgUUQd RoZAINBEmdSFRaK"
+                            tabindex="-1"
+                            id="GGWdcwXTbyfsbfA"
+                            href="contact.html"
+                            aria-controls="w-tabs-0-data-w-pane-3"
+                            aria-selected="false"
+                            ><img src="img/jackpot.png" alt="image" />
+                            <div class="FGHrDsShRxCdagv">
+                              <div>Missões e Desafios Diários</div>
+                              <div class="wGjgPnoRicEzYkQ urWEowJhQpTwpar">
+                                Quer um motivo extra para voltar todo dia?
+                                JustFunSlots oferece missões e desafios diários
+                                que tornam a experiência ainda mais emocionante!
+                                Complete objetivos, ganhe recompensas e
+                                aproveite novas formas de jogar, sempre com a
+                                diversão em primeiro lugar e sem apostas reais.
+                              </div>
+                            </div></a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="NUHkaMrFJLakTgo">
+            <div class="KUlSkTfQUuQvLtE">
+              <div class="UzWuZUNkieQWCvm">
+                <div class="lNqoYzifedCXcou XttPhNhCnUJowji">
+                  <div class="uHfylRnKWzwvsFf">
+                    <div class="emssNXKylROFksM">
+                      <h3 class="ptuVZnBXedJjdye jZtQkkEDYLAgVoX">
+                        Resultados Excepcionais no JustFunSlots – O Que Nos
+                        Diferencia
+                      </h3>
+                      <div class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"></div>
+                      <div class="BwEkBLYzjYrwsGr urWEowJhQpTwpar">
+                        No JustFunSlots, nosso compromisso com a excelência se
+                        reflete em resultados excepcionais que falam por si. Não
+                        se trata apenas de diversão; trata-se de criar uma
+                        experiência memorável para nossos jogadores. Nossos
+                        dados mostram que a maioria dos nossos usuários se
+                        diverte mais e retorna para jogar regularmente, graças à
+                        nossa variedade de jogos envolventes e ao ambiente
+                        amigável.
+                      </div>
+                    </div>
+                    <div class="LrkSrUcOCPAAwTx XZGSjVisCSROTdp"></div>
+                    <div class="qzbmgUXseHhcTLh">
+                      <div
+                        data-delay="4000"
+                        data-animation="slide"
+                        class="lgTVmRUpgAfuCxH nNhMIXzKSexPxzm"
+                        data-autoplay="false"
+                        data-easing="ease"
+                        data-hide-arrows="false"
+                        data-disable-swipe="false"
+                        data-autoplay-limit="0"
+                        data-nav-spacing="3"
+                        data-duration="500"
+                        data-infinite="true"
+                      >
+                        <div
+                          class="UxzifmnoDtHBuEz cVKHzSdaFXWskJQ"
+                          id="aPtpBGJhbtVyPeM"
+                        >
+                          <div class="XLwyeXKjXGtTQMX qqnUPjAmGUdNodF">
+                            <div class="flaTeebXtoCBjtU urcITiPKGWbzWsO">
+                              <div class="mgtnIYKRnhvRhQH EDxsSxxRtEYYJZP">
+                                <div class="eYuGSrfogmNZRWs LivrnXQgvOLUSHE">
+                                  <div class="zhwKWhRDRfzkRZT">
+                                    <div class="QmdwaelKokJruRn">
+                                      <img
+                                        src="img/cas4.jpg"
+                                        alt="image"
+                                        class="fpDTGPMmMTzacmJ"
+                                      />
+                                    </div>
+                                    <div class="ROljTCCtRDtsaeb">
+                                      <h3
+                                        class="efnVqpNCohRESNh jZtQkkEDYLAgVoX"
+                                      >
+                                        Experiência do Usuário
+                                      </h3>
+                                      <div
+                                        class="LrkSrUcOCPAAwTx iydVNKLWdGIodLj"
+                                      ></div>
+                                      <div class="NMycZmAgOmjFbZU">
+                                        <h3
+                                          class="efnVqpNCohRESNh jZtQkkEDYLAgVoX"
+                                        >
+                                          Interface Amigável e Intuitiva
+                                        </h3>
+                                        <p
+                                          class="BwEkBLYzjYrwsGr urWEowJhQpTwpar"
+                                        >
+                                          Navegar no JustFunSlots é uma
+                                          experiência simples e agradável. Nossa
+                                          interface foi projetada pensando no
+                                          usuário, permitindo que você encontre
+                                          rapidamente seus jogos favoritos e
+                                          comece a jogar em poucos cliques. A
+                                          facilidade de uso garante que todos,
+                                          independentemente da experiência,
+                                          possam se divertir sem complicações.
+                                        </p>
+                                      </div>
+                                      <div
+                                        class="LrkSrUcOCPAAwTx IGnZjBzBAKJCbQR"
+                                      ></div>
+                                      <a
+                                        href="contact.html"
+                                        class="HSvDArcZXLAsldC bHbQPvZejfgUUQd"
+                                        ><div>View more</div></a
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="XLwyeXKjXGtTQMX qqnUPjAmGUdNodF"
+                            aria-hidden="true"
+                          >
+                            <div
+                              class="flaTeebXtoCBjtU urcITiPKGWbzWsO"
+                              aria-hidden="true"
+                            >
+                              <div
+                                class="mgtnIYKRnhvRhQH EDxsSxxRtEYYJZP"
+                                aria-hidden="true"
+                              >
+                                <div
+                                  class="eYuGSrfogmNZRWs LivrnXQgvOLUSHE"
+                                  aria-hidden="true"
+                                >
+                                  <div
+                                    class="zhwKWhRDRfzkRZT"
+                                    aria-hidden="true"
+                                  >
+                                    <div
+                                      class="QmdwaelKokJruRn"
+                                      aria-hidden="true"
+                                    >
+                                      <img
+                                        src="img/cas5.jpg"
+                                        alt="image"
+                                        class="fpDTGPMmMTzacmJ"
+                                        aria-hidden="true"
+                                      />
+                                    </div>
+                                    <div
+                                      class="ROljTCCtRDtsaeb"
+                                      aria-hidden="true"
+                                    >
+                                      <h3
+                                        class="efnVqpNCohRESNh jZtQkkEDYLAgVoX"
+                                        aria-hidden="true"
+                                      >
+                                        Comunidade e Socialização
+                                      </h3>
+                                      <div
+                                        class="LrkSrUcOCPAAwTx iydVNKLWdGIodLj"
+                                        aria-hidden="true"
+                                      ></div>
+                                      <div
+                                        class="NMycZmAgOmjFbZU"
+                                        aria-hidden="true"
+                                      >
+                                        <h3
+                                          class="efnVqpNCohRESNh jZtQkkEDYLAgVoX"
+                                          aria-hidden="true"
+                                        >
+                                          Conecte-se e Compartilhe a Diversão
+                                        </h3>
+                                        <p
+                                          class="BwEkBLYzjYrwsGr urWEowJhQpTwpar"
+                                          aria-hidden="true"
+                                        >
+                                          Faça parte de uma comunidade vibrante
+                                          no JustFunSlots! Interaja com outros
+                                          jogadores, compartilhe suas conquistas
+                                          e participe de eventos sociais
+                                          emocionantes. Acreditamos que a
+                                          diversão é ainda melhor quando
+                                          compartilhada, e nossa plataforma
+                                          facilita a socialização entre os
+                                          jogadores, tornando cada sessão de
+                                          jogo uma experiência mais rica e
+                                          envolvente.
+                                        </p>
+                                      </div>
+                                      <div
+                                        class="LrkSrUcOCPAAwTx IGnZjBzBAKJCbQR"
+                                        aria-hidden="true"
+                                      ></div>
+                                      <a
+                                        href="contact.html"
+                                        class="HSvDArcZXLAsldC bHbQPvZejfgUUQd"
+                                        tabindex="-1"
+                                        aria-hidden="true"
+                                        ><div aria-hidden="true">
+                                          View more
+                                        </div></a
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="XLwyeXKjXGtTQMX qqnUPjAmGUdNodF"
+                            aria-hidden="true"
+                          >
+                            <div
+                              class="flaTeebXtoCBjtU urcITiPKGWbzWsO"
+                              aria-hidden="true"
+                            >
+                              <div
+                                class="mgtnIYKRnhvRhQH EDxsSxxRtEYYJZP"
+                                aria-hidden="true"
+                              >
+                                <div
+                                  class="eYuGSrfogmNZRWs LivrnXQgvOLUSHE"
+                                  aria-hidden="true"
+                                >
+                                  <div
+                                    class="zhwKWhRDRfzkRZT"
+                                    aria-hidden="true"
+                                  >
+                                    <div
+                                      class="QmdwaelKokJruRn"
+                                      aria-hidden="true"
+                                    >
+                                      <img
+                                        src="img/cas6.jpg"
+                                        alt="image"
+                                        class="fpDTGPMmMTzacmJ"
+                                        aria-hidden="true"
+                                      />
+                                    </div>
+                                    <div
+                                      class="ROljTCCtRDtsaeb"
+                                      aria-hidden="true"
+                                    >
+                                      <h3
+                                        class="efnVqpNCohRESNh jZtQkkEDYLAgVoX"
+                                        aria-hidden="true"
+                                      >
+                                        Variedade de Jogos
+                                      </h3>
+                                      <div
+                                        class="LrkSrUcOCPAAwTx iydVNKLWdGIodLj"
+                                        aria-hidden="true"
+                                      ></div>
+                                      <div
+                                        class="NMycZmAgOmjFbZU"
+                                        aria-hidden="true"
+                                      >
+                                        <h3
+                                          class="efnVqpNCohRESNh jZtQkkEDYLAgVoX"
+                                          aria-hidden="true"
+                                        >
+                                          Diversidade de Slots Para Todos os
+                                          Gostos
+                                        </h3>
+                                        <p
+                                          class="BwEkBLYzjYrwsGr urWEowJhQpTwpar"
+                                          aria-hidden="true"
+                                        >
+                                          No JustFunSlots, oferecemos uma
+                                          impressionante variedade de jogos de
+                                          slots para atender a todos os gostos e
+                                          preferências. De temas clássicos a
+                                          aventuras emocionantes, há sempre algo
+                                          novo para explorar. Nossos jogos são
+                                          atualizados regularmente, garantindo
+                                          que você nunca fique sem opções e
+                                          sempre tenha algo emocionante para
+                                          experimentar.
+                                        </p>
+                                      </div>
+                                      <div
+                                        class="LrkSrUcOCPAAwTx IGnZjBzBAKJCbQR"
+                                        aria-hidden="true"
+                                      ></div>
+                                      <a
+                                        href="contact.html"
+                                        class="HSvDArcZXLAsldC bHbQPvZejfgUUQd"
+                                        tabindex="-1"
+                                        aria-hidden="true"
+                                        ><div aria-hidden="true">
+                                          View more
+                                        </div></a
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ObxjnVErGepYQOd">
+            <div class="KUlSkTfQUuQvLtE">
+              <div class="UzWuZUNkieQWCvm">
+                <div class="lNqoYzifedCXcou zBxhWVuBhZtJdKx">
+                  <div class="MWSyokrEYXoKREY">
+                    <div class="uypRexFAzsiWZKF">
+                      <h3 class="ptuVZnBXedJjdye">
+                        Nossa Equipe – Profissionais Dedicados a Proporcionar a
+                        Melhor Experiência de Jogo
+                      </h3>
+                      <div class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"></div>
+                      <div class="BwEkBLYzjYrwsGr">
+                        No JustFunSlots, nossa equipe é o coração da nossa
+                        operação. Formada por especialistas apaixonados pela
+                        indústria de jogos, cada membro traz uma combinação
+                        única de habilidades, criatividade e experiência para
+                        garantir que você tenha a melhor experiência possível.
+                        Desde desenvolvedores de jogos que criam gráficos
+                        envolventes até profissionais de atendimento ao cliente
+                        que estão sempre prontos para ajudar, cada um de nós
+                        está comprometido com a sua diversão.
+                      </div>
+                    </div>
+                    <div class="LrkSrUcOCPAAwTx XZGSjVisCSROTdp"></div>
+                    <div class="ytYAquoMWJNVmZd urcITiPKGWbzWsO">
+                      <div class="XeMEbULHDxXvuOJ EDxsSxxRtEYYJZP">
+                        <div class="kpoTClMJzensNNf LivrnXQgvOLUSHE">
+                          <a
+                            href="contact.html"
+                            class="gEQskZnMaitXQFH bHbQPvZejfgUUQd"
+                            ><div class="huwzpZJcMfklrqh">
+                              <img
+                                src="img/stuff1.jpeg"
+                                alt="image"
+                                class="yMHjvRyUuDlJYPo"
+                              />
+                              <div class="gvqfmFOrUXTddCD"></div>
+                              <div class="rcsYnAAKEbCEOAT"></div>
+                              <div
+                                class="rcsYnAAKEbCEOAT xORrNfWzRXPQNbO"
+                              ></div>
+                            </div>
+                            <div class="OYuDCmIkWgARyTB">
+                              <h5 class="OlbXBpxlOWmRweD KMzNBoOUsXYJuTQ">
+                                Ana Oliveira
+                              </h5>
+                              <div class="BwEkBLYzjYrwsGr">
+                                Gerente de Desenvolvimento de Jogos
+                              </div>
+                            </div></a
+                          >
+                        </div>
+                        <div class="kpoTClMJzensNNf LivrnXQgvOLUSHE">
+                          <a
+                            href="contact.html"
+                            class="gEQskZnMaitXQFH bHbQPvZejfgUUQd"
+                            ><div class="huwzpZJcMfklrqh">
+                              <img
+                                src="img/stuff3.jpeg"
+                                alt="image"
+                                class="yMHjvRyUuDlJYPo"
+                              />
+                              <div class="gvqfmFOrUXTddCD"></div>
+                              <div class="rcsYnAAKEbCEOAT"></div>
+                              <div
+                                class="rcsYnAAKEbCEOAT xORrNfWzRXPQNbO"
+                              ></div>
+                            </div>
+                            <div class="OYuDCmIkWgARyTB">
+                              <h5 class="OlbXBpxlOWmRweD KMzNBoOUsXYJuTQ">
+                                Carlos Mendes
+                              </h5>
+                              <div class="BwEkBLYzjYrwsGr">
+                                Especialista em Atendimento ao Cliente
+                              </div>
+                            </div></a
+                          >
+                        </div>
+                        <div class="kpoTClMJzensNNf LivrnXQgvOLUSHE">
+                          <a
+                            href="contact.html"
+                            class="gEQskZnMaitXQFH bHbQPvZejfgUUQd"
+                            ><div class="huwzpZJcMfklrqh">
+                              <img
+                                src="img/stuff2.jpeg"
+                                alt="image"
+                                class="yMHjvRyUuDlJYPo"
+                              />
+                              <div class="gvqfmFOrUXTddCD"></div>
+                              <div class="rcsYnAAKEbCEOAT"></div>
+                              <div
+                                class="rcsYnAAKEbCEOAT xORrNfWzRXPQNbO"
+                              ></div>
+                            </div>
+                            <div class="OYuDCmIkWgARyTB">
+                              <h5 class="OlbXBpxlOWmRweD KMzNBoOUsXYJuTQ">
+                                Fernanda Costa
+                              </h5>
+                              <div class="BwEkBLYzjYrwsGr">
+                                Coordenadora de Marketing
+                              </div>
+                            </div></a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="MQiNdIzTTnbdYNh">
+            <div class="KUlSkTfQUuQvLtE">
+              <div class="UzWuZUNkieQWCvm">
+                <div class="lNqoYzifedCXcou">
+                  <div class="OjnyBdEnAPgGPLW">
+                    <div class="VMkCelKKOQvpxmE">
+                      <h3 class="ptuVZnBXedJjdye">
+                        Avaliações e Depoimentos de Nossos Clientes – O Que
+                        Dizem Sobre Nós
+                      </h3>
+                    </div>
+                    <div class="LrkSrUcOCPAAwTx XZGSjVisCSROTdp"></div>
+                    <div class="KokVJLBmCNGipUH">
+                      <div
+                        data-delay="4000"
+                        data-animation="slide"
+                        class="jnTqgkzqKQpCHXY nNhMIXzKSexPxzm"
+                        data-autoplay="false"
+                        data-easing="ease"
+                        data-hide-arrows="false"
+                        data-disable-swipe="false"
+                        data-autoplay-limit="0"
+                        data-nav-spacing="3"
+                        data-duration="500"
+                        data-infinite="true"
+                      >
+                        <div
+                          class="fJRzDknhPWihwMg cVKHzSdaFXWskJQ"
+                          id="ETnTlwpiDhplpiC"
+                        >
+                          <div class="aVzRyYsARcGwknZ qqnUPjAmGUdNodF">
+                            <div class="ajkQASmSeiFTZjY">
+                              <h5 class="OlbXBpxlOWmRweD">
+                                "O JustFunSlots é o melhor cassino social que já
+                                experimentei! Os jogos são super divertidos e o
+                                suporte ao cliente é excepcional. Eu me sinto
+                                parte de uma comunidade incrível!"
+                              </h5>
+                              <div
+                                class="LrkSrUcOCPAAwTx IGnZjBzBAKJCbQR"
+                              ></div>
+                              <div class="ABZBhLsXNCQWFxb">
+                                <img src="img/user.png" alt="image" />
+                                <div class="nhJVZEkEjBzVjYZ">
+                                  <div class="wtsLrdtznNMUJyo">
+                                    Mariana Silva
+                                  </div>
+                                  <div class="wGjgPnoRicEzYkQ">
+                                    Jogadora Freemium
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="aVzRyYsARcGwknZ qqnUPjAmGUdNodF"
+                            aria-hidden="true"
+                          >
+                            <div class="ajkQASmSeiFTZjY" aria-hidden="true">
+                              <h5 class="OlbXBpxlOWmRweD" aria-hidden="true">
+                                "Adoro a variedade de jogos disponíveis! Sempre
+                                há algo novo para jogar, e eu posso me divertir
+                                sem preocupações. JustFunSlots se tornou meu
+                                lugar favorito para relaxar."
+                              </h5>
+                              <div
+                                class="LrkSrUcOCPAAwTx IGnZjBzBAKJCbQR"
+                                aria-hidden="true"
+                              ></div>
+                              <div class="ABZBhLsXNCQWFxb" aria-hidden="true">
+                                <img
+                                  src="img/user.png"
+                                  alt="image"
+                                  aria-hidden="true"
+                                />
+                                <div class="nhJVZEkEjBzVjYZ" aria-hidden="true">
+                                  <div
+                                    class="wtsLrdtznNMUJyo"
+                                    aria-hidden="true"
+                                  >
+                                    Lucas Almeida
+                                  </div>
+                                  <div
+                                    class="wGjgPnoRicEzYkQ"
+                                    aria-hidden="true"
+                                  >
+                                    Aventureiro de Slots
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="aVzRyYsARcGwknZ qqnUPjAmGUdNodF"
+                            aria-hidden="true"
+                          >
+                            <div class="ajkQASmSeiFTZjY" aria-hidden="true">
+                              <h5 class="OlbXBpxlOWmRweD" aria-hidden="true">
+                                "A plataforma é muito fácil de usar, e os
+                                gráficos são fantásticos! É um ótimo jeito de
+                                passar o tempo com amigos. Recomendo para quem
+                                quer diversão sem pressão!"
+                              </h5>
+                              <div
+                                class="LrkSrUcOCPAAwTx IGnZjBzBAKJCbQR"
+                                aria-hidden="true"
+                              ></div>
+                              <div class="ABZBhLsXNCQWFxb" aria-hidden="true">
+                                <img
+                                  src="img/user.png"
+                                  alt="image"
+                                  aria-hidden="true"
+                                />
+                                <div class="nhJVZEkEjBzVjYZ" aria-hidden="true">
+                                  <div
+                                    class="wtsLrdtznNMUJyo"
+                                    aria-hidden="true"
+                                  >
+                                    Juliana Rocha
+                                  </div>
+                                  <div
+                                    class="wGjgPnoRicEzYkQ"
+                                    aria-hidden="true"
+                                  >
+                                    Entusiasta de Cassinos Sociais
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="jJaUAYzhDtquuGO">
+            <div class="KUlSkTfQUuQvLtE">
+              <div class="UzWuZUNkieQWCvm">
+                <div class="lNqoYzifedCXcou XttPhNhCnUJowji">
+                  <div class="eVFFFYzqcQjNIXZ">
+                    <h3 class="ptuVZnBXedJjdye">
+                      Pronto para Começar – Sua Aventura no JustFunSlots Começa
+                      Aqui!
+                    </h3>
+                    <div class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"></div>
+                    <div class="BwEkBLYzjYrwsGr">
+                      Estamos empolgados para que você inicie sua jornada no
+                      JustFunSlots! Nossa plataforma está pronta para oferecer
+                      uma experiência de cassino social inigualável, cheia de
+                      diversão e emoção. Com um simples clique, você pode
+                      mergulhar em uma variedade de jogos, todos projetados para
+                      proporcionar entretenimento sem risco. Não espere mais – a
+                      diversão está a apenas um passo de distância!
+                    </div>
+                    <div class="LrkSrUcOCPAAwTx IGnZjBzBAKJCbQR"></div>
+                    <a
+                      href="contact.html"
+                      class="HSvDArcZXLAsldC bHbQPvZejfgUUQd"
+                      ><div>Saiba mais</div></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="FGPqclDZYtBNRem" id="service">
+            <div class="KUlSkTfQUuQvLtE">
+              <div class="UzWuZUNkieQWCvm">
+                <div class="lNqoYzifedCXcou zBxhWVuBhZtJdKx">
+                  <div class="WJHjJQckfrQjXYs">
+                    <div class="eIZCbcXuXlhJYCn">
+                      <h3 class="ptuVZnBXedJjdye jZtQkkEDYLAgVoX">
+                        Pacote de Diversão – Descubra Nossas Ofertas Exclusivas
+                        no JustFunSlots!
+                      </h3>
+                      <div class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"></div>
+                      <div class="BwEkBLYzjYrwsGr urWEowJhQpTwpar">
+                        No JustFunSlots, o nosso Pacote de Diversão é a chave
+                        para desbloquear uma experiência de jogo emocionante e
+                        envolvente. Este pacote exclusivo inclui acesso a jogos
+                        selecionados, bônus especiais e eventos únicos que
+                        garantem horas de entretenimento sem custo. Nossa oferta
+                        foi projetada para proporcionar a melhor experiência,
+                        reunindo todos os elementos que você adora em um só
+                        lugar.
+                      </div>
+                    </div>
+                    <div class="LrkSrUcOCPAAwTx XZGSjVisCSROTdp"></div>
+                    <div class="IFqmQItmnzwKSTe byESkkcpKzxeSnl">
+                      <div id="ApDyJTgavZenlLF" class="TIPyBvQdRLlxZHZ">
+                        <div class="VlWFkKeCtWNBoTI">
+                          <div class="uSPeFoKCImMenan">
+                            <h5 class="OlbXBpxlOWmRweD">Slots Temáticos</h5>
+                            <div class="wGjgPnoRicEzYkQ">
+                              Mergulhe em mundos fascinantes com nossa coleção
+                              de slots temáticos, onde cada jogo oferece uma
+                              experiência única e envolvente. Escolha entre
+                              diversas opções que vão desde aventuras épicas até
+                              contos clássicos, todos projetados para garantir
+                              horas de diversão.
+                            </div>
+                          </div>
+                          <div class="LrkSrUcOCPAAwTx iydVNKLWdGIodLj"></div>
+                          <h3 class="ptuVZnBXedJjdye">Jogos de Slots</h3>
+                          <div class="LrkSrUcOCPAAwTx IGnZjBzBAKJCbQR"></div>
+                          <a
+                            href="contact.html"
+                            class="HSvDArcZXLAsldC bHbQPvZejfgUUQd"
+                            ><div>Contact us</div></a
+                          >
+                        </div>
+                        <div class="LGknRvUOugaKTlR">
+                          <div class="KcXcPWmuVjbsRtC">
+                            <img src="img/accept.png" alt="image" />
+                            <div class="BwEkBLYzjYrwsGr">
+                              Temas Diversificados: Explore slots com temas de
+                              mitologia, cinema, fantasia e muito mais.
+                            </div>
+                          </div>
+                          <div class="KcXcPWmuVjbsRtC">
+                            <img src="img/accept.png" alt="image" />
+                            <div class="BwEkBLYzjYrwsGr">
+                              Jogabilidade Imersiva: Gráficos vibrantes e
+                              trilhas sonoras que tornam cada jogo uma aventura.
+                            </div>
+                          </div>
+                          <div class="KcXcPWmuVjbsRtC">
+                            <img src="img/accept.png" alt="image" />
+                            <div class="BwEkBLYzjYrwsGr">
+                              Bônus Especiais: Ganhe rodadas grátis e prêmios ao
+                              atingir combinações vencedoras.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="jZkRTGmtXTwCOIV" class="TIPyBvQdRLlxZHZ">
+                        <div class="VlWFkKeCtWNBoTI">
+                          <div class="uSPeFoKCImMenan">
+                            <h5 class="OlbXBpxlOWmRweD">Desafios Diários</h5>
+                            <div class="wGjgPnoRicEzYkQ">
+                              Participe de nossos desafios diários e teste suas
+                              habilidades em competições emocionantes! Cada
+                              desafio oferece a chance de ganhar prêmios
+                              exclusivos e se destacar na comunidade. Mostre seu
+                              talento e divirta-se enquanto compete!
+                            </div>
+                          </div>
+                          <div class="LrkSrUcOCPAAwTx iydVNKLWdGIodLj"></div>
+                          <h3 class="ptuVZnBXedJjdye">Competição e Eventos</h3>
+                          <div class="LrkSrUcOCPAAwTx IGnZjBzBAKJCbQR"></div>
+                          <a
+                            href="contact.html"
+                            class="HSvDArcZXLAsldC bHbQPvZejfgUUQd"
+                            ><div>Contact us</div></a
+                          >
+                        </div>
+                        <div class="LGknRvUOugaKTlR">
+                          <div class="KcXcPWmuVjbsRtC">
+                            <img src="img/accept.png" alt="image" />
+                            <div class="BwEkBLYzjYrwsGr">
+                              Prêmios Atraentes: Ganhe recompensas incríveis ao
+                              completar os desafios.
+                            </div>
+                          </div>
+                          <div class="KcXcPWmuVjbsRtC">
+                            <img src="img/accept.png" alt="image" />
+                            <div class="BwEkBLYzjYrwsGr">
+                              Classificações em Tempo Real: Acompanhe seu
+                              progresso e compare com outros jogadores.
+                            </div>
+                          </div>
+                          <div class="KcXcPWmuVjbsRtC">
+                            <img src="img/accept.png" alt="image" />
+                            <div class="BwEkBLYzjYrwsGr">
+                              Eventos Temáticos: Participe de desafios especiais
+                              durante datas comemorativas e festividades.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="TIPyBvQdRLlxZHZ">
+                        <div class="VlWFkKeCtWNBoTI">
+                          <div class="uSPeFoKCImMenan">
+                            <h5 class="OlbXBpxlOWmRweD">
+                              Comunidade JustFunSlots
+                            </h5>
+                            <div class="wGjgPnoRicEzYkQ">
+                              Junte-se à nossa comunidade de jogadores e
+                              compartilhe a paixão pelos jogos! No JustFunSlots,
+                              você encontrará amigos e colegas que compartilham
+                              interesses semelhantes, tornando sua experiência
+                              de jogo ainda mais gratificante.
+                            </div>
+                          </div>
+                          <div class="LrkSrUcOCPAAwTx iydVNKLWdGIodLj"></div>
+                          <h3 class="ptuVZnBXedJjdye">Socialização</h3>
+                          <div class="LrkSrUcOCPAAwTx IGnZjBzBAKJCbQR"></div>
+                          <a
+                            href="contact.html"
+                            class="HSvDArcZXLAsldC bHbQPvZejfgUUQd"
+                            ><div>Contact us</div></a
+                          >
+                        </div>
+                        <div class="LGknRvUOugaKTlR">
+                          <div class="KcXcPWmuVjbsRtC">
+                            <img src="img/accept.png" alt="image" />
+                            <div class="BwEkBLYzjYrwsGr">
+                              Interação Social: Converse e compartilhe dicas com
+                              outros jogadores em nosso chat.
+                            </div>
+                          </div>
+                          <div class="KcXcPWmuVjbsRtC">
+                            <img src="img/accept.png" alt="image" />
+                            <div class="BwEkBLYzjYrwsGr">
+                              Eventos Sociais: Participe de festas virtuais e
+                              torneios exclusivos para a comunidade.
+                            </div>
+                          </div>
+                          <div class="KcXcPWmuVjbsRtC">
+                            <img src="img/accept.png" alt="image" />
+                            <div class="BwEkBLYzjYrwsGr">
+                              Feedback e Sugestões: Contribua com ideias e ajude
+                              a moldar o futuro do JustFunSlots.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <div class="hrclear"></div>
-
-            <div id="ipostatistics"></div>
-
-            <div id="ipofooter"></div>
+          <div class="HaGdzJpVElkDHiC">
+            <div class="KUlSkTfQUuQvLtE">
+              <div class="UzWuZUNkieQWCvm">
+                <div class="lNqoYzifedCXcou XttPhNhCnUJowji">
+                  <div class="FSVaLYyLHYBHbOW">
+                    <div class="DjKXuRSdDvGtFpL">
+                      <h3 class="ptuVZnBXedJjdye jZtQkkEDYLAgVoX">
+                        Mantenha-se Atualizado com Nosso Blog e Notícias – Tudo
+                        Sobre o JustFunSlots!
+                      </h3>
+                      <div class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"></div>
+                      <p class="BwEkBLYzjYrwsGr urWEowJhQpTwpar">
+                        No JustFunSlots, acreditamos que a informação é
+                        fundamental para maximizar sua experiência de jogo.
+                        Nosso blog e seção de notícias oferecem um repositório
+                        rico em conteúdos que abrangem tudo, desde dicas
+                        estratégicas para os jogos até atualizações sobre novos
+                        lançamentos e eventos emocionantes. Aqui, você
+                        encontrará artigos que ajudam a aprimorar suas
+                        habilidades, assim como entrevistas com desenvolvedores
+                        de jogos e insights sobre tendências da indústria.
+                      </p>
+                    </div>
+                    <div class="LrkSrUcOCPAAwTx XZGSjVisCSROTdp"></div>
+                    <div class="iAveaESCekFjWHA">
+                      <div class="OvccPPKdTrRJnPC urcITiPKGWbzWsO">
+                        <div class="MoLKaTNKtlBPQxF EDxsSxxRtEYYJZP">
+                          <div class="sQfRGpaURIezfir LivrnXQgvOLUSHE">
+                            <a
+                              href="contact.html"
+                              class="LfTWPgTbvFldrFh bHbQPvZejfgUUQd"
+                              ><div class="VuumlPbdcDUUiSj">
+                                <img
+                                  src="img/cas8.jpg"
+                                  alt="image"
+                                  class="IkhHMYUeUTCTTax"
+                                />
+                              </div>
+                              <div class="XhjMDijOiHDHukZ">
+                                <div class="uABiVUyTKUZsosi">
+                                  <div class="ZFucAsFCoZXgvVk">
+                                    <div>Novidades do Cassino</div>
+                                  </div>
+                                  <h5 class="OlbXBpxlOWmRweD RrqkpXfMoyoUtqu">
+                                    Descubra os Últimos Lançamentos de Jogos!
+                                  </h5>
+                                </div>
+                                <div
+                                  class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"
+                                ></div></div
+                            ></a>
+                          </div>
+                          <div class="sQfRGpaURIezfir LivrnXQgvOLUSHE">
+                            <a
+                              href="contact.html"
+                              class="LfTWPgTbvFldrFh bHbQPvZejfgUUQd"
+                              ><div class="VuumlPbdcDUUiSj">
+                                <img
+                                  src="img/cas9.jpg"
+                                  alt="image"
+                                  class="IkhHMYUeUTCTTax"
+                                />
+                              </div>
+                              <div class="XhjMDijOiHDHukZ">
+                                <div class="uABiVUyTKUZsosi">
+                                  <div class="ZFucAsFCoZXgvVk">
+                                    <div>Dicas e Estratégias</div>
+                                  </div>
+                                  <h5 class="OlbXBpxlOWmRweD RrqkpXfMoyoUtqu">
+                                    Maximize sua Diversão: Dicas para Jogar
+                                    Melhor!
+                                  </h5>
+                                </div>
+                                <div
+                                  class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"
+                                ></div></div
+                            ></a>
+                          </div>
+                          <div class="sQfRGpaURIezfir LivrnXQgvOLUSHE">
+                            <a
+                              href="contact.html"
+                              class="LfTWPgTbvFldrFh bHbQPvZejfgUUQd"
+                              ><div class="VuumlPbdcDUUiSj">
+                                <img
+                                  src="img/cas10.jpg"
+                                  alt="image"
+                                  class="IkhHMYUeUTCTTax"
+                                />
+                              </div>
+                              <div class="XhjMDijOiHDHukZ">
+                                <div class="uABiVUyTKUZsosi">
+                                  <div class="ZFucAsFCoZXgvVk">
+                                    <div>Eventos e Competições</div>
+                                  </div>
+                                  <h5 class="OlbXBpxlOWmRweD RrqkpXfMoyoUtqu">
+                                    Participe das Nossas Competências e Ganhe
+                                    Prêmios!
+                                  </h5>
+                                </div>
+                                <div
+                                  class="LrkSrUcOCPAAwTx OMioczzjLshfoRz"
+                                ></div></div
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div id="ipocopyright">
-        <div class="copyright">
-          <div class="row copyright__inner layout-container">
-            <div class="copy-logo">
-              <a title="BIG WIN a.s." href="index.html" class="header-logo">
-                <img
-                  src="images/logo-min.png"
-                  width="300"
-                  height="98"
-                  alt="BIG WIN a.s."
-                />
-              </a>
-            </div>
-            <div class="copy-socials flex-container">
-              <a
-                class="tooltip tooltipstered"
-                href="kde-nas-najdete/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="29.3"
-                  height="29.3"
-                  viewBox="0 0 29.3 29.3"
-                >
-                  <g data-name="Group 803">
-                    <path
-                      data-name="Path 256"
-                      d="M14.6 0h-6a10.8 10.8 0 0 0-3.5.8 7.2 7.2 0 0 0-2.6 1.7A7.2 7.2 0 0 0 .8 5 10.7 10.7 0 0 0 0 8.6l-.1 6v6a10.8 10.8 0 0 0 .8 3.6A7.5 7.5 0 0 0 5 28.5a10.8 10.8 0 0 0 3.5.7h12a10.8 10.8 0 0 0 3.6-.7 7.5 7.5 0 0 0 4.3-4.3 10.8 10.8 0 0 0 .7-3.5V8.6a10.8 10.8 0 0 0-.7-3.5 7.2 7.2 0 0 0-1.7-2.6A7.2 7.2 0 0 0 24.2.8a10.8 10.8 0 0 0-3.5-.7l-6-.1Zm-1.3 2.6h1.3l6 .1a8.1 8.1 0 0 1 2.7.5A4.5 4.5 0 0 1 25 4.3 4.5 4.5 0 0 1 26 6a8 8 0 0 1 .6 2.7v11.9a8.1 8.1 0 0 1-.5 2.7 4.9 4.9 0 0 1-2.8 2.8 8 8 0 0 1-2.7.5H8.7A8 8 0 0 1 6 26 4.5 4.5 0 0 1 4.3 25a4.5 4.5 0 0 1-1-1.7 8 8 0 0 1-.6-2.7V8.7A8.1 8.1 0 0 1 3.2 6a4.5 4.5 0 0 1 1.1-1.7 4.5 4.5 0 0 1 1.7-1 8 8 0 0 1 2.7-.6h4.6Zm9.2 2.5a1.8 1.8 0 1 0 1.7 1.7 1.8 1.8 0 0 0-1.7-1.7Zm-7.9 2a7.5 7.5 0 1 0 7.6 7.5 7.5 7.5 0 0 0-7.6-7.5Zm0 2.7a4.9 4.9 0 1 1-4.8 4.8 4.9 4.9 0 0 1 4.8-4.8Z"
-                      fill="#e5e0bd"
-                    ></path>
-                  </g>
-                </svg>
-                <span>Instagram</span>
-              </a>
-              <a
-                class="tooltip tooltipstered"
-                href="kde-nas-najdete/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="29.3"
-                  height="29.3"
-                  viewBox="0 0 29.3 29.3"
-                >
-                  <g data-name="Group 804">
-                    <path
-                      data-name="Path 257"
-                      d="M29.3 14.7a14.6 14.6 0 1 0-17 14.6V19H8.6v-4.3h3.8v-3.2c0-3.7 2.1-5.7 5.5-5.7a22.4 22.4 0 0 1 3.3.2v3.7h-1.9A2.1 2.1 0 0 0 17 12v2.7h4l-.6 4.3H17v10.3a14.7 14.7 0 0 0 12.4-14.6Z"
-                      fill="#e5e0bd"
-                    ></path>
-                  </g>
-                </svg>
-                <span>Facebook</span>
-              </a>
-            </div>
-            <div class="copy-adresa">
-              <p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="23.4"
-                  height="31.2"
-                  viewBox="0 0 23.4 31.2"
-                >
-                  <path
-                    data-name="Icon awesome-map-marker-alt"
-                    d="M10.5 30.5C1.6 17.7 0 16.4 0 11.7a11.7 11.7 0 0 1 23.4 0c0 4.7-1.7 6-10.5 18.8a1.5 1.5 0 0 1-2.4 0Zm1.2-14a4.9 4.9 0 1 0-4.9-4.8 4.9 4.9 0 0 0 4.9 4.9Z"
-                    fill="#fff"
-                  ></path>
-                </svg>
-                náměstí Republiky, Bedřicha Smetany 139/1, Plzeň
-              </p>
-            </div>
-            <div class="copy-otevreno">
-              <p><strong>Otevřeno NONSTOP!</strong></p>
-            </div>
-          </div>
-
-          <div class="row copy-mapa">
-            <a
-              title="Zobrazit na mapě"
-              href="https://goo.gl/maps/CFjwr5PqWqjJG1ur7"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Zobrazit na mapě</span>
-            </a>
-          </div>
-
-          <div class="row copy-zakaz layout-container">
-            <p>
-              <strong
-                >Zákaz účasti osob mladších 18 let na hazardní hře! Ministerstvo
-                financí varuje:<br />
-                „Účastí na hazardní hře může vzniknout závislost!“</strong
-              >
-            </p>
-          </div>
-
-          <div class="row antee">
-            <!-- <div class="layout-container">
-            © 2024 Casino BIG WIN Plzeň,
-            <a href="mailto:david-paukner@seznam.cz">Kontaktovat webmastera</a>,
-            <span id="links"
-              ><a href="mapa-stranek/index.html">Mapa stránek</a></span
-            ><br />ANTEE s.r.o. -
-            <a href="https://www.antee.cz" rel="nofollow"
-              >Tvorba webových stránek</a
-            >, Redakční systém IPO
-          </div> -->
-            <div class="layout-container">
-              © 2024 Casino BIG WIN Plzeň,
-
-              <span id="links"
-                ><a href="mapa-stranek/index.html">Mapa stránek</a></span
-              >, Redakční systém IPO
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/date-home.js"></script>
-    <script src="js/burger-menu.js"></script>
+    <div class="help-picture">
+      <img
+        src="img/chat_communication_message_talk_chatting_icon.png"
+        alt="alt"
+      />
+    </div>
+    <div class="chat-container">
+      <div class="chat-window" id="chatWindow">
+        <img
+          class="chat-window__close"
+          src="img/cancel_close_delete_icon.png"
+          alt="image"
+        />
+        <!-- Сообщения чата будут здесь -->
+      </div>
+      <div class="chat-input-container">
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="Digite uma mensagem..."
+        />
+        <button id="sendButton">Enviar</button>
+      </div>
+    </div>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-content">
+          <nav class="header-menu__footer">
+            <ul>
+              <li class="header-menu__item">
+                <a href="index.html" class="header-menu__item-link">Início</a>
+              </li>
+              <li class="header-menu__item">
+                <a href="about.html" class="header-menu__item-link"
+                  >Sobre nós</a
+                >
+              </li>
+              <li class="header-menu__item">
+                <a href="index.html#service" class="header-menu__item-link"
+                  >Serviço</a
+                >
+              </li>
+              <li class="header-menu__item">
+                <a href="contact.html" class="header-menu__item-link"
+                  >Сontato</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <ul class="footer-content-rules">
+            <li class="header-menu__item">
+              <a class="header-menu__item-link" href="privacy-policy.html"
+                >Política de privacidade</a
+              >
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__item-link" href="terms-conditions.html"
+                >Termos e condições</a
+              >
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__item-link" href="disclaimer.html"
+                >Isenção de responsabilidade</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-end">
+          ©2024 contact@JustFunSlots.com. Todos os direitos reservados.
+        </div>
+      </div>
+    </footer>
   </body>
+
+  <script src="script.js"></script>
 </html>
