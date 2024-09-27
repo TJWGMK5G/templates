@@ -48,7 +48,7 @@ if (openChat !== null) {
 
       const systemMessage = document.createElement("div");
       systemMessage.classList.add("chat-message");
-      systemMessage.innerHTML = `"Thank you, your message has been accepted. We'll be in touch as soon as our expert is available."`;
+      systemMessage.innerHTML = `"Спасибо, ваше сообщение было принято. Мы свяжемся с вами, как только наш специалист будет доступен."`;
 
       chatWindow.appendChild(systemMessage);
 
