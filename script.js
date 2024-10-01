@@ -13,32 +13,3 @@ menuItems.forEach((e) => {
     toggler.classList.remove("header-toggler--open");
   });
 });
-
-// let html = document.querySelector("html");
-// document.querySelector(".header-toggler").onclick = function () {
-//   html.classList.toggle("unscroll");
-// };
-
-// const btnModal = document.querySelector(".modal__btn");
-// const modal = document.querySelector(".modal ");
-
-// if (modal !== null) {
-//   btnModal.addEventListener("click", function () {
-//     modal.classList.add("hidden");
-//   });
-// }
-
-// // coockie;
-// var coockie = document.querySelector(".coockie");
-// var accept = document.querySelector(".coockie-wrap-buttons__accept");
-// var cancel = document.querySelector(".coockie-wrap-buttons__cancel");
-
-// if (coockie !== null) {
-//   accept.addEventListener("click", () => {
-//     coockie.style.display = "none";
-//   });
-
-//   cancel.addEventListener("click", () => {
-//     coockie.style.display = "none";
-//   });
-// }
