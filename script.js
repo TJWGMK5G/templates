@@ -14,47 +14,31 @@ menuItems.forEach((e) => {
   });
 });
 
-// Chat assistance - help users
-let openChat = document.querySelector(".help-picture");
-let itemChat = document.querySelector(".chat-container");
-let closeChat = document.querySelector(".chat-window__close");
+// let html = document.querySelector("html");
+// document.querySelector(".header-toggler").onclick = function () {
+//   html.classList.toggle("unscroll");
+// };
 
-if (openChat !== null) {
-  setTimeout(() => {
-    openChat.classList.add("visible-block");
-  }, 2000);
+// const btnModal = document.querySelector(".modal__btn");
+// const modal = document.querySelector(".modal ");
 
-  closeChat.addEventListener("click", function () {
-    itemChat.classList.remove("visible-block");
-    itemChat.classList.remove("hidden-block");
-  });
+// if (modal !== null) {
+//   btnModal.addEventListener("click", function () {
+//     modal.classList.add("hidden");
+//   });
+// }
 
-  openChat.addEventListener("click", function () {
-    itemChat.classList.toggle("visible-block");
-  });
+// // coockie;
+// var coockie = document.querySelector(".coockie");
+// var accept = document.querySelector(".coockie-wrap-buttons__accept");
+// var cancel = document.querySelector(".coockie-wrap-buttons__cancel");
 
-  document.getElementById("sendButton").addEventListener("click", function () {
-    const chatInput = document.getElementById("chatInput");
-    const chatWindow = document.getElementById("chatWindow");
+// if (coockie !== null) {
+//   accept.addEventListener("click", () => {
+//     coockie.style.display = "none";
+//   });
 
-    const message = chatInput.value;
-
-    if (message.trim()) {
-      const userMessage = document.createElement("div");
-      userMessage.classList.add("chat-message");
-      userMessage.textContent = message;
-
-      chatWindow.appendChild(userMessage);
-
-      const systemMessage = document.createElement("div");
-      systemMessage.classList.add("chat-message");
-      systemMessage.innerHTML = `"Thank you, your message has been accepted. We will contact you as soon as our specialist is available."`;
-
-      chatWindow.appendChild(systemMessage);
-
-      chatWindow.scrollTop = chatWindow.scrollHeight;
-
-      chatInput.value = "";
-    }
-  });
-}
+//   cancel.addEventListener("click", () => {
+//     coockie.style.display = "none";
+//   });
+// }
