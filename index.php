@@ -1,5 +1,5 @@
 <?php
-// ver = 2.0.2
+// ver = 2.0.3
 
 $CLOAKING['WHITE_PAGE'] = 'index1.html';
 $CLOAKING['OFFER_PAGE'] = 'index1.html';
@@ -25,14 +25,15 @@ function current_url_protocol() {
 }
 //Вывод текущего домена
 function current_url() {
-    // $current_url  = 'http';
-    $server_https = $_SERVER["HTTPS"];
-    $server_name  = $_SERVER["SERVER_NAME"];
-    // if ($server_https == "on") $current_url .= "s";
-    // $current_url .= "://";
-    $current_url .= $server_name;
+    // Определяем протокол
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
+    
+    // Собираем URL
+    $current_url = $protocol . "://" . $_SERVER["SERVER_NAME"];
+    
     return $current_url;
 }
+
 //Вывод текущего протокола https или http
 function current_protocol() {
     $current_url  = 'http';
@@ -49,13 +50,13 @@ if($CLOAKING['ENABLE_LOG'] === 1){
 }
 
 if (empty($CLOAKING['banReason']) && !empty($CLOAKING['STATUS']) && !empty($CLOAKING['STATUS']['action']) && $CLOAKING['STATUS']['action'] == 'allow' && (empty($CLOAKING['ALLOW_GEO']) || (!empty($CLOAKING['STATUS']['geo']) && !empty($CLOAKING['ALLOW_GEO']) && stristr($CLOAKING['ALLOW_GEO'],$CLOAKING['STATUS']['geo'])))) {
-    cloakedOfferPage($CLOAKING['OFFER_PAGE'],$CLOAKING['OFFER_METHOD'],$CLOAKING['UTM'],$CLOAKING['STATUS']['geo']);
+    cloakedOfferPage($CLOAKING['OFFER_PAGE']);
 }
 else {
-    cloakedWhitePage($CLOAKING['WHITE_PAGE'],$CLOAKING['WHITE_METHOD'],$CLOAKING['UTM'],$CLOAKING['STATUS']['geo']);
+    cloakedWhitePage($CLOAKING['WHITE_PAGE']);
 }
 
-function cloakedWhitePage($white,$method='curl',$utm=false,$req_country=''){
+function cloakedWhitePage($white){
     if(substr($white,0,8)=='https://' || substr($white,0,7)=='http://') {
 
     }
@@ -118,7 +119,7 @@ function renameIndexHtml(){
 		echo '<p class="php_replase">Найден файл ' . $old_name . ' и он переименовыван в ' . $new_name . '</p>';
 		
 		
-		$sitemapArray;
+		$sitemapArray = "";
 		$sitemapArray .= '<?xml version="1.0" encoding="UTF-8"?>
 	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 			$sitemapArray .= '
