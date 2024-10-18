@@ -58,3 +58,28 @@ if (openChat !== null) {
     }
   });
 }
+
+if (document.getElementById("commentForm") !== null) {
+  document
+    .getElementById("commentForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const rating = document.getElementById("rating").value;
+      const comment = document.getElementById("comment").value;
+
+      const commentItem = document.createElement("li");
+      commentItem.classList.add("comment-item");
+
+      commentItem.innerHTML = `
+      <h3>${username}</h3>
+      <p class="rating">Avaliação: ${"★".repeat(rating)}</p>
+      <p>${comment}</p>
+  `;
+
+      document.getElementById("commentsList").appendChild(commentItem);
+
+      document.getElementById("commentForm").reset();
+    });
+}
