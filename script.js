@@ -59,6 +59,7 @@ if (openChat !== null) {
   });
 }
 
+// FEEDBACK
 if (document.getElementById("commentForm") !== null) {
   document
     .getElementById("commentForm")
@@ -82,4 +83,14 @@ if (document.getElementById("commentForm") !== null) {
 
       document.getElementById("commentForm").reset();
     });
+}
+
+// TABS
+function toggleAnswer(index) {
+  const answer = document.getElementById(`answer${index}`);
+  if (answer.style.display === "block") {
+    answer.style.display = "none";
+  } else {
+    answer.style.display = "block";
+  }
 }
