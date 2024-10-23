@@ -14,83 +14,27 @@ menuItems.forEach((e) => {
   });
 });
 
-// Chat assistance - help users
-let openChat = document.querySelector(".help-picture");
-let itemChat = document.querySelector(".chat-container");
-let closeChat = document.querySelector(".chat-window__close");
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
 
-if (openChat !== null) {
-  setTimeout(() => {
-    openChat.classList.add("visible-block");
-  }, 2000);
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  slidesPerView: 1,
+  spaceBetween: 30,
 
-  closeChat.addEventListener("click", function () {
-    itemChat.classList.remove("visible-block");
-    itemChat.classList.remove("hidden-block");
-  });
+  breakpoints: {
+    1024: { slidesPerView: 3 },
+    550: { slidesPerView: 2 },
+  },
 
-  openChat.addEventListener("click", function () {
-    itemChat.classList.toggle("visible-block");
-  });
-
-  document.getElementById("sendButton").addEventListener("click", function () {
-    const chatInput = document.getElementById("chatInput");
-    const chatWindow = document.getElementById("chatWindow");
-
-    const message = chatInput.value;
-
-    if (message.trim()) {
-      const userMessage = document.createElement("div");
-      userMessage.classList.add("chat-message");
-      userMessage.textContent = message;
-
-      chatWindow.appendChild(userMessage);
-
-      const systemMessage = document.createElement("div");
-      systemMessage.classList.add("chat-message");
-      systemMessage.innerHTML = `"Thank you, your message has been accepted. We will contact you as soon as our specialist is available."`;
-
-      chatWindow.appendChild(systemMessage);
-
-      chatWindow.scrollTop = chatWindow.scrollHeight;
-
-      chatInput.value = "";
-    }
-  });
-}
-
-// FEEDBACK
-if (document.getElementById("commentForm") !== null) {
-  document
-    .getElementById("commentForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const username = document.getElementById("username").value;
-      const rating = document.getElementById("rating").value;
-      const comment = document.getElementById("comment").value;
-
-      const commentItem = document.createElement("li");
-      commentItem.classList.add("comment-item");
-
-      commentItem.innerHTML = `
-      <h3>${username}</h3>
-      <p class="rating">Avaliação: ${"★".repeat(rating)}</p>
-      <p>${comment}</p>
-  `;
-
-      document.getElementById("commentsList").appendChild(commentItem);
-
-      document.getElementById("commentForm").reset();
-    });
-}
-
-// TABS
-function toggleAnswer(index) {
-  const answer = document.getElementById(`answer${index}`);
-  if (answer.style.display === "block") {
-    answer.style.display = "none";
-  } else {
-    answer.style.display = "block";
-  }
-}
+  autoHeight: true,
+});
